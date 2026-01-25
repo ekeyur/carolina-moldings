@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "What are your business hours?",
     answer:
-      "We are available to answer questions about prices and products Monday through Friday, 9:00 AM to 3:00 PM EST. For inquiries outside of these hours, please email us at Contact@CarolinaMoldings.com and we'll get back to you as soon as possible.",
+      "We are available to answer questions about prices and products Monday through Friday, 9:00 AM to 3:00 PM EST. For inquiries outside of these hours, please email us at contact@carolinamoldings.com and we'll get back to you as soon as possible.",
   },
   {
     question: "How can I place an order?",
