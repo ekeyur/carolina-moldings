@@ -76,7 +76,7 @@ export default function CTA() {
               ))}
             </div>
 
-            <Link href="#contact" className="btn-primary">
+            <Link href="#contact" aria-label="Contact us - get a quote" className="btn-primary">
               Contact Us
               <svg
                 className="w-4 h-4 ml-2"

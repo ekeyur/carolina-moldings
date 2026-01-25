@@ -41,7 +41,7 @@ export default function Footer() {
                 <p className="font-display text-lg font-semibold text-white tracking-wide">
                   Carolina Moldings
                 </p>
-                <p className="text-xs text-steel-500 font-medium tracking-wider uppercase">
+                <p className="text-xs text-steel-400 font-medium tracking-wider uppercase">
                   Since 1975
                 </p>
               </div>
@@ -54,11 +54,11 @@ export default function Footer() {
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
               <p className="text-steel-400">
-                <span className="text-steel-500">Address:</span> 3600 Woodpark
+                <span className="text-steel-400">Address:</span> 3600 Woodpark
                 Blvd. Suite A, Charlotte NC, 28206
               </p>
               <p className="text-steel-400">
-                <span className="text-steel-500">Phone:</span>{" "}
+                <span className="text-steel-400">Phone:</span>{" "}
                 <a
                   href="tel:18005237475"
                   className="hover:text-primary-500 transition-colors"
@@ -67,7 +67,7 @@ export default function Footer() {
                 </a>
               </p>
               <p className="text-steel-400">
-                <span className="text-steel-500">Email:</span>{" "}
+                <span className="text-steel-400">Email:</span>{" "}
                 <a
                   href="mailto:Contact@CarolinaMoldings.com"
                   className="hover:text-primary-500 transition-colors"
@@ -138,13 +138,13 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-steel-800 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-steel-500">
+          <p className="text-sm text-steel-400">
             © {new Date().getFullYear()} Carolina Moldings, Inc. All rights
             reserved.
           </p>
-          <p className="text-sm text-steel-600">
+          <p className="text-sm text-steel-400">
             You can&apos;t steal from{" "}
-            <span className="text-primary-600 font-semibold">Snap Seal™</span>
+            <span className="text-primary-500 font-semibold">Snap Seal™</span>
           </p>
         </div>
       </div>

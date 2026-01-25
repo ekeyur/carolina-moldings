@@ -117,6 +117,7 @@ export default function Header() {
           <div className="hidden lg:block">
             <Link
               href="#contact"
+              aria-label="Contact us - navigate to contact form"
               className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary-600 text-white text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all hover:shadow-lg hover:shadow-primary-600/25"
             >
               Contact Us
@@ -213,6 +214,7 @@ export default function Header() {
             ))}
             <Link
               href="#contact"
+              aria-label="Contact us - navigate to contact form"
               className="block mx-4 mt-4 px-6 py-3 bg-primary-600 text-white text-center font-display font-semibold uppercase tracking-wider rounded-sm"
             >
               Contact Us
