@@ -130,7 +130,7 @@ export default function AmericanIndexCoversPage() {
                       src={product.image}
                       alt={product.model}
                       fill
-                      className={`object-contain ${product.imagePadding || "p-8"}`}
+                      className={`object-contain p-8`}
                     />
                   ) : (
                     <div className="text-center p-4">
@@ -226,7 +226,10 @@ export default function AmericanIndexCoversPage() {
                   "Reduces installation time",
                   "Compatible with Snap Seal tamper systems",
                 ].map((feature) => (
-                  <li key={feature} className="flex items-center text-steel-700">
+                  <li
+                    key={feature}
+                    className="flex items-center text-steel-700"
+                  >
                     <svg
                       className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0"
                       fill="none"
