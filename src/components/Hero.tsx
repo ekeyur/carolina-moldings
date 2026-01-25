@@ -32,16 +32,40 @@ export default function Hero() {
           className="w-full h-full text-white opacity-[0.08]"
         >
           {/* Outer frame */}
-          <rect x="20" y="10" width="200" height="120" rx="6" strokeWidth="1.5" />
+          <rect
+            x="20"
+            y="10"
+            width="200"
+            height="120"
+            rx="6"
+            strokeWidth="1.5"
+          />
 
           {/* Inner display area */}
           <rect x="30" y="20" width="180" height="100" rx="4" />
 
           {/* CUBIC FEET header */}
-          <text x="120" y="38" textAnchor="middle" fontSize="12" fontWeight="bold" fill="currentColor" stroke="none">CUBIC FEET</text>
+          <text
+            x="120"
+            y="38"
+            textAnchor="middle"
+            fontSize="12"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            CUBIC FEET
+          </text>
 
           {/* Odometer-style number display */}
-          <rect x="45" y="50" width="150" height="45" rx="3" strokeWidth="0.75" />
+          <rect
+            x="45"
+            y="50"
+            width="150"
+            height="45"
+            rx="3"
+            strokeWidth="0.75"
+          />
 
           {/* Number separators */}
           <line x1="75" y1="50" x2="75" y2="95" strokeWidth="0.5" />
@@ -50,14 +74,73 @@ export default function Hero() {
           <line x1="165" y1="50" x2="165" y2="95" strokeWidth="0.5" />
 
           {/* Numbers in odometer */}
-          <text x="60" y="82" textAnchor="middle" fontSize="24" fontWeight="bold" fill="currentColor" stroke="none">{digits[0]}</text>
-          <text x="90" y="82" textAnchor="middle" fontSize="24" fontWeight="bold" fill="currentColor" stroke="none">{digits[1]}</text>
-          <text x="120" y="82" textAnchor="middle" fontSize="24" fontWeight="bold" fill="currentColor" stroke="none">{digits[2]}</text>
-          <text x="150" y="82" textAnchor="middle" fontSize="24" fontWeight="bold" fill="currentColor" stroke="none">{digits[3]}</text>
-          <text x="180" y="82" textAnchor="middle" fontSize="24" fontWeight="bold" fill="currentColor" stroke="none">{digits[4]}</text>
+          <text
+            x="60"
+            y="82"
+            textAnchor="middle"
+            fontSize="24"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            {digits[0]}
+          </text>
+          <text
+            x="90"
+            y="82"
+            textAnchor="middle"
+            fontSize="24"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            {digits[1]}
+          </text>
+          <text
+            x="120"
+            y="82"
+            textAnchor="middle"
+            fontSize="24"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            {digits[2]}
+          </text>
+          <text
+            x="150"
+            y="82"
+            textAnchor="middle"
+            fontSize="24"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            {digits[3]}
+          </text>
+          <text
+            x="180"
+            y="82"
+            textAnchor="middle"
+            fontSize="24"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            {digits[4]}
+          </text>
 
           {/* Multiplier */}
-          <text x="120" y="115" textAnchor="middle" fontSize="8" fill="currentColor" stroke="none">x 1000</text>
+          <text
+            x="120"
+            y="115"
+            textAnchor="middle"
+            fontSize="8"
+            fill="currentColor"
+            stroke="none"
+          >
+            x 1000
+          </text>
         </svg>
         {/* Snap seal dots - same visibility as outline */}
         <svg
@@ -110,7 +193,7 @@ export default function Hero() {
               Full Catalog
             </Link>
             <a
-              href="/CMI-Catalog-2023.pdf"
+              href="/cmi_catalog_2023.pdf"
               target="_blank"
               className="btn-secondary"
             >

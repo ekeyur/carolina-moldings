@@ -13,7 +13,6 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log(formState);
   };
 
@@ -61,7 +60,7 @@ export default function Contact() {
             </h2>
             <p className="text-steel-400 text-lg mb-12 max-w-lg">
               We are available to answer any and all questions over the phone
-              about prices and products Mon-Fri 8am-3pm EST. For anything else
+              about prices and products Mon-Fri 9am-3pm EST. For anything else
               please e-mail us and we will get back to you as soon as possible.
             </p>
 

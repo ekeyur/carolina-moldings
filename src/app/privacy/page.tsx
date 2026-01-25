@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
                   href="mailto:Contact@CarolinaMoldings.com"
                   className="text-primary-600 hover:text-primary-700"
                 >
-                  Contact@CarolinaMoldings.com
+                  contact@carolinaMoldings.com
                 </a>{" "}
                 or call{" "}
                 <a
