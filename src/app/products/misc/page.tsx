@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 const miscProducts = [
   {
@@ -9,6 +10,7 @@ const miscProducts = [
     description:
       "Protect the wriggler of your meter before anything bad happens. This commercial ERT protector device provides essential protection for your meter components.",
     category: "Protection",
+    image: "/products/cep.png",
   },
   {
     model: "IDC",
@@ -16,6 +18,7 @@ const miscProducts = [
     description:
       "Protective cover that safeguards the wriggler of your meter from damage and environmental factors.",
     category: "Protection",
+    image: "/products/idc.png",
   },
   {
     model: "M-110-OS",
@@ -23,6 +26,7 @@ const miscProducts = [
     description:
       "Specialized instrument drive cover designed for Mercury meters, providing reliable protection.",
     category: "Protection",
+    image: "/products/m-110-os.png",
   },
   {
     model: "RV 250",
@@ -30,6 +34,7 @@ const miscProducts = [
     description:
       "Screen-protected regulator vent designed to prevent bugs and debris from entering and compromising meter interiors.",
     category: "Ventilation",
+    image: "/products/rv-250.png",
   },
   {
     model: "Nuts & Swivels",
@@ -37,6 +42,7 @@ const miscProducts = [
     description:
       "Complete selection of nut and swivel combinations including insulated and offset options for various meter configurations.",
     category: "Hardware",
+    image: "/products/nuts-swivels.png",
   },
 ];
 
@@ -92,13 +98,20 @@ export default function MiscPage() {
                 key={product.model}
                 className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300"
               >
-                <div className="w-full aspect-video mb-6 bg-steel-100 rounded-lg flex items-center justify-center overflow-hidden relative">
-                  <div className="absolute top-3 right-3 px-2 py-1 bg-steel-700 text-white text-xs font-semibold rounded">
+                <div className="w-full aspect-square mb-6 bg-steel-100 rounded-lg flex items-center justify-center overflow-hidden relative">
+                  <div className="absolute top-3 right-3 px-2 py-1 bg-steel-700 text-white text-xs font-semibold rounded z-10">
                     {product.category}
                   </div>
-                  <div className="text-center p-4">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-steel-200 rounded-lg flex items-center justify-center">
-                      {product.category === "Protection" ? (
+                  {product.image ? (
+                    <Image
+                      src={product.image}
+                      alt={product.model}
+                      fill
+                      className="object-contain object-center p-6"
+                    />
+                  ) : (
+                    <div className="text-center p-4">
+                      <div className="w-20 h-20 mx-auto mb-4 bg-steel-200 rounded-lg flex items-center justify-center">
                         <svg
                           className="w-10 h-10 text-steel-400"
                           fill="none"
@@ -109,49 +122,15 @@ export default function MiscPage() {
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             strokeWidth={1.5}
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                            d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
                           />
                         </svg>
-                      ) : product.category === "Ventilation" ? (
-                        <svg
-                          className="w-10 h-10 text-steel-400"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
-                          />
-                        </svg>
-                      ) : (
-                        <svg
-                          className="w-10 h-10 text-steel-400"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
-                          />
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={1.5}
-                            d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-                          />
-                        </svg>
-                      )}
+                      </div>
+                      <p className="text-steel-500 text-sm font-medium">
+                        {product.category}
+                      </p>
                     </div>
-                    <p className="text-steel-500 text-sm font-medium">
-                      {product.category}
-                    </p>
-                  </div>
+                  )}
                 </div>
 
                 <div className="mb-2">

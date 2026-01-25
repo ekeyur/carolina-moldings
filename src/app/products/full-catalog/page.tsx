@@ -1,16 +1,13 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const catalogCategories = [
   {
     title: 'Index Covers',
     description: 'All of our index covers are personally shipped and quality controlled.',
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
-      </svg>
-    ),
+    image: '/products/catalog-index-covers.png',
     products: [
       { name: 'American / Honeywell Index Covers', href: '/products/american-index-covers' },
       { name: 'Rockwell / Sensus Index Covers', href: '/products/rockwell-index-covers' },
@@ -20,11 +17,7 @@ const catalogCategories = [
   {
     title: 'Tamper Systems',
     description: 'Our unique tamper system will ensure that nobody will be able to steal from your business.',
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-      </svg>
-    ),
+    image: '/products/catalog-tamper.png',
     products: [
       { name: 'Snap Seal™ Tamper System', href: '/products/tamper-system' },
     ],
@@ -32,12 +25,7 @@ const catalogCategories = [
   {
     title: 'Screws',
     description: 'We will provide every screw for any gas meter need.',
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
+    image: '/products/catalog-screws.png',
     products: [
       { name: 'Meter Screws', href: '/products/meter-screws' },
     ],
@@ -45,11 +33,7 @@ const catalogCategories = [
   {
     title: 'Paint Covers',
     description: 'Our paint covers have been used all over the world with incredible success.',
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
-      </svg>
-    ),
+    image: '/products/catalog-paint-covers.png',
     products: [
       { name: 'Paint Covers', href: '/products/paint-covers' },
     ],
@@ -57,11 +41,7 @@ const catalogCategories = [
   {
     title: 'Nuts and Swivels',
     description: 'Products designed to fit various customer specifications for secure meter connections.',
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
-      </svg>
-    ),
+    image: '/products/nuts-swivels.png',
     products: [
       { name: 'Nuts and Swivels', href: '/products/misc' },
     ],
@@ -69,11 +49,7 @@ const catalogCategories = [
   {
     title: 'Miscellaneous',
     description: 'For any other gas meter need we have a product to ensure a clean and proper functioning meter.',
-    icon: (
-      <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-      </svg>
-    ),
+    image: '/products/rv-250.png',
     products: [
       { name: 'Miscellaneous Products', href: '/products/misc' },
     ],
@@ -123,11 +99,17 @@ export default function FullCatalogPage() {
                 key={category.title}
                 className="bg-white rounded-xl border border-steel-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
+                {/* Category Image */}
+                <div className="relative h-48 bg-steel-100 overflow-hidden">
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    fill
+                    className="object-contain object-center p-4"
+                  />
+                </div>
                 {/* Category Header */}
                 <div className="p-6 bg-steel-900 text-white">
-                  <div className="w-16 h-16 mb-4 bg-primary-600/20 rounded-lg flex items-center justify-center text-primary-400">
-                    {category.icon}
-                  </div>
                   <h2 className="font-display text-xl font-bold mb-2">
                     {category.title}
                   </h2>

@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -63,16 +64,12 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-linear-to-br from-steel-200 to-steel-300 flex items-center justify-center">
-                  <div className="text-center">
-                    <p className="font-display text-8xl font-bold text-steel-400">
-                      50+
-                    </p>
-                    <p className="font-display text-xl text-steel-500 uppercase tracking-wider">
-                      Years Strong
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src="/50-plus-years.png"
+                  alt="50+ Years of Excellence"
+                  fill
+                  className="object-contain object-center p-4"
+                />
               </div>
             </div>
           </div>
