@@ -1,18 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
-  const digits = ["0", "1", "9", "7", "5"];
-
   return (
     <section className="relative min-h-screen flex items-center gradient-mesh overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 noise-overlay"></div>
 
       {/* Geometric accents */}
-      <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-steel-600/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 -right-48 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-red-900/20 rounded-full blur-3xl"></div>
 
       {/* Grid lines */}
       <div className="absolute inset-0 opacity-10">
@@ -21,137 +20,38 @@ export default function Hero() {
         <div className="absolute left-3/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white to-transparent"></div>
       </div>
 
-      {/* Gas Meter Sketch */}
-      <div className="hidden lg:block absolute right-[24%] top-[85%] -translate-y-1/2 w-[400px] h-[280px]">
-        {/* Faint outline */}
-        <svg
-          viewBox="0 0 240 140"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="1"
-          className="w-full h-full text-white opacity-[0.08]"
-        >
-          {/* Outer frame */}
-          <rect
-            x="20"
-            y="10"
-            width="200"
-            height="120"
-            rx="6"
-            strokeWidth="1.5"
+      {/* Gas Meter Images - Floating Display */}
+      <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[80%] pointer-events-none">
+        {/* Main featured meter - American/Honeywell */}
+        <div className="absolute right-[15%] top-[20%] w-64 h-64 opacity-80 animate-fade-in animate-delay-300">
+          <Image
+            src="/american-honeywell.png"
+            alt="American Honeywell Gas Meter"
+            fill
+            className="object-contain"
+            priority
           />
+        </div>
 
-          {/* Inner display area */}
-          <rect x="30" y="20" width="180" height="100" rx="4" />
-
-          {/* CUBIC FEET header */}
-          <text
-            x="120"
-            y="38"
-            textAnchor="middle"
-            fontSize="12"
-            fontWeight="bold"
-            fill="currentColor"
-            stroke="none"
-          >
-            CUBIC FEET
-          </text>
-
-          {/* Odometer-style number display */}
-          <rect
-            x="45"
-            y="50"
-            width="150"
-            height="45"
-            rx="3"
-            strokeWidth="0.75"
+        {/* Secondary meter - Rockwell/Sensus */}
+        <div className="absolute right-[40%] top-[50%] w-44 h-44 opacity-50 animate-fade-in animate-delay-400">
+          <Image
+            src="/rockwell-sensus.png"
+            alt="Rockwell Sensus Gas Meter"
+            fill
+            className="object-contain"
           />
+        </div>
 
-          {/* Number separators */}
-          <line x1="75" y1="50" x2="75" y2="95" strokeWidth="0.5" />
-          <line x1="105" y1="50" x2="105" y2="95" strokeWidth="0.5" />
-          <line x1="135" y1="50" x2="135" y2="95" strokeWidth="0.5" />
-          <line x1="165" y1="50" x2="165" y2="95" strokeWidth="0.5" />
-
-          {/* Numbers in odometer */}
-          <text
-            x="60"
-            y="82"
-            textAnchor="middle"
-            fontSize="24"
-            fontWeight="bold"
-            fill="currentColor"
-            stroke="none"
-          >
-            {digits[0]}
-          </text>
-          <text
-            x="90"
-            y="82"
-            textAnchor="middle"
-            fontSize="24"
-            fontWeight="bold"
-            fill="currentColor"
-            stroke="none"
-          >
-            {digits[1]}
-          </text>
-          <text
-            x="120"
-            y="82"
-            textAnchor="middle"
-            fontSize="24"
-            fontWeight="bold"
-            fill="currentColor"
-            stroke="none"
-          >
-            {digits[2]}
-          </text>
-          <text
-            x="150"
-            y="82"
-            textAnchor="middle"
-            fontSize="24"
-            fontWeight="bold"
-            fill="currentColor"
-            stroke="none"
-          >
-            {digits[3]}
-          </text>
-          <text
-            x="180"
-            y="82"
-            textAnchor="middle"
-            fontSize="24"
-            fontWeight="bold"
-            fill="currentColor"
-            stroke="none"
-          >
-            {digits[4]}
-          </text>
-
-          {/* Multiplier */}
-          <text
-            x="120"
-            y="115"
-            textAnchor="middle"
-            fontSize="8"
-            fill="currentColor"
-            stroke="none"
-          >
-            x 1000
-          </text>
-        </svg>
-        {/* Snap seal dots - same visibility as outline */}
-        <svg
-          viewBox="0 0 240 140"
-          className="absolute inset-0 w-full h-full opacity-[0.08]"
-        >
-          <circle cx="42" cy="32" r="6" fill="#dc2626" />
-          <circle cx="198" cy="32" r="6" fill="#dc2626" />
-          <circle cx="42" cy="108" r="6" fill="#dc2626" />
-          <circle cx="198" cy="108" r="6" fill="#dc2626" />
-        </svg>
+        {/* Tertiary meter - Sprague/Itron */}
+        <div className="absolute right-[5%] top-[60%] w-40 h-40 opacity-40 animate-fade-in animate-delay-500">
+          <Image
+            src="/sprague-itron.png"
+            alt="Sprague Itron Gas Meter"
+            fill
+            className="object-contain"
+          />
+        </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-40">
