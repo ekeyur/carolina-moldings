@@ -45,6 +45,7 @@ export default function Hero() {
               fill
               sizes="160px"
               className="object-contain"
+              priority
             />
           </div>
         </div>
@@ -58,6 +59,7 @@ export default function Hero() {
               fill
               sizes="144px"
               className="object-contain"
+              priority
             />
           </div>
         </div>
