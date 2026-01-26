@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 const navigation = {
   products: [
@@ -22,6 +25,21 @@ const navigation = {
 };
 
 export default function Footer() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname !== "/") {
+      router.push("/#contact");
+    } else {
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  };
+
   return (
     <footer className="bg-steel-900 border-t border-steel-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -124,12 +142,21 @@ export default function Footer() {
             <ul className="space-y-3">
               {navigation.company.map((item) => (
                 <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-sm text-steel-400 hover:text-primary-500 transition-colors"
-                  >
-                    {item.name}
-                  </Link>
+                  {item.href === "#contact" ? (
+                    <button
+                      onClick={scrollToContact}
+                      className="text-sm text-steel-400 hover:text-primary-500 transition-colors cursor-pointer"
+                    >
+                      {item.name}
+                    </button>
+                  ) : (
+                    <Link
+                      href={item.href}
+                      className="text-sm text-steel-400 hover:text-primary-500 transition-colors"
+                    >
+                      {item.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
