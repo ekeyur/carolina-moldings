@@ -107,8 +107,8 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animate-delay-300">
-            <Link href="/products/full-catalog" className="btn-primary">
-              Full Catalog
+            <Link href="/#contact" className="btn-primary">
+              Request a Quote
             </Link>
             <a
               href="/cmi_catalog_2023.pdf"
