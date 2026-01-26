@@ -106,6 +106,7 @@ export default function ProductsPage() {
                           src={item.image}
                           alt={item.name}
                           fill
+                          sizes="56px"
                           className="object-contain p-1 transition-transform group-hover:scale-110"
                         />
                       ) : (
