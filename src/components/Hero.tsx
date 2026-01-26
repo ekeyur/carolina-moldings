@@ -23,34 +23,43 @@ export default function Hero() {
       {/* Gas Meter Images - Spread across page */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none overflow-hidden">
         {/* Main featured meter - American/Honeywell - right side */}
-        <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-70 animate-fade-in animate-delay-300">
-          <Image
-            src="/american-honeywell.png"
-            alt="American Honeywell Gas Meter"
-            fill
-            className="object-contain"
-            priority
-          />
+        <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-70">
+          <div className="w-full h-full opacity-0 animate-float-in-right animate-delay-300" style={{ animationFillMode: 'forwards' }}>
+            <Image
+              src="/american-honeywell.png"
+              alt="American Honeywell Gas Meter"
+              fill
+              sizes="256px"
+              className="object-contain"
+              priority
+            />
+          </div>
         </div>
 
         {/* Secondary meter - Rockwell/Sensus - left side, lower */}
-        <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-30 animate-fade-in animate-delay-400">
-          <Image
-            src="/rockwell-sensus.png"
-            alt="Rockwell Sensus Gas Meter"
-            fill
-            className="object-contain"
-          />
+        <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-30">
+          <div className="w-full h-full opacity-0 animate-float-in-left animate-delay-400" style={{ animationFillMode: 'forwards' }}>
+            <Image
+              src="/rockwell-sensus.png"
+              alt="Rockwell Sensus Gas Meter"
+              fill
+              sizes="160px"
+              className="object-contain"
+            />
+          </div>
         </div>
 
         {/* Tertiary meter - Sprague/Itron - center top */}
-        <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-25 animate-fade-in animate-delay-500">
-          <Image
-            src="/sprague-itron.png"
-            alt="Sprague Itron Gas Meter"
-            fill
-            className="object-contain"
-          />
+        <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-25">
+          <div className="w-full h-full opacity-0 animate-float-in-down animate-delay-500" style={{ animationFillMode: 'forwards' }}>
+            <Image
+              src="/sprague-itron.png"
+              alt="Sprague Itron Gas Meter"
+              fill
+              sizes="144px"
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
 
