@@ -1,7 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
-import Image from "next/image";
 
 export default function AboutPage() {
   return (
@@ -63,13 +62,33 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <Image
-                  src="/50-plus-years.png"
-                  alt="50+ Years of Excellence"
-                  fill
-                  className="object-contain object-center p-4"
-                />
+              <div className="aspect-square bg-gradient-to-br from-steel-900 via-steel-800 to-steel-900 rounded-2xl overflow-hidden flex items-center justify-center relative">
+                {/* Background pattern */}
+                <div className="absolute inset-0 opacity-10">
+                  <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-600 rounded-full blur-3xl"></div>
+                </div>
+
+                {/* Decorative ring */}
+                <div className="absolute inset-8 border-2 border-white/10 rounded-full"></div>
+                <div className="absolute inset-16 border border-white/5 rounded-full"></div>
+
+                {/* Content */}
+                <div className="relative text-center z-10">
+                  <div className="font-display text-8xl md:text-9xl font-bold text-white leading-none">
+                    50<span className="text-primary-500">+</span>
+                  </div>
+                  <div className="mt-2 font-display text-xl md:text-2xl uppercase tracking-[0.2em] text-steel-300">
+                    Years
+                  </div>
+                  <div className="mt-1 text-sm text-steel-400 tracking-wider">
+                    of Excellence
+                  </div>
+                  <div className="mt-6 w-16 h-1 bg-primary-600 mx-auto rounded-full"></div>
+                  <div className="mt-6 text-xs text-steel-500 uppercase tracking-widest">
+                    Est. 1975
+                  </div>
+                </div>
               </div>
             </div>
           </div>
