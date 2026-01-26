@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About Carolina Moldings | Family-Owned Gas Meter Index Cover Manufacturer Since 1975",
+  description:
+    "Learn about Carolina Moldings, a family-owned manufacturer of gas meter index covers and tamper plugs for over 50 years. Our Snap Seal technology is trusted by utilities nationwide.",
+  keywords:
+    "Carolina Moldings history, gas meter manufacturer, index cover manufacturer, tamper plug manufacturer, Snap Seal inventor, family-owned utility supplier",
+};
 
 export default function AboutPage() {
   return (

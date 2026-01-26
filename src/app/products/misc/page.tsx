@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Gas Meter Accessories | ERT Protectors, Vents & Hardware | Carolina Moldings",
+  description:
+    "Complete selection of gas meter accessories including ERT protectors, instrument drive covers, regulator vents, and hardware. Quality products for index cover installations.",
+  keywords:
+    "gas meter accessories, ERT protector, instrument drive cover, regulator vent, nuts and swivels, meter hardware, index cover accessories",
+};
 
 const miscProducts = [
   {

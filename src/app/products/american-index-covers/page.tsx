@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "American & Honeywell Index Covers | A-101, A-103, A-40G, A-100G | Carolina Moldings",
+  description:
+    "Precision-fit index covers for American and Honeywell gas meters. Models A-101, A-101 OS, A-103, A-103 OS, A-40G, A-100G with Sure Seal gasket and Snap Seal tamper plug compatibility.",
+  keywords:
+    "American index covers, Honeywell index covers, A-101, A-103, A-40G, A-100G, gas meter covers, tamper plug compatible, Snap Seal, Sure Seal gasket",
+};
 
 const americanCovers = [
   {

@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Snap Seal Tamper Plugs & Tamper System | Gas Meter Security | Carolina Moldings",
+  description:
+    "Industry-leading Snap Seal tamper plugs and tamper-evident security system for gas meters. Protect index covers from theft with our tamper plugs, screw cups, and Tophat seals.",
+  keywords:
+    "Snap Seal, tamper plugs, tamper system, tamper-evident, gas meter security, screw cups, Tophat tamper, TS Plug, meter theft prevention, index cover security",
+};
 
 const snapSeals = [
   {

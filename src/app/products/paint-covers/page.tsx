@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: "Paint Covers for Gas Meter Index Covers | American & Rockwell | Carolina Moldings",
+  description:
+    "Protective paint covers for gas meter index covers during painting operations. Available for American, Honeywell, Rockwell, and Sensus meter types.",
+  keywords:
+    "paint covers, index cover protection, meter painting, American paint covers, Rockwell paint covers, gas meter accessories",
+};
 
 const paintCovers = [
   {

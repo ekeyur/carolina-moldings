@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  title: "Complete Product Catalog | Index Covers, Tamper Plugs & More | Carolina Moldings",
+  description:
+    "Browse Carolina Moldings' full catalog of gas meter products. Index covers, Snap Seal tamper plugs, meter screws, and accessories with complete specifications and compatibility info.",
+  keywords:
+    "product catalog, gas meter catalog, index covers catalog, tamper plugs, Snap Seal, meter screws, paint covers, gas meter products, utility supplies",
+};
 
 const catalogCategories = [
   {

@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Meter Screws & Hardware | Case Screws & Hand Hole Screws | Carolina Moldings",
+  description:
+    "Complete selection of gas meter screws including case screws and hand hole screws for index covers. Compatible with American, Rockwell, Sprague meters and tamper plug systems.",
+  keywords:
+    "meter screws, case screws, hand hole screws, gas meter hardware, index cover screws, tamper plug screws, utility meter screws",
+};
 
 const caseScrews = [
   {

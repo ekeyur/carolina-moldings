@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Rockwell & Sensus Index Covers | R-103, R-104, R-105, R-40G, R-100G | Carolina Moldings",
+  description:
+    "Premium index covers for Rockwell and Sensus gas meters. Models R-103, R-104, R-105, R-40G, R-100G available with Sure Seal gasket and Snap Seal tamper plug options.",
+  keywords:
+    "Rockwell index covers, Sensus index covers, R-103, R-104, R-105, R-40G, R-100G, gas meter covers, tamper plug compatible, Snap Seal, Sure Seal",
+};
 
 const rockwellCovers = [
   {

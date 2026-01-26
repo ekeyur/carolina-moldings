@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Gas Meter Index Covers | American, Rockwell & Itron | Carolina Moldings",
+  description:
+    "High-quality gas meter index covers for American, Rockwell, Itron, and Sprague meters. Compatible with Snap Seal tamper plugs and Sure Seal gaskets. Trusted by utilities since 1975.",
+  keywords:
+    "gas meter index covers, index covers, American index covers, Rockwell index covers, Itron index covers, tamper plug compatible, Sure Seal gasket, Snap Seal compatible",
+};
 
 const indexCoverCategories = [
   {

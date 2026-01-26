@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Itron & Sprague Index Covers | I-100G, S-105 & Endpoint Covers | Carolina Moldings",
+  description:
+    "Quality index covers for Itron and Sprague gas meters including I-100G, S-105, and endpoint covers. Compatible with Snap Seal tamper plugs and Tophat tamper systems.",
+  keywords:
+    "Itron index covers, Sprague index covers, I-100G, S-105, endpoint covers, gas meter covers, tamper plug compatible, Tophat tamper, Snap Seal",
+};
 
 const itronCovers = [
   {
