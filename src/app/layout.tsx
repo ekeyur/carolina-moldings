@@ -1,5 +1,20 @@
 import type { Metadata } from "next";
+import { Oswald, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-oswald",
+  display: "swap",
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-source-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Carolina Moldings, Inc. | Gas Meter Covers & Tamper Systems",
@@ -15,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
+    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={`${oswald.variable} ${sourceSans.variable}`}>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );
