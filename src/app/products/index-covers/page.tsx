@@ -1,23 +1,26 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
+import Image from "next/image";
 
 const indexCoverCategories = [
   {
-    name: "American Index Covers",
+    name: "American / Honeywell Index Covers",
     href: "/products/american-index-covers",
     description:
       "Index covers for American and Honeywell gas meters. Available with Sure Seal gaskets and Snap Seal tamper compatibility.",
     products: ["A-101", "A-101 OS", "A-103", "A-103 OS", "A-40G", "A-100G"],
     color: "primary",
+    image: "/american-honeywell.png",
   },
   {
-    name: "Rockwell Index Covers",
+    name: "Rockwell / Sensus Index Covers",
     href: "/products/rockwell-index-covers",
     description:
       "Premium covers for Rockwell and Sensus meters. Multiple models with tamper system options.",
     products: ["R-103", "R-104", "R-105", "R-40G", "R-100G"],
     color: "steel",
+    image: "/rockwell-sensus.png",
   },
   {
     name: "Itron / Sprague Index Covers",
@@ -26,6 +29,7 @@ const indexCoverCategories = [
       "Quality covers for Itron and Sprague meters, plus endpoint covers for various meter types.",
     products: ["I-100G", "S-105", "Endpoint Covers"],
     color: "primary",
+    image: "/sprague-itron.png",
   },
 ];
 
@@ -169,29 +173,19 @@ export default function IndexCoversPage() {
               >
                 <div className="p-8">
                   <div
-                    className={`w-16 h-16 mb-6 rounded-lg flex items-center justify-center ${
+                    className={`w-24 h-24 mb-6 rounded-lg flex items-center justify-center ${
                       category.color === "primary"
-                        ? "bg-primary-100"
-                        : "bg-steel-100"
+                        ? "bg-primary-50"
+                        : "bg-steel-50"
                     }`}
                   >
-                    <svg
-                      className={`w-8 h-8 ${
-                        category.color === "primary"
-                          ? "text-primary-600"
-                          : "text-steel-600"
-                      }`}
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
-                      />
-                    </svg>
+                    <Image
+                      src={category.image}
+                      alt={category.name}
+                      width={80}
+                      height={80}
+                      className="object-contain"
+                    />
                   </div>
 
                   <h2 className="font-display text-2xl font-bold text-steel-900 mb-3 group-hover:text-primary-600 transition-colors">
