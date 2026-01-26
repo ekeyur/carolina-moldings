@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ScrollAnimate from "./ScrollAnimate";
 
 export default function Contact() {
   const [formState, setFormState] = useState({
@@ -51,8 +52,9 @@ export default function Contact() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Contact Info */}
-          <div>
-            <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <ScrollAnimate animation="left">
+            <div>
+              <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
               Get In Touch
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
@@ -177,10 +179,12 @@ export default function Contact() {
                 </div>
               </div>
             </div>
-          </div>
+            </div>
+          </ScrollAnimate>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-xl p-8 lg:p-10 shadow-xl">
+          <ScrollAnimate animation="right" delay={200}>
+            <div className="bg-white rounded-xl p-8 lg:p-10 shadow-xl">
             <h3 className="font-display text-2xl font-bold text-steel-900 mb-6">
               Send us a message
             </h3>
@@ -299,7 +303,8 @@ export default function Contact() {
                 </svg>
               </button>
             </form>
-          </div>
+            </div>
+          </ScrollAnimate>
         </div>
       </div>
     </section>

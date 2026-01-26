@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import ScrollAnimate from "./ScrollAnimate";
 
 const meterBrands = [
   {
@@ -35,26 +36,27 @@ export default function Products() {
     <section className="relative py-24 lg:py-32 bg-white industrial-pattern">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="max-w-3xl mb-16">
-          <p className="section-subtitle mb-4">Our Products</p>
-          <h2 className="section-title mb-6">
-            Index Covers for Specific Meter Brands
-          </h2>
-          <p className="text-lg text-steel-600">
-            Browse our precision-engineered index covers and tamper systems
-            designed for compatibility with major meter manufacturers.
-          </p>
-        </div>
+        <ScrollAnimate>
+          <div className="max-w-3xl mb-16">
+            <p className="section-subtitle mb-4">Our Products</p>
+            <h2 className="section-title mb-6">
+              Index Covers for Specific Meter Brands
+            </h2>
+            <p className="text-lg text-steel-600">
+              Browse our precision-engineered index covers and tamper systems
+              designed for compatibility with major meter manufacturers.
+            </p>
+          </div>
+        </ScrollAnimate>
 
         {/* Product Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {meterBrands.map((brand, index) => (
-            <Link
-              key={brand.name}
-              href={brand.href}
-              className="group relative bg-steel-50 rounded-lg overflow-hidden border border-steel-200 hover:border-primary-300 transition-all duration-300 hover:shadow-xl hover:shadow-steel-200/50"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
+            <ScrollAnimate key={brand.name} delay={index * 100}>
+              <Link
+                href={brand.href}
+                className="group relative bg-steel-50 rounded-lg overflow-hidden border border-steel-200 hover:border-primary-300 transition-all duration-300 hover:shadow-xl hover:shadow-steel-200/50 block"
+              >
               {/* Image */}
               <div className="relative h-64 bg-linear-to-br from-steel-100 to-steel-200 overflow-hidden">
                 <Image
@@ -101,16 +103,18 @@ export default function Products() {
                 </span>
               </div>
             </Link>
+            </ScrollAnimate>
           ))}
         </div>
 
         {/* Additional Product Categories */}
-        <div className="mt-16 pt-16 border-t border-steel-200">
-          <h3 className="font-display text-2xl font-semibold text-steel-900 mb-8">
-            More Product Categories
-          </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {[
+        <ScrollAnimate>
+          <div className="mt-16 pt-16 border-t border-steel-200">
+            <h3 className="font-display text-2xl font-semibold text-steel-900 mb-8">
+              More Product Categories
+            </h3>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
               {
                 name: "Tamper System",
                 href: "/products/tamper-system",
@@ -178,9 +182,10 @@ export default function Products() {
                   {category.name}
                 </span>
               </Link>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
+        </ScrollAnimate>
       </div>
     </section>
   );

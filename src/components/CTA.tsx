@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ScrollAnimate from "./ScrollAnimate";
 
 export default function CTA() {
   return (
@@ -36,8 +37,9 @@ export default function CTA() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
-          <div>
-            <p className="section-subtitle mb-4">Custom Solutions</p>
+          <ScrollAnimate animation="left">
+            <div>
+              <p className="section-subtitle mb-4">Custom Solutions</p>
             <h2 className="section-title mb-6">
               Building Custom Pieces For Any Need
             </h2>
@@ -92,10 +94,12 @@ export default function CTA() {
                 />
               </svg>
             </Link>
-          </div>
+            </div>
+          </ScrollAnimate>
 
           {/* Visual element */}
-          <div className="relative">
+          <ScrollAnimate animation="right" delay={200}>
+            <div className="relative">
             <div className="aspect-square bg-steel-800 rounded-2xl overflow-hidden">
               <div className="absolute inset-0 bg-linear-to-br from-steel-700 to-steel-900"></div>
 
@@ -138,7 +142,8 @@ export default function CTA() {
               <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-primary-600/30"></div>
               <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary-600/30"></div>
             </div>
-          </div>
+            </div>
+          </ScrollAnimate>
         </div>
       </div>
     </section>

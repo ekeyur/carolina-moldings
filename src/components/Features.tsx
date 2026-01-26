@@ -1,5 +1,7 @@
 'use client';
 
+import ScrollAnimate from './ScrollAnimate';
+
 const features = [
   {
     title: 'Family Owned',
@@ -62,28 +64,29 @@ export default function Features() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
-            Why Choose Us
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
-            You can&apos;t steal from{' '}
-            <span className="text-primary-500">Snap Seal™</span>
-          </h2>
-          <p className="text-steel-400 text-lg">
-            For over 50 years, we&apos;ve been the trusted name in gas meter products. 
-            Here&apos;s what sets us apart.
-          </p>
-        </div>
+        <ScrollAnimate>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+              Why Choose Us
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
+              You can&apos;t steal from{' '}
+              <span className="text-primary-500">Snap Seal™</span>
+            </h2>
+            <p className="text-steel-400 text-lg">
+              For over 50 years, we&apos;ve been the trusted name in gas meter products.
+              Here&apos;s what sets us apart.
+            </p>
+          </div>
+        </ScrollAnimate>
 
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="group relative p-8 bg-steel-800/50 backdrop-blur-sm rounded-lg border border-steel-700/50 hover:border-primary-500/50 transition-all duration-300 hover:bg-steel-800/80"
-              style={{ animationDelay: `${index * 100}ms` }}
-            >
+            <ScrollAnimate key={feature.title} delay={index * 100} animation="scale">
+              <div
+                className="group relative p-8 bg-steel-800/50 backdrop-blur-sm rounded-lg border border-steel-700/50 hover:border-primary-500/50 transition-all duration-300 hover:bg-steel-800/80 h-full"
+              >
               {/* Icon */}
               <div className="w-16 h-16 mb-6 bg-primary-600/10 border border-primary-600/20 rounded-lg flex items-center justify-center text-primary-500 group-hover:bg-primary-600/20 group-hover:scale-110 transition-all duration-300">
                 {feature.icon}
@@ -100,6 +103,7 @@ export default function Features() {
               {/* Hover accent */}
               <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-600 to-primary-400 rounded-b-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </div>
+            </ScrollAnimate>
           ))}
         </div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
 const navigation = [
@@ -32,6 +33,24 @@ const navigation = [
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToContact = (e: React.MouseEvent) => {
+    e.preventDefault();
+
+    if (pathname !== "/") {
+      // Navigate to home page first, then scroll
+      router.push("/#contact");
+    } else {
+      // Already on home page, just scroll
+      const contactSection = document.getElementById("contact");
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setMobileMenuOpen(false);
+  };
 
   return (
     <header className="fixed w-full z-50 bg-steel-900/95 backdrop-blur-md border-b border-white/5">
@@ -115,13 +134,13 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link
-              href="#contact"
-              aria-label="Contact us - navigate to contact form"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary-600 text-white text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all hover:shadow-lg hover:shadow-primary-600/25"
+            <button
+              onClick={scrollToContact}
+              aria-label="Request a quote - navigate to contact form"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-primary-600 text-white text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-500 transition-all shadow-lg shadow-primary-600/30 hover:shadow-xl hover:shadow-primary-500/40 hover:-translate-y-0.5 cursor-pointer"
             >
-              Contact Us
-            </Link>
+              Request a Quote
+            </button>
           </div>
 
           {/* Mobile menu button */}
@@ -212,13 +231,13 @@ export default function Header() {
                 )}
               </div>
             ))}
-            <Link
-              href="#contact"
-              aria-label="Contact us - navigate to contact form"
-              className="block mx-4 mt-4 px-6 py-3 bg-primary-600 text-white text-center font-display font-semibold uppercase tracking-wider rounded-sm"
+            <button
+              onClick={scrollToContact}
+              aria-label="Request a quote - navigate to contact form"
+              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-primary-600 text-white text-center font-display font-semibold uppercase tracking-wider rounded-sm shadow-lg shadow-primary-600/30 cursor-pointer"
             >
-              Contact Us
-            </Link>
+              Request a Quote
+            </button>
           </div>
         )}
       </nav>

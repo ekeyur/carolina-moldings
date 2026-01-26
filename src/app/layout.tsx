@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning className={`${oswald.variable} ${sourceSans.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${oswald.variable} ${sourceSans.variable}`}>
       <body suppressHydrationWarning>{children}</body>
     </html>
   );

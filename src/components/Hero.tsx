@@ -85,14 +85,21 @@ export default function Hero() {
             <span className="text-steel-500">, Inc.</span>
           </h1>
 
+          {/* Value Proposition */}
+          <p className="font-display text-lg sm:text-xl md:text-2xl text-white font-medium mb-6 opacity-0 animate-fade-in-up animate-delay-100 max-w-3xl">
+            Precision Injection Molding for the{" "}
+            <span className="text-primary-400">Natural Gas Industry</span>{" "}
+            since 1975
+          </p>
+
           {/* Tagline */}
-          <p className="font-display text-xl sm:text-2xl md:text-3xl text-steel-300 mb-4 opacity-0 animate-fade-in-up animate-delay-100">
+          <p className="text-lg text-steel-300 mb-4 opacity-0 animate-fade-in-up animate-delay-150">
             You can&apos;t steal from{" "}
             <span className="text-primary-500 font-semibold">Snap Seal™</span>
           </p>
 
           {/* Description */}
-          <p className="text-lg text-steel-400 max-w-2xl mb-10 opacity-0 animate-fade-in-up animate-delay-200">
+          <p className="text-base text-steel-400 max-w-2xl mb-10 opacity-0 animate-fade-in-up animate-delay-200">
             Industry-leading manufacturer of gas meter index covers,
             tamper-proof systems, and precision molded components. Trusted by
             utilities nationwide.
