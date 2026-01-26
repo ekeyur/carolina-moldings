@@ -24,7 +24,10 @@ export default function Hero() {
       <div className="hidden lg:block absolute inset-0 pointer-events-none overflow-hidden">
         {/* Main featured meter - American/Honeywell - right side */}
         <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-70">
-          <div className="relative w-full h-full opacity-0 animate-float-in-right animate-delay-300" style={{ animationFillMode: 'forwards' }}>
+          <div
+            className="relative w-full h-full opacity-0 animate-float-in-right animate-delay-300"
+            style={{ animationFillMode: "forwards" }}
+          >
             <Image
               src="/american-honeywell.png"
               alt="American Honeywell Gas Meter"
@@ -38,7 +41,10 @@ export default function Hero() {
 
         {/* Secondary meter - Rockwell/Sensus - left side, lower */}
         <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-30">
-          <div className="relative w-full h-full opacity-0 animate-float-in-left animate-delay-400" style={{ animationFillMode: 'forwards' }}>
+          <div
+            className="relative w-full h-full opacity-0 animate-float-in-left animate-delay-400"
+            style={{ animationFillMode: "forwards" }}
+          >
             <Image
               src="/rockwell-sensus.png"
               alt="Rockwell Sensus Gas Meter"
@@ -52,7 +58,10 @@ export default function Hero() {
 
         {/* Tertiary meter - Sprague/Itron - center top */}
         <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-25">
-          <div className="relative w-full h-full opacity-0 animate-float-in-down animate-delay-500" style={{ animationFillMode: 'forwards' }}>
+          <div
+            className="relative w-full h-full opacity-0 animate-float-in-down animate-delay-500"
+            style={{ animationFillMode: "forwards" }}
+          >
             <Image
               src="/sprague-itron.png"
               alt="Sprague Itron Gas Meter"
@@ -87,9 +96,9 @@ export default function Hero() {
 
           {/* Value Proposition */}
           <p className="font-display text-lg sm:text-xl md:text-2xl text-white font-medium mb-6 opacity-0 animate-fade-in-up animate-delay-100 max-w-3xl">
-            Precision Injection Molding for the{" "}
-            <span className="text-primary-400">Natural Gas Industry</span>{" "}
-            since 1975
+            Precision parts for the{" "}
+            <span className="text-primary-400">Natural Gas Industry</span> since
+            1975
           </p>
 
           {/* Tagline */}
