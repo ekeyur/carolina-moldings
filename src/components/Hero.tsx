@@ -20,10 +20,10 @@ export default function Hero() {
         <div className="absolute left-3/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white to-transparent"></div>
       </div>
 
-      {/* Gas Meter Images - Floating Display */}
-      <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[45%] h-[80%] pointer-events-none">
-        {/* Main featured meter - American/Honeywell */}
-        <div className="absolute right-[15%] top-[20%] w-64 h-64 opacity-80 animate-fade-in animate-delay-300">
+      {/* Gas Meter Images - Spread across page */}
+      <div className="hidden lg:block absolute inset-0 pointer-events-none overflow-hidden">
+        {/* Main featured meter - American/Honeywell - right side */}
+        <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-70 animate-fade-in animate-delay-300">
           <Image
             src="/american-honeywell.png"
             alt="American Honeywell Gas Meter"
@@ -33,8 +33,8 @@ export default function Hero() {
           />
         </div>
 
-        {/* Secondary meter - Rockwell/Sensus */}
-        <div className="absolute right-[40%] top-[50%] w-44 h-44 opacity-50 animate-fade-in animate-delay-400">
+        {/* Secondary meter - Rockwell/Sensus - left side, lower */}
+        <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-30 animate-fade-in animate-delay-400">
           <Image
             src="/rockwell-sensus.png"
             alt="Rockwell Sensus Gas Meter"
@@ -43,8 +43,8 @@ export default function Hero() {
           />
         </div>
 
-        {/* Tertiary meter - Sprague/Itron */}
-        <div className="absolute right-[5%] top-[60%] w-40 h-40 opacity-40 animate-fade-in animate-delay-500">
+        {/* Tertiary meter - Sprague/Itron - center top */}
+        <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-25 animate-fade-in animate-delay-500">
           <Image
             src="/sprague-itron.png"
             alt="Sprague Itron Gas Meter"
