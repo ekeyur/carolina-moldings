@@ -74,7 +74,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-40">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-24">
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 opacity-0 animate-fade-in">
@@ -142,7 +142,7 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-12 mt-16 pt-12 border-t border-white/10 opacity-0 animate-fade-in-up animate-delay-400">
+          <div className="flex flex-wrap gap-12 my-4 pt-12 border-t border-white/10 opacity-0 animate-fade-in-up animate-delay-400">
             <div>
               <p className="font-display text-4xl font-bold text-white">50+</p>
               <p className="text-sm text-steel-400 mt-1">Years Experience</p>
@@ -166,7 +166,39 @@ export default function Hero() {
         <span className="text-xs text-steel-500 uppercase tracking-widest">
           Scroll
         </span>
-        <div className="w-px h-12 bg-linear-to-b from-steel-500 to-transparent"></div>
+        {/* Animated mouse icon */}
+        <div className="relative w-6 h-10 border-2 border-steel-500 rounded-full flex justify-center animate-bounce-slow">
+          <div className="w-1 h-2 bg-steel-400 rounded-full mt-2 animate-scroll-wheel"></div>
+        </div>
+        {/* Animated chevrons */}
+        <div className="flex flex-col items-center -mt-1">
+          <svg
+            className="w-4 h-4 text-steel-500 animate-chevron-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+          <svg
+            className="w-4 h-4 text-steel-500 -mt-2 animate-chevron-2"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </div>
       </div>
     </section>
   );

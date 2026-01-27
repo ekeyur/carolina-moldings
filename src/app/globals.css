@@ -227,6 +227,55 @@
   }
 }
 
+/* Scroll indicator animations */
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes scroll-wheel {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@keyframes chevron-bounce {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(4px);
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+.animate-scroll-wheel {
+  animation: scroll-wheel 1.5s ease-in-out infinite;
+}
+
+.animate-chevron-1 {
+  animation: chevron-bounce 1.5s ease-in-out infinite;
+}
+
+.animate-chevron-2 {
+  animation: chevron-bounce 1.5s ease-in-out infinite;
+  animation-delay: 0.15s;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
