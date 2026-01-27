@@ -95,11 +95,11 @@ export default function Hero() {
           </h1>
 
           {/* Value Proposition */}
-          <p className="font-display text-lg sm:text-xl md:text-2xl text-white font-medium mb-6 opacity-0 animate-fade-in-up animate-delay-100 max-w-3xl">
+          {/* <p className="font-display text-lg sm:text-xl md:text-2xl text-white font-medium mb-6 opacity-0 animate-fade-in-up animate-delay-100 max-w-3xl">
             Precision parts for the{" "}
             <span className="text-primary-400">Natural Gas Industry</span> since
             1975
-          </p>
+          </p> */}
 
           {/* Tagline */}
           <p className="text-lg text-steel-300 mb-4 opacity-0 animate-fade-in-up animate-delay-150">
