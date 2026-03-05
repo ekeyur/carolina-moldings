@@ -86,12 +86,12 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6 opacity-0 animate-fade-in-up">
-            Carolina
+            <span className="text-primary-400">Carolina</span>
             <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-primary-600">
               Moldings
             </span>
-            <span className="text-steel-500">, Inc.</span>
+            <span className="text-white">, Inc.</span>
           </h1>
 
           {/* Value Proposition */}

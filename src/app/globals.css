@@ -4,18 +4,29 @@
   --font-display: var(--font-oswald), sans-serif;
   --font-body: var(--font-source-sans), sans-serif;
 
-  --color-primary-50: #fef2f2;
-  --color-primary-100: #fee2e2;
-  --color-primary-200: #fecaca;
-  --color-primary-300: #fca5a5;
-  --color-primary-400: #f87171;
-  --color-primary-500: #ef4444;
-  --color-primary-600: #b91c1c;
-  --color-primary-700: #991b1b;
-  --color-primary-800: #7f1d1d;
-  --color-primary-900: #450a0a;
+  --color-primary-50: #f0f7fd;
+  --color-primary-100: #daeef9;
+  --color-primary-200: #b0d9f3;
+  --color-primary-300: #78bfec;
+  --color-primary-400: #4ea8e0;
+  --color-primary-500: #4b9cd3;
+  --color-primary-600: #2e7db8;
+  --color-primary-700: #22619b;
+  --color-primary-800: #1a487a;
+  --color-primary-900: #0f2948;
 
-  --color-steel-50: #f8fafc;
+  --color-accent-50: #fef2f2;
+  --color-accent-100: #fee2e2;
+  --color-accent-200: #fecaca;
+  --color-accent-300: #fca5a5;
+  --color-accent-400: #f87171;
+  --color-accent-500: #ef4444;
+  --color-accent-600: #b91c1c;
+  --color-accent-700: #991b1b;
+  --color-accent-800: #7f1d1d;
+  --color-accent-900: #450a0a;
+
+  --color-steel-50: #eef4fb;
   --color-steel-100: #f1f5f9;
   --color-steel-200: #e2e8f0;
   --color-steel-300: #cbd5e1;
@@ -34,7 +45,7 @@
 
   body {
     @apply font-body text-steel-800 antialiased;
-    background-color: #fafbfc;
+    background-color: #f5f8fd;
   }
 
   h1,
@@ -49,10 +60,10 @@
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-3.5 font-display text-sm uppercase tracking-wider font-semibold 
-           bg-primary-600 text-white rounded-sm
-           hover:bg-primary-700 transition-all duration-300 
-           hover:shadow-lg hover:shadow-primary-600/25 hover:-translate-y-0.5
+    @apply inline-flex items-center justify-center px-8 py-3.5 font-display text-sm uppercase tracking-wider font-semibold
+           bg-accent-600 text-white rounded-sm
+           hover:bg-accent-700 transition-all duration-300
+           hover:shadow-lg hover:shadow-accent-600/25 hover:-translate-y-0.5
            active:translate-y-0;
   }
 

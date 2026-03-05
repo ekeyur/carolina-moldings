@@ -382,7 +382,7 @@ export default function MeterScrewsPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all"
             >
               Contact Us
             </Link>
