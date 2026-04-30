@@ -35,7 +35,7 @@ const catalogCategories = [
       </svg>
     ),
     products: [
-      { name: 'Snap Seal™ Tamper System', href: '/products/tamper-system' },
+      { name: <><span className="text-accent-600 font-semibold">Snap Seal™</span> Tamper System</>, href: '/products/tamper-system' },
     ],
   },
   {
@@ -95,28 +95,28 @@ export default function FullCatalogPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-steel-900 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-primary-50 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-600/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-100/30 rounded-full blur-3xl"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-400 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Complete Selection
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
             Full Product Catalog
           </h1>
-          <p className="text-steel-400 text-lg max-w-2xl">
+          <p className="text-steel-600 text-lg max-w-2xl">
             Browse our complete range of gas meter products. From index covers to tamper systems,
             we have everything you need for meter installation, maintenance, and security.
           </p>
@@ -133,14 +133,14 @@ export default function FullCatalogPage() {
                 className="bg-white rounded-xl border border-steel-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Category Header */}
-                <div className="p-6 bg-steel-900 text-white">
-                  <div className="w-16 h-16 mb-4 bg-primary-600/20 rounded-lg flex items-center justify-center text-primary-400">
+                <div className="p-6 bg-primary-50 border-b border-steel-200">
+                  <div className="w-16 h-16 mb-4 bg-primary-100 border border-primary-200 rounded-lg flex items-center justify-center text-primary-600">
                     {category.icon}
                   </div>
-                  <h2 className="font-display text-xl font-bold mb-2">
+                  <h2 className="font-display text-xl font-bold text-steel-900 mb-2">
                     {category.title}
                   </h2>
-                  <p className="text-steel-400 text-sm">
+                  <p className="text-steel-600 text-sm">
                     {category.description}
                   </p>
                 </div>
@@ -152,7 +152,7 @@ export default function FullCatalogPage() {
                   </p>
                   <ul className="space-y-2">
                     {category.products.map((product) => (
-                      <li key={product.name}>
+                      <li key={product.href}>
                         <Link
                           href={product.href}
                           className="group flex items-center justify-between p-3 rounded-lg hover:bg-steel-50 transition-colors"
@@ -221,7 +221,7 @@ export default function FullCatalogPage() {
                 ),
               },
               {
-                title: 'Snap Seal™',
+                title: <><span className="text-accent-600">Snap Seal™</span></>,
                 description: 'Industry-leading tamper-evident security technology.',
                 icon: (
                   <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -230,7 +230,7 @@ export default function FullCatalogPage() {
                 ),
               },
             ].map((feature) => (
-              <div key={feature.title} className="text-center">
+              <div key={feature.description} className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
                   {feature.icon}
                 </div>
@@ -247,15 +247,15 @@ export default function FullCatalogPage() {
       </section>
 
       {/* PDF Download */}
-      <section className="py-16 lg:py-24 bg-steel-50">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="p-8 md:p-12 bg-steel-900 rounded-xl">
+          <div className="p-8 md:p-12 bg-steel-50 border border-steel-200 rounded-xl">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
-                <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3">
+                <h3 className="font-display text-2xl md:text-3xl font-bold text-steel-900 mb-3">
                   Download Our Complete Catalog
                 </h3>
-                <p className="text-steel-400 max-w-xl">
+                <p className="text-steel-600 max-w-xl">
                   Get our full product catalog in PDF format for offline reference.
                   Includes all specifications, model numbers, and compatibility information.
                 </p>
@@ -263,7 +263,7 @@ export default function FullCatalogPage() {
               <a
                 href="/CMI-Catalog-2023.pdf"
                 target="_blank"
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all hover:shadow-lg hover:shadow-accent-600/25 whitespace-nowrap"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all hover:shadow-lg hover:shadow-primary-600/25 whitespace-nowrap"
               >
                 Download PDF
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -276,19 +276,19 @@ export default function FullCatalogPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-steel-900">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-steel-900 mb-6">
             Can&apos;t Find What You Need?
           </h2>
-          <p className="text-steel-400 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-steel-600 text-lg mb-8 max-w-2xl mx-auto">
             We offer custom solutions and can help you find the right products for your specific requirements.
             Contact us today and let our experts assist you.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
             >
               Contact Us
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -297,7 +297,7 @@ export default function FullCatalogPage() {
             </Link>
             <a
               href="tel:1-800-523-7475"
-              className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white/30 font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-white/10 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-transparent text-steel-700 border-2 border-steel-300 font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-steel-100 transition-all"
             >
               1-800-523-7475
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

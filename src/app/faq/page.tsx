@@ -8,13 +8,11 @@ import Link from "next/link";
 const faqs = [
   {
     question: "What products does Carolina Moldings manufacture?",
-    answer:
-      "We manufacture a wide range of gas meter products including index covers for American/Honeywell, Rockwell/Sensus, and Sprague/Itron meters, tamper-evident Snap Seal™ systems, meter screws, paint covers, and various miscellaneous accessories.",
+    answer: <>We manufacture a wide range of gas meter products including index covers for American/Honeywell, Rockwell/Sensus, and Sprague/Itron meters, tamper-evident <span className="text-accent-600 font-semibold">Snap Seal™</span> systems, meter screws, paint covers, and various miscellaneous accessories.</>,
   },
   {
-    question: "What is the Snap Seal™ tamper system?",
-    answer:
-      "Snap Seal™ is our proprietary tamper-evident technology designed to protect gas meters from unauthorized access. The system provides visible evidence if tampering has occurred, helping utilities maintain meter integrity and prevent theft.",
+    question: <>What is the <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper system?</>,
+    answer: <><span className="text-accent-600 font-semibold">Snap Seal™</span> is our proprietary tamper-evident technology designed to protect gas meters from unauthorized access. The system provides visible evidence if tampering has occurred, helping utilities maintain meter integrity and prevent theft.</>,
   },
   {
     question: "Can you create custom molded products?",
@@ -66,17 +64,17 @@ export default function FAQPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-steel-900">
+      <section className="pt-32 pb-16 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Support
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
             Frequently Asked
             <br />
             Questions
           </h1>
-          <p className="text-steel-400 text-lg max-w-2xl">
+          <p className="text-steel-600 text-lg max-w-2xl">
             Find answers to common questions about our products, services, and
             ordering process.
           </p>
@@ -139,7 +137,7 @@ export default function FAQPage() {
             </p>
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
             >
               Contact Us
               <svg

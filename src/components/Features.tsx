@@ -43,19 +43,19 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="relative py-24 lg:py-32 bg-steel-900 overflow-hidden">
+    <section className="relative py-24 lg:py-32 bg-steel-50 overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-steel-700/30 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-steel-200/40 rounded-full blur-3xl"></div>
       </div>
-      
+
       {/* Grid pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-30">
         <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" strokeWidth="1"/>
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#cbd5e1" strokeWidth="1"/>
             </pattern>
           </defs>
           <rect width="100%" height="100%" fill="url(#grid)" />
@@ -66,14 +66,14 @@ export default function Features() {
         {/* Section Header */}
         <ScrollAnimate>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+            <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
               Why Choose Us
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-6">
               You can&apos;t steal from{' '}
-              <span className="text-primary-500">Snap Seal™</span>
+              <span className="text-accent-600 font-semibold">Snap Seal™</span>
             </h2>
-            <p className="text-steel-400 text-lg">
+            <p className="text-steel-600 text-lg">
               For over 50 years, we&apos;ve been the trusted name in gas meter products.
               Here&apos;s what sets us apart.
             </p>
@@ -85,18 +85,18 @@ export default function Features() {
           {features.map((feature, index) => (
             <ScrollAnimate key={feature.title} delay={index * 100} animation="scale">
               <div
-                className="group relative p-8 bg-steel-800/50 backdrop-blur-sm rounded-lg border border-steel-700/50 hover:border-primary-500/50 transition-all duration-300 hover:bg-steel-800/80 h-full"
+                className="group relative p-8 bg-white rounded-lg border border-steel-200 hover:border-primary-400/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary-100/50 h-full"
               >
               {/* Icon */}
-              <div className="w-16 h-16 mb-6 bg-primary-600/10 border border-primary-600/20 rounded-lg flex items-center justify-center text-primary-500 group-hover:bg-primary-600/20 group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 bg-primary-50 border border-primary-200 rounded-lg flex items-center justify-center text-primary-600 group-hover:bg-primary-100 group-hover:scale-110 transition-all duration-300">
                 {feature.icon}
               </div>
 
               {/* Content */}
-              <h3 className="font-display text-xl font-semibold text-white mb-3">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-3">
                 {feature.title}
               </h3>
-              <p className="text-steel-400 text-sm leading-relaxed">
+              <p className="text-steel-600 text-sm leading-relaxed">
                 {feature.description}
               </p>
 

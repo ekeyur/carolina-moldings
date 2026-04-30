@@ -15,15 +15,15 @@ export default function PrivacyPolicyPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-12 bg-steel-900 relative overflow-hidden">
+      <section className="pt-32 pb-12 bg-primary-50 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">
+          <h1 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-4">
             Privacy Policy
           </h1>
-          <p className="text-steel-400">Last updated: January 2025</p>
+          <p className="text-steel-600">Last updated: January 2025</p>
         </div>
       </section>
 

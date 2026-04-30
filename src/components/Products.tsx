@@ -71,7 +71,7 @@ export default function Products() {
 
                 {/* Badge */}
                 {brand.badge && (
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-accent-600 text-white text-xs font-display font-semibold uppercase tracking-wider rounded-sm z-10">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-primary-600 text-white text-xs font-display font-semibold uppercase tracking-wider rounded-sm z-10">
                     {brand.badge}
                   </div>
                 )}

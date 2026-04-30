@@ -40,10 +40,8 @@ export default function Header() {
     e.preventDefault();
 
     if (pathname !== "/") {
-      // Navigate to home page first, then scroll
       router.push("/#contact");
     } else {
-      // Already on home page, just scroll
       const contactSection = document.getElementById("contact");
       if (contactSection) {
         contactSection.scrollIntoView({ behavior: "smooth" });
@@ -53,24 +51,24 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed w-full z-50 bg-steel-900/95 backdrop-blur-md border-b border-white/5">
+    <header className="fixed w-full z-50 bg-primary-600/95 backdrop-blur-md border-b border-white/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <div className="w-12 h-12 bg-primary-600 rounded-sm flex items-center justify-center transform group-hover:scale-105 transition-transform">
-                <span className="font-display text-xl font-bold text-white">
+              <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center transform group-hover:scale-105 transition-transform">
+                <span className="font-display text-xl font-bold text-primary-700">
                   CMI
                 </span>
               </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary-500 rounded-sm opacity-50"></div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary-300 rounded-sm opacity-60"></div>
             </div>
             <div>
               <p className="font-display text-base sm:text-lg font-semibold text-white tracking-wide">
                 Carolina Moldings
               </p>
-              <p className="text-xs text-steel-400 font-medium tracking-wider uppercase">
+              <p className="text-xs text-primary-100 font-medium tracking-wider uppercase">
                 Since 1975
               </p>
             </div>
@@ -83,7 +81,7 @@ export default function Header() {
                 {item.children ? (
                   <>
                     <button
-                      className="px-4 py-2 text-sm font-medium text-steel-300 hover:text-white transition-colors flex items-center gap-1"
+                      className="px-4 py-2 text-sm font-medium text-white/85 hover:text-white transition-colors flex items-center gap-1"
                       onMouseEnter={() => setProductsOpen(true)}
                       onMouseLeave={() => setProductsOpen(false)}
                     >
@@ -107,12 +105,12 @@ export default function Header() {
                       onMouseEnter={() => setProductsOpen(true)}
                       onMouseLeave={() => setProductsOpen(false)}
                     >
-                      <div className="bg-steel-800 border border-steel-700/50 rounded-lg shadow-xl shadow-black/20 py-2 min-w-55">
+                      <div className="bg-white border border-primary-200 rounded-lg shadow-xl shadow-primary-900/20 py-2 min-w-55">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-steel-300 hover:text-white hover:bg-steel-700/50 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-steel-700 hover:text-primary-700 hover:bg-primary-50 transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -123,7 +121,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-4 py-2 text-sm font-medium text-steel-300 hover:text-white transition-colors"
+                    className="px-4 py-2 text-sm font-medium text-white/85 hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -137,7 +135,7 @@ export default function Header() {
             <button
               onClick={scrollToContact}
               aria-label="Request a quote - navigate to contact form"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-accent-600 text-white text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all duration-300 hover:shadow-lg hover:shadow-accent-600/25 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-primary-700 text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-900/20 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               Request a Quote
             </button>
@@ -145,7 +143,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-steel-300 hover:text-white"
+            className="lg:hidden p-2 text-white/85 hover:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open menu</span>
@@ -183,14 +181,14 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-steel-700/50">
+          <div className="lg:hidden py-4 border-t border-white/20">
             {navigation.map((item) => (
               <div key={item.name}>
                 {item.children ? (
                   <div>
                     <button
                       onClick={() => setProductsOpen(!productsOpen)}
-                      className="w-full flex items-center justify-between px-4 py-3 text-steel-300 hover:text-white"
+                      className="w-full flex items-center justify-between px-4 py-3 text-white/85 hover:text-white"
                     >
                       {item.name}
                       <svg
@@ -208,12 +206,12 @@ export default function Header() {
                       </svg>
                     </button>
                     {productsOpen && (
-                      <div className="pl-4 border-l border-steel-700 ml-4">
+                      <div className="pl-4 border-l border-white/30 ml-4">
                         {item.children.map((child) => (
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-steel-400 hover:text-white"
+                            className="block px-4 py-2 text-sm text-white/75 hover:text-white"
                           >
                             {child.name}
                           </Link>
@@ -224,7 +222,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-steel-300 hover:text-white"
+                    className="block px-4 py-3 text-white/85 hover:text-white"
                   >
                     {item.name}
                   </Link>
@@ -234,7 +232,7 @@ export default function Header() {
             <button
               onClick={scrollToContact}
               aria-label="Request a quote - navigate to contact form"
-              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-accent-600 text-white text-center font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all duration-300 cursor-pointer"
+              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-white text-primary-700 text-center font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 cursor-pointer"
             >
               Request a Quote
             </button>

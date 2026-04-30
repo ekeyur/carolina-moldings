@@ -90,37 +90,37 @@ export default function TamperSystemPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-steel-900 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-primary-50 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-600/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary-100/30 rounded-full blur-3xl"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-400 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Security Products
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
             Tamper System
           </h1>
-          <p className="text-steel-400 text-lg max-w-2xl mb-8">
-            Our comprehensive Snap Seal™ tamper-evident security system protects gas meters
+          <p className="text-steel-600 text-lg max-w-2xl mb-8">
+            Our comprehensive <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper-evident security system protects gas meters
             from theft and unauthorized access. Industry-trusted technology since 1975.
           </p>
-          <div className="inline-flex items-center px-6 py-3 bg-primary-600/20 border border-primary-500/30 rounded-lg">
-            <svg className="w-6 h-6 text-primary-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="inline-flex items-center px-6 py-3 bg-primary-100 border border-primary-300 rounded-lg">
+            <svg className="w-6 h-6 text-primary-600 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
             </svg>
-            <span className="text-primary-400 font-display font-semibold">
-              You can&apos;t steal from Snap Seal™!
+            <span className="text-steel-800 font-display font-semibold">
+              You can&apos;t steal from <span className="text-accent-600">Snap Seal™</span>!
             </span>
           </div>
         </div>
@@ -135,7 +135,7 @@ export default function TamperSystemPage() {
                 See How It Works
               </h2>
               <p className="text-steel-600 text-lg mb-6">
-                Our Snap Seal™ tamper system provides visible tamper evidence on gas meters.
+                Our <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper system provides visible tamper evidence on gas meters.
                 The diagram shows how different seals and cups work together to protect meter access points.
               </p>
               <ul className="space-y-3">
@@ -171,11 +171,11 @@ export default function TamperSystemPage() {
       </section>
 
       {/* Snap Seals Section */}
-      <section className="py-16 lg:py-24 bg-steel-50">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-16">
             <h2 className="font-display text-2xl md:text-3xl font-bold text-steel-900 mb-4 pb-4 border-b border-steel-200">
-              Snap Seals™
+              <span className="text-accent-600">Snap Seals™</span>
             </h2>
             <p className="text-steel-600">
               Tamper-evident seals available in multiple colors to match your utility&apos;s requirements.
@@ -203,7 +203,7 @@ export default function TamperSystemPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                         </svg>
                       </div>
-                      <p className="text-steel-500 text-sm font-medium">Snap Seal™</p>
+                      <p className="text-accent-600 text-sm font-semibold">Snap Seal™</p>
                     </div>
                   )}
                 </div>
@@ -237,7 +237,7 @@ export default function TamperSystemPage() {
               Screw Cups
             </h2>
             <p className="text-steel-600">
-              Compatible screw cups designed to work with our Snap Seal™ tamper system.
+              Compatible screw cups designed to work with our <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper system.
             </p>
           </div>
 
@@ -285,11 +285,11 @@ export default function TamperSystemPage() {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 lg:py-24 bg-steel-50">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-steel-900 mb-6">
-              How the Snap Seal™ System Works
+              How the <span className="text-accent-600">Snap Seal™</span> System Works
             </h2>
             <p className="text-steel-600">
               Our tamper-evident system provides visible proof of any unauthorized access attempts.
@@ -305,8 +305,8 @@ export default function TamperSystemPage() {
               },
               {
                 step: '2',
-                title: 'Apply the Snap Seal™',
-                description: 'The Snap Seal™ snaps securely into the cup, covering the screw head completely.',
+                title: <>Apply the <span className="text-accent-600">Snap Seal™</span></>,
+                description: <>The <span className="text-accent-600 font-semibold">Snap Seal™</span> snaps securely into the cup, covering the screw head completely.</>,
               },
               {
                 step: '3',
@@ -336,11 +336,11 @@ export default function TamperSystemPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-3xl md:text-4xl font-bold text-steel-900 mb-6">
-                Why Choose Snap Seal™?
+                Why Choose <span className="text-accent-600">Snap Seal™</span>?
               </h2>
               <div className="space-y-4 text-steel-600 leading-relaxed">
                 <p>
-                  The Snap Seal™ tamper system has been protecting gas meters for utilities
+                  The <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper system has been protecting gas meters for utilities
                   across North America for decades. Our unique design makes it virtually
                   impossible to remove the seal without leaving visible evidence.
                 </p>
@@ -374,7 +374,7 @@ export default function TamperSystemPage() {
                     <svg className="w-24 h-24 mx-auto mb-4 opacity-90" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg>
-                    <p className="font-display text-2xl font-bold uppercase tracking-wider">Snap Seal™</p>
+                    <p className="font-display text-2xl font-bold uppercase tracking-wider text-accent-300">Snap Seal™</p>
                     <p className="text-primary-200 mt-2">Trusted Security</p>
                   </div>
                 </div>
@@ -385,25 +385,25 @@ export default function TamperSystemPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-steel-900">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-steel-900 mb-6">
             Protect Your Meters Today
           </h2>
-          <p className="text-steel-400 text-lg mb-8 max-w-2xl mx-auto">
-            Contact us to learn more about the Snap Seal™ tamper system or to place an order.
+          <p className="text-steel-600 text-lg mb-8 max-w-2xl mx-auto">
+            Contact us to learn more about the <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper system or to place an order.
             Our team can help you find the right seals and cups for your meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
             >
               Contact Us
             </Link>
             <Link
               href="/products"
-              className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white/30 font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-white/10 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-transparent text-steel-700 border-2 border-steel-300 font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-steel-100 transition-all"
             >
               View All Products
             </Link>

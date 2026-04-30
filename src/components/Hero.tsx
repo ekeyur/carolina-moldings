@@ -10,20 +10,20 @@ export default function Hero() {
       <div className="absolute inset-0 noise-overlay"></div>
 
       {/* Geometric accents */}
-      <div className="absolute top-1/4 -right-48 w-96 h-96 bg-red-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-red-900/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-1/4 -right-48 w-96 h-96 bg-primary-300/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary-200/30 rounded-full blur-3xl"></div>
 
       {/* Grid lines */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute left-1/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white to-transparent"></div>
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white to-transparent"></div>
-        <div className="absolute left-3/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-white to-transparent"></div>
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute left-1/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary-300 to-transparent"></div>
+        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary-300 to-transparent"></div>
+        <div className="absolute left-3/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary-300 to-transparent"></div>
       </div>
 
       {/* Gas Meter Images - Spread across page */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none overflow-hidden">
         {/* Main featured meter - American/Honeywell - right side */}
-        <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-70">
+        <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-60">
           <div
             className="relative w-full h-full opacity-0 animate-float-in-right animate-delay-300"
             style={{ animationFillMode: "forwards" }}
@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
 
         {/* Secondary meter - Rockwell/Sensus - left side, lower */}
-        <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-30">
+        <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-25">
           <div
             className="relative w-full h-full opacity-0 animate-float-in-left animate-delay-400"
             style={{ animationFillMode: "forwards" }}
@@ -57,7 +57,7 @@ export default function Hero() {
         </div>
 
         {/* Tertiary meter - Sprague/Itron - center top */}
-        <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-25">
+        <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-20">
           <div
             className="relative w-full h-full opacity-0 animate-float-in-down animate-delay-500"
             style={{ animationFillMode: "forwards" }}
@@ -77,38 +77,31 @@ export default function Hero() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-24">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-8 opacity-0 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 border border-primary-300 rounded-full mb-8 opacity-0 animate-fade-in">
             <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
-            <span className="text-sm text-steel-300 font-medium">
+            <span className="text-sm text-primary-800 font-medium">
               Family Owned Since 1975
             </span>
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[0.9] tracking-tight mb-6 opacity-0 animate-fade-in-up">
-            <span className="text-primary-400">Carolina</span>
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-steel-900 leading-[0.9] tracking-tight mb-6 opacity-0 animate-fade-in-up">
+            <span className="text-steel-900">Carolina</span>
             <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-400 to-primary-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-600 to-primary-400">
               Moldings
             </span>
-            <span className="text-white">, Inc.</span>
+            <span className="text-steel-900">, Inc.</span>
           </h1>
 
-          {/* Value Proposition */}
-          {/* <p className="font-display text-lg sm:text-xl md:text-2xl text-white font-medium mb-6 opacity-0 animate-fade-in-up animate-delay-100 max-w-3xl">
-            Precision parts for the{" "}
-            <span className="text-primary-400">Natural Gas Industry</span> since
-            1975
-          </p> */}
-
           {/* Tagline */}
-          <p className="text-lg text-steel-300 mb-4 opacity-0 animate-fade-in-up animate-delay-150">
+          <p className="text-lg text-steel-700 mb-4 opacity-0 animate-fade-in-up animate-delay-150">
             You can&apos;t steal from{" "}
-            <span className="text-primary-500 font-semibold">Snap Seal™</span>
+            <span className="text-accent-600 font-semibold">Snap Seal™</span>
           </p>
 
           {/* Description */}
-          <p className="text-base text-steel-400 max-w-2xl mb-10 opacity-0 animate-fade-in-up animate-delay-200">
+          <p className="text-base text-steel-600 max-w-2xl mb-10 opacity-0 animate-fade-in-up animate-delay-200">
             Industry-leading manufacturer of gas meter index covers,
             tamper-proof systems, and precision molded components. Trusted by
             utilities nationwide.
@@ -142,20 +135,20 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-12 my-4 pt-12 border-t border-white/10 opacity-0 animate-fade-in-up animate-delay-400">
+          <div className="flex flex-wrap gap-12 my-4 pt-12 border-t border-primary-200 opacity-0 animate-fade-in-up animate-delay-400">
             <div>
-              <p className="font-display text-4xl font-bold text-white">50+</p>
-              <p className="text-sm text-steel-400 mt-1">Years Experience</p>
+              <p className="font-display text-4xl font-bold text-steel-900">50+</p>
+              <p className="text-sm text-steel-600 mt-1">Years Experience</p>
             </div>
             <div>
-              <p className="font-display text-4xl font-bold text-white">100+</p>
-              <p className="text-sm text-steel-400 mt-1">Products</p>
+              <p className="font-display text-4xl font-bold text-steel-900">100+</p>
+              <p className="text-sm text-steel-600 mt-1">Products</p>
             </div>
             <div>
-              <p className="font-display text-4xl font-bold text-white">
+              <p className="font-display text-4xl font-bold text-steel-900">
                 1000+
               </p>
-              <p className="text-sm text-steel-400 mt-1">Clients Served</p>
+              <p className="text-sm text-steel-600 mt-1">Clients Served</p>
             </div>
           </div>
         </div>
@@ -163,17 +156,15 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-0 animate-fade-in animate-delay-500">
-        <span className="text-xs text-steel-500 uppercase tracking-widest">
+        <span className="text-xs text-primary-500 uppercase tracking-widest">
           Scroll
         </span>
-        {/* Animated mouse icon */}
-        <div className="relative w-6 h-10 border-2 border-steel-500 rounded-full flex justify-center animate-bounce-slow">
-          <div className="w-1 h-2 bg-steel-400 rounded-full mt-2 animate-scroll-wheel"></div>
+        <div className="relative w-6 h-10 border-2 border-primary-400 rounded-full flex justify-center animate-bounce-slow">
+          <div className="w-1 h-2 bg-primary-400 rounded-full mt-2 animate-scroll-wheel"></div>
         </div>
-        {/* Animated chevrons */}
         <div className="flex flex-col items-center -mt-1">
           <svg
-            className="w-4 h-4 text-steel-500 animate-chevron-1"
+            className="w-4 h-4 text-primary-400 animate-chevron-1"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -186,7 +177,7 @@ export default function Hero() {
             />
           </svg>
           <svg
-            className="w-4 h-4 text-steel-500 -mt-2 animate-chevron-2"
+            className="w-4 h-4 text-primary-400 -mt-2 animate-chevron-2"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"

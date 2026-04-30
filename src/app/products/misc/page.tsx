@@ -61,14 +61,14 @@ export default function MiscPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-steel-900 relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-primary-50 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-600/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-400 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -85,13 +85,13 @@ export default function MiscPage() {
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Accessories
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
             Miscellaneous Products
           </h1>
-          <p className="text-steel-400 text-lg max-w-2xl">
+          <p className="text-steel-600 text-lg max-w-2xl">
             Additional gas meter accessories including ERT protectors,
             instrument drive covers, regulator vents, and hardware components.
           </p>
@@ -234,7 +234,7 @@ export default function MiscPage() {
       </section>
 
       {/* Related Products */}
-      <section className="py-16 lg:py-24 bg-steel-50">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-steel-900 mb-8">
             Related Products
@@ -278,25 +278,25 @@ export default function MiscPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-steel-900">
+      <section className="py-16 lg:py-24 bg-primary-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-steel-900 mb-6">
             Need Accessories?
           </h2>
-          <p className="text-steel-400 text-lg mb-8 max-w-2xl mx-auto">
+          <p className="text-steel-600 text-lg mb-8 max-w-2xl mx-auto">
             Contact us today to place an order or inquire about additional
             accessories for your gas meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
             >
               Contact Us
             </Link>
             <Link
               href="/products/full-catalog"
-              className="inline-flex items-center px-8 py-4 bg-transparent text-white border-2 border-white/30 font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-white/10 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-transparent text-steel-700 border-2 border-steel-300 font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-steel-100 transition-all"
             >
               View Full Catalog
             </Link>

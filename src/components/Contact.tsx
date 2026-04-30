@@ -29,21 +29,21 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="relative py-24 lg:py-32 bg-steel-900 overflow-hidden"
+      className="relative py-24 lg:py-32 bg-white overflow-hidden"
     >
       {/* Background effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-600/5 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-steel-700/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-1/4 right-0 w-96 h-96 bg-primary-100/50 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-steel-100/60 rounded-full blur-3xl"></div>
       </div>
 
       {/* Grid overlay */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-40">
         <div
           className="h-full w-full"
           style={{
             backgroundImage:
-              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+              "linear-gradient(to right, #e2e8f0 1px, transparent 1px), linear-gradient(to bottom, #e2e8f0 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         ></div>
@@ -54,13 +54,13 @@ export default function Contact() {
           {/* Contact Info */}
           <ScrollAnimate animation="left">
             <div>
-              <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+              <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
               Get In Touch
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
+            <h2 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-6">
               Contact Us
             </h2>
-            <p className="text-steel-400 text-lg mb-12 max-w-lg">
+            <p className="text-steel-600 text-lg mb-12 max-w-lg">
               We are available to answer any and all questions over the phone
               about prices and products Mon-Fri 9am-3pm EST. For anything else
               please e-mail us and we will get back to you as soon as possible.
@@ -92,10 +92,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-white mb-1">
+                  <h3 className="font-display text-lg font-semibold text-steel-900 mb-1">
                     Address
                   </h3>
-                  <p className="text-steel-400">
+                  <p className="text-steel-600">
                     3600 Woodpark Blvd. Suite A<br />
                     Charlotte NC, 28206
                   </p>
@@ -120,12 +120,12 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-white mb-1">
+                  <h3 className="font-display text-lg font-semibold text-steel-900 mb-1">
                     Phone
                   </h3>
                   <a
                     href="tel:18005237475"
-                    className="text-steel-400 hover:text-primary-500 transition-colors"
+                    className="text-steel-600 hover:text-primary-600 transition-colors"
                   >
                     1-800-523-7475
                   </a>
@@ -150,12 +150,12 @@ export default function Contact() {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="font-display text-lg font-semibold text-white mb-1">
+                  <h3 className="font-display text-lg font-semibold text-steel-900 mb-1">
                     Email
                   </h3>
                   <a
                     href="mailto:Contact@CarolinaMoldings.com"
-                    className="text-steel-400 hover:text-primary-500 transition-colors"
+                    className="text-steel-600 hover:text-primary-600 transition-colors"
                   >
                     contact@carolinamoldings.com
                   </a>
@@ -164,14 +164,14 @@ export default function Contact() {
             </div>
 
             {/* Business Hours */}
-            <div className="mt-12 p-6 bg-steel-800/50 border border-steel-700/50 rounded-lg">
-              <h3 className="font-display text-lg font-semibold text-white mb-3">
+            <div className="mt-12 p-6 bg-steel-50 border border-steel-200 rounded-lg">
+              <h3 className="font-display text-lg font-semibold text-steel-900 mb-3">
                 Business Hours
               </h3>
-              <div className="space-y-2 text-steel-400">
+              <div className="space-y-2 text-steel-600">
                 <div className="flex justify-between">
                   <span>Monday - Friday</span>
-                  <span className="text-white">9:00 AM - 3:00 PM EST</span>
+                  <span className="text-steel-900 font-medium">9:00 AM - 3:00 PM EST</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Saturday - Sunday</span>

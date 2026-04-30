@@ -78,15 +78,15 @@ export default function ProductsPage() {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-steel-900">
+      <section className="pt-32 pb-16 bg-primary-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Our Products
           </p>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight mb-6">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
             Full Product Catalog
           </h1>
-          <p className="text-steel-400 text-lg max-w-2xl">
+          <p className="text-steel-600 text-lg max-w-2xl">
             Browse our complete range of gas meter index covers, tamper systems,
             and accessories. Quality products trusted by utilities nationwide
             since 1975.
@@ -163,13 +163,13 @@ export default function ProductsPage() {
           ))}
 
           {/* PDF Download */}
-          <div className="mt-16 p-8 bg-steel-900 rounded-xl">
+          <div className="mt-16 p-8 bg-steel-50 border border-steel-200 rounded-xl">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
               <div>
-                <h3 className="font-display text-2xl font-bold text-white mb-2">
+                <h3 className="font-display text-2xl font-bold text-steel-900 mb-2">
                   Download Our Complete Catalog
                 </h3>
-                <p className="text-steel-400">
+                <p className="text-steel-600">
                   Get our full product catalog in PDF format for offline
                   reference.
                 </p>
@@ -177,7 +177,7 @@ export default function ProductsPage() {
               <a
                 href="/CMI-Catalog-2023.pdf"
                 target="_blank"
-                className="inline-flex items-center justify-center px-8 py-4 bg-accent-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-700 transition-all hover:shadow-lg hover:shadow-accent-600/25"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all hover:shadow-lg hover:shadow-primary-600/25"
               >
                 Download PDF
                 <svg
