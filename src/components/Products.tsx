@@ -58,20 +58,24 @@ export default function Products() {
                 className="group relative bg-steel-50 rounded-lg overflow-hidden border border-steel-200 hover:border-primary-300 transition-all duration-300 hover:shadow-xl hover:shadow-steel-200/50 block"
               >
               {/* Image */}
-              <div className="relative h-64 bg-linear-to-br from-steel-100 to-steel-200 overflow-hidden">
+              <div className="relative h-64 bg-linear-to-br from-primary-50 to-primary-100 overflow-hidden">
                 <Image
                   src={brand.image}
                   alt={brand.name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-contain p-6 transition-transform duration-300 group-hover:scale-110"
+                  className="object-contain p-6 transition-all duration-300 group-hover:scale-110"
+                  style={{
+                    filter:
+                      "contrast(1.2) saturate(1.35) brightness(1.05) drop-shadow(0 0 20px rgba(30,158,219,0.55)) drop-shadow(0 4px 14px rgba(219,20,20,0.25))",
+                  }}
                 />
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-primary-600/0 group-hover:bg-primary-600/10 transition-colors duration-300"></div>
+                <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/10 transition-colors duration-300"></div>
 
                 {/* Badge */}
                 {brand.badge && (
-                  <div className="absolute top-4 right-4 px-3 py-1 bg-primary-600 text-white text-xs font-display font-semibold uppercase tracking-wider rounded-sm z-10">
+                  <div className="absolute top-4 right-4 px-3 py-1 bg-primary-500 text-white text-xs font-display font-semibold uppercase tracking-wider rounded-sm z-10">
                     {brand.badge}
                   </div>
                 )}

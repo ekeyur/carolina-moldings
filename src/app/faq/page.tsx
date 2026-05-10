@@ -8,11 +8,34 @@ import Link from "next/link";
 const faqs = [
   {
     question: "What products does Carolina Moldings manufacture?",
-    answer: <>We manufacture a wide range of gas meter products including index covers for American/Honeywell, Rockwell/Sensus, and Sprague/Itron meters, tamper-evident <span className="text-accent-600 font-semibold">Snap Seal™</span> systems, meter screws, paint covers, and various miscellaneous accessories.</>,
+    answer: (
+      <>
+        We manufacture a wide range of gas meter products including index covers
+        for American/Honeywell, Rockwell/Sensus, and Sprague/Itron meters,
+        tamper-evident{" "}
+        <span className="text-accent-600 font-semibold">Snap Seal™</span>{" "}
+        systems, meter screws, paint covers, and various miscellaneous
+        accessories.
+      </>
+    ),
   },
   {
-    question: <>What is the <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper system?</>,
-    answer: <><span className="text-accent-600 font-semibold">Snap Seal™</span> is our proprietary tamper-evident technology designed to protect gas meters from unauthorized access. The system provides visible evidence if tampering has occurred, helping utilities maintain meter integrity and prevent theft.</>,
+    question: (
+      <>
+        What is the{" "}
+        <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper
+        system?
+      </>
+    ),
+    answer: (
+      <>
+        <span className="text-accent-600 font-semibold">Snap Seal™</span> is our
+        proprietary tamper-evident technology designed to protect gas meters
+        from unauthorized access. The system provides visible evidence if
+        tampering has occurred, helping utilities maintain meter integrity and
+        prevent theft.
+      </>
+    ),
   },
   {
     question: "Can you create custom molded products?",
@@ -32,7 +55,7 @@ const faqs = [
   {
     question: "How can I place an order?",
     answer:
-      "You can place orders by calling us at 1-800-523-7475 during business hours, or by emailing us at contact@carolinaMoldings.com. You can also use our contact form on the website.",
+      "You can place orders by calling us at 1-800-523-7475 during business hours, or by emailing us at contact@carolinamoldings.com. You can also use our contact form on the website.",
   },
   {
     question: "Do you offer wholesale pricing?",
@@ -137,7 +160,7 @@ export default function FAQPage() {
             </p>
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
             >
               Contact Us
               <svg

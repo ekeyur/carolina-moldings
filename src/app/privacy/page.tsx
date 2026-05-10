@@ -73,10 +73,10 @@ export default function PrivacyPolicyPage() {
               <p>
                 Questions about this policy? Contact us at{" "}
                 <a
-                  href="mailto:Contact@CarolinaMoldings.com"
+                  href="mailto:contact@carolinamoldings.com"
                   className="text-primary-600 hover:text-primary-700"
                 >
-                  contact@carolinaMoldings.com
+                  contact@carolinamoldings.com
                 </a>{" "}
                 or call{" "}
                 <a

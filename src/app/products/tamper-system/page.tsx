@@ -315,7 +315,7 @@ export default function TamperSystemPage() {
               },
             ].map((item) => (
               <div key={item.step} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-6 bg-primary-600 rounded-full flex items-center justify-center">
+                <div className="w-16 h-16 mx-auto mb-6 bg-primary-500 rounded-full flex items-center justify-center">
                   <span className="font-display text-2xl font-bold text-white">{item.step}</span>
                 </div>
                 <h3 className="font-display text-xl font-semibold text-steel-900 mb-3">
@@ -397,7 +397,7 @@ export default function TamperSystemPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
             >
               Contact Us
             </Link>

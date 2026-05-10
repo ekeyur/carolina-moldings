@@ -109,14 +109,18 @@ export default function ProductsPage() {
                     href={item.href}
                     className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all duration-300"
                   >
-                    <div className="w-14 h-14 mb-4 bg-steel-100 rounded-lg flex items-center justify-center group-hover:bg-primary-50 transition-colors overflow-hidden relative">
+                    <div className="w-14 h-14 mb-4 bg-primary-50 rounded-lg flex items-center justify-center group-hover:bg-primary-100 transition-colors overflow-hidden relative">
                       {item.image ? (
                         <Image
                           src={item.image}
                           alt={item.name}
                           fill
                           sizes="56px"
-                          className="object-contain p-1 transition-transform group-hover:scale-110"
+                          className="object-contain p-1 transition-all group-hover:scale-110"
+                          style={{
+                            filter:
+                              "contrast(1.2) saturate(1.35) brightness(1.05) drop-shadow(0 0 6px rgba(30,158,219,0.6)) drop-shadow(0 2px 6px rgba(219,20,20,0.25))",
+                          }}
                         />
                       ) : (
                         <svg
@@ -177,7 +181,7 @@ export default function ProductsPage() {
               <a
                 href="/CMI-Catalog-2023.pdf"
                 target="_blank"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all hover:shadow-lg hover:shadow-primary-600/25"
+                className="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all hover:shadow-lg hover:shadow-primary-500/30"
               >
                 Download PDF
                 <svg

@@ -44,25 +44,25 @@ export default function Header() {
     } else {
       const contactSection = document.getElementById("contact");
       if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth" });
+        contactSection.scrollIntoView({ behavior: "smooth", block: "end" });
       }
     }
     setMobileMenuOpen(false);
   };
 
   return (
-    <header className="fixed w-full z-50 bg-primary-600/95 backdrop-blur-md border-b border-white/20">
+    <header className="fixed w-full z-50 bg-primary-500/95 backdrop-blur-md border-b border-white/20">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center transform group-hover:scale-105 transition-transform">
-                <span className="font-display text-xl font-bold text-primary-700">
+                <span className="font-display text-xl font-bold text-primary-600">
                   CMI
                 </span>
               </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-primary-300 rounded-sm opacity-60"></div>
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-white/30 rounded-sm opacity-60"></div>
             </div>
             <div>
               <p className="font-display text-base sm:text-lg font-semibold text-white tracking-wide">
@@ -110,7 +110,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-steel-700 hover:text-primary-700 hover:bg-primary-50 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-steel-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
                           >
                             {child.name}
                           </Link>
@@ -135,7 +135,7 @@ export default function Header() {
             <button
               onClick={scrollToContact}
               aria-label="Request a quote - navigate to contact form"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-primary-700 text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-900/20 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-primary-600 text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-900/20 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
               Request a Quote
             </button>
@@ -232,7 +232,7 @@ export default function Header() {
             <button
               onClick={scrollToContact}
               aria-label="Request a quote - navigate to contact form"
-              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-white text-primary-700 text-center font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 cursor-pointer"
+              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-white text-primary-600 text-center font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 cursor-pointer"
             >
               Request a Quote
             </button>

@@ -1,7 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
+
+const scrollToContact = () => {
+  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "end" });
+};
 
 export default function Hero() {
   return (
@@ -13,37 +16,59 @@ export default function Hero() {
       <div className="absolute top-1/4 -right-48 w-96 h-96 bg-primary-300/20 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-1/4 w-64 h-64 bg-primary-200/30 rounded-full blur-3xl"></div>
 
-      {/* Grid lines */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute left-1/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary-300 to-transparent"></div>
-        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary-300 to-transparent"></div>
-        <div className="absolute left-3/4 top-0 bottom-0 w-px bg-linear-to-b from-transparent via-primary-300 to-transparent"></div>
-      </div>
-
       {/* Gas Meter Images - Spread across page */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none overflow-hidden">
         {/* Main featured meter - American/Honeywell - right side */}
-        <div className="absolute right-[22%] top-[58%] w-64 h-64 opacity-60">
+        <div className="absolute right-[22%] top-[58%] w-80 h-80 opacity-90">
           <div
             className="relative w-full h-full opacity-0 animate-float-in-right animate-delay-300"
-            style={{ animationFillMode: "forwards" }}
+            style={{
+              animationFillMode: "forwards",
+              filter:
+                "contrast(1.25) saturate(1.4) brightness(1.05) drop-shadow(0 0 28px rgba(30,158,219,0.65)) drop-shadow(0 6px 18px rgba(219,20,20,0.35))",
+            }}
           >
             <Image
               src="/american-honeywell.png"
               alt="American Honeywell Gas Meter"
               fill
-              sizes="256px"
+              sizes="320px"
               className="object-contain"
               priority
             />
           </div>
         </div>
 
-        {/* Secondary meter - Rockwell/Sensus - left side, lower */}
-        <div className="absolute left-[12%] bottom-[10%] w-40 h-40 opacity-25">
+        {/* Secondary meter - Sprague/Itron - left side, lower */}
+        <div className="absolute left-[12%] bottom-[10%] w-48 h-48 opacity-65">
           <div
             className="relative w-full h-full opacity-0 animate-float-in-left animate-delay-400"
-            style={{ animationFillMode: "forwards" }}
+            style={{
+              animationFillMode: "forwards",
+              filter:
+                "contrast(1.2) saturate(1.3) brightness(1.05) drop-shadow(0 0 18px rgba(30,158,219,0.5)) drop-shadow(0 4px 12px rgba(219,20,20,0.25))",
+            }}
+          >
+            <Image
+              src="/sprague-itron.png"
+              alt="Sprague Itron Gas Meter"
+              fill
+              sizes="192px"
+              className="object-contain"
+              priority
+            />
+          </div>
+        </div>
+
+        {/* Tertiary meter - Rockwell/Sensus - center top */}
+        <div className="absolute left-[55%] top-[18%] w-40 h-40 opacity-60">
+          <div
+            className="relative w-full h-full opacity-0 animate-float-in-down animate-delay-500"
+            style={{
+              animationFillMode: "forwards",
+              filter:
+                "contrast(1.2) saturate(1.3) brightness(1.05) drop-shadow(0 0 16px rgba(30,158,219,0.45)) drop-shadow(0 4px 10px rgba(219,20,20,0.2))",
+            }}
           >
             <Image
               src="/rockwell-sensus.png"
@@ -55,29 +80,12 @@ export default function Hero() {
             />
           </div>
         </div>
-
-        {/* Tertiary meter - Sprague/Itron - center top */}
-        <div className="absolute left-[55%] top-[18%] w-36 h-36 opacity-20">
-          <div
-            className="relative w-full h-full opacity-0 animate-float-in-down animate-delay-500"
-            style={{ animationFillMode: "forwards" }}
-          >
-            <Image
-              src="/sprague-itron.png"
-              alt="Sprague Itron Gas Meter"
-              fill
-              sizes="144px"
-              className="object-contain"
-              priority
-            />
-          </div>
-        </div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-24">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 border border-primary-300 rounded-full mb-8 opacity-0 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-primary-300 rounded-full mb-8 opacity-0 animate-fade-in">
             <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
             <span className="text-sm text-primary-800 font-medium">
               Family Owned Since 1975
@@ -86,7 +94,9 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-steel-900 leading-[0.9] tracking-tight mb-6 opacity-0 animate-fade-in-up">
-            <span className="text-steel-900">Carolina</span>
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-600 to-primary-400">
+              Carolina
+            </span>
             <br />
             <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-600 to-primary-400">
               Moldings
@@ -109,9 +119,9 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animate-delay-300">
-            <Link href="/#contact" className="btn-primary">
+            <button type="button" onClick={scrollToContact} className="btn-primary">
               Request a Quote
-            </Link>
+            </button>
             <a
               href="/cmi_catalog_2023.pdf"
               target="_blank"
@@ -135,13 +145,17 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-12 my-4 pt-12 border-t border-primary-200 opacity-0 animate-fade-in-up animate-delay-400">
+          <div className="flex flex-wrap gap-12 my-4 pt-12 opacity-0 animate-fade-in-up animate-delay-400">
             <div>
-              <p className="font-display text-4xl font-bold text-steel-900">50+</p>
+              <p className="font-display text-4xl font-bold text-steel-900">
+                50+
+              </p>
               <p className="text-sm text-steel-600 mt-1">Years Experience</p>
             </div>
             <div>
-              <p className="font-display text-4xl font-bold text-steel-900">100+</p>
+              <p className="font-display text-4xl font-bold text-steel-900">
+                100+
+              </p>
               <p className="text-sm text-steel-600 mt-1">Products</p>
             </div>
             <div>

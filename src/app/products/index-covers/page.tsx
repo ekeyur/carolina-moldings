@@ -194,6 +194,10 @@ export default function IndexCoversPage() {
                       width={80}
                       height={80}
                       className="object-contain"
+                      style={{
+                        filter:
+                          "contrast(1.2) saturate(1.35) brightness(1.05) drop-shadow(0 0 14px rgba(30,158,219,0.55)) drop-shadow(0 3px 10px rgba(219,20,20,0.25))",
+                      }}
                     />
                   </div>
 
@@ -234,7 +238,7 @@ export default function IndexCoversPage() {
                 <div
                   className={`h-1 w-full ${
                     category.color === "primary"
-                      ? "bg-primary-600"
+                      ? "bg-primary-500"
                       : "bg-steel-600"
                   } transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left`}
                 ></div>
@@ -289,21 +293,21 @@ export default function IndexCoversPage() {
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 shrink-0"></span>
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 shrink-0"></span>
                     <span>
                       <strong className="text-steel-900">A-Series</strong> for
                       American and Honeywell meters
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 shrink-0"></span>
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 shrink-0"></span>
                     <span>
                       <strong className="text-steel-900">R-Series</strong> for
                       Rockwell and Sensus meters
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <span className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 shrink-0"></span>
+                    <span className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 shrink-0"></span>
                     <span>
                       <strong className="text-steel-900">
                         I-Series & S-Series
@@ -319,7 +323,7 @@ export default function IndexCoversPage() {
               </div>
               <Link
                 href="/#contact"
-                className="inline-flex items-center mt-6 px-6 py-3 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+                className="inline-flex items-center mt-6 px-6 py-3 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
               >
                 Get Help
               </Link>
@@ -409,7 +413,7 @@ export default function IndexCoversPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
             >
               Contact Us
             </Link>

@@ -4,7 +4,8 @@ import Footer from "@/components/Footer";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "About Carolina Moldings | Family-Owned Gas Meter Index Cover Manufacturer Since 1975",
+  title:
+    "About Carolina Moldings | Family-Owned Gas Meter Index Cover Manufacturer Since 1975",
   description:
     "Learn about Carolina Moldings, a family-owned manufacturer of gas meter index covers and tamper plugs for over 50 years. Our Snap Seal technology is trusted by utilities nationwide.",
   keywords:
@@ -58,10 +59,17 @@ export default function AboutPage() {
                   and precision molded components for the gas industry.
                 </p>
                 <p>
-                  Our signature <span className="text-accent-600 font-semibold">Snap Seal™</span> tamper-evident technology has become
-                  an industry standard, helping utilities protect their assets
-                  and ensure meter integrity. As we like to say: &quot;You
-                  can&apos;t steal from <span className="text-accent-600 font-semibold">Snap Seal™</span>.&quot;
+                  Our signature{" "}
+                  <span className="text-accent-600 font-semibold">
+                    Snap Seal™
+                  </span>{" "}
+                  tamper-evident technology has become an industry standard,
+                  helping utilities protect their assets and ensure meter
+                  integrity. As we like to say: &quot;You can&apos;t steal from{" "}
+                  <span className="text-accent-600 font-semibold">
+                    Snap Seal™
+                  </span>
+                  .&quot;
                 </p>
                 <p>
                   Today, we remain a family-owned and operated business,
@@ -71,11 +79,11 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative">
-              <div className="aspect-square bg-gradient-to-br from-steel-900 via-steel-800 to-steel-900 rounded-2xl overflow-hidden flex items-center justify-center relative">
+              <div className="aspect-square bg-linear-to-br from-steel-900 via-steel-800 to-steel-900 rounded-2xl overflow-hidden flex items-center justify-center relative">
                 {/* Background pattern */}
                 <div className="absolute inset-0 opacity-10">
                   <div className="absolute top-0 right-0 w-64 h-64 bg-primary-500 rounded-full blur-3xl"></div>
-                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-600 rounded-full blur-3xl"></div>
+                  <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary-500 rounded-full blur-3xl"></div>
                 </div>
 
                 {/* Decorative ring */}
@@ -93,7 +101,7 @@ export default function AboutPage() {
                   <div className="mt-1 text-sm text-steel-400 tracking-wider">
                     of Excellence
                   </div>
-                  <div className="mt-6 w-16 h-1 bg-primary-600 mx-auto rounded-full"></div>
+                  <div className="mt-6 w-16 h-1 bg-primary-500 mx-auto rounded-full"></div>
                   <div className="mt-6 text-xs text-steel-500 uppercase tracking-widest">
                     Est. 1975
                   </div>
@@ -212,7 +220,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
             >
               Contact Us
             </Link>

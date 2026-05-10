@@ -154,7 +154,7 @@ export default function ItronIndexCoversPage() {
               >
                 <div className="w-full aspect-square mb-6 bg-steel-100 rounded-lg flex items-center justify-center overflow-hidden relative">
                   {product.tamperCompatible && (
-                    <div className="absolute top-3 right-3 px-2 py-1 bg-primary-600 text-white text-xs font-semibold rounded z-10">
+                    <div className="absolute top-3 right-3 px-2 py-1 bg-primary-500 text-white text-xs font-semibold rounded z-10">
                       Tamper Compatible
                     </div>
                   )}
@@ -255,7 +255,7 @@ export default function ItronIndexCoversPage() {
                     {product.meterType}
                   </div>
                   {product.tamperCompatible && (
-                    <div className="absolute top-3 right-3 px-2 py-1 bg-primary-600 text-white text-xs font-semibold rounded z-10">
+                    <div className="absolute top-3 right-3 px-2 py-1 bg-primary-500 text-white text-xs font-semibold rounded z-10">
                       Tamper Compatible
                     </div>
                   )}
@@ -441,7 +441,7 @@ export default function ItronIndexCoversPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-700 transition-all"
+              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
             >
               Contact Us
             </Link>

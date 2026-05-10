@@ -1,7 +1,10 @@
 "use client";
 
-import Link from "next/link";
 import ScrollAnimate from "./ScrollAnimate";
+
+const scrollToContact = () => {
+  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "end" });
+};
 
 export default function CTA() {
   return (
@@ -58,7 +61,7 @@ export default function CTA() {
                 "Small and large batch production",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-primary-600 rounded-full flex items-center justify-center shrink-0">
+                  <div className="w-6 h-6 bg-primary-500 rounded-full flex items-center justify-center shrink-0">
                     <svg
                       className="w-4 h-4 text-white"
                       fill="none"
@@ -78,7 +81,7 @@ export default function CTA() {
               ))}
             </div>
 
-            <Link href="#contact" aria-label="Contact us - get a quote" className="btn-primary">
+            <button type="button" onClick={scrollToContact} aria-label="Contact us - get a quote" className="btn-primary">
               Contact Us
               <svg
                 className="w-4 h-4 ml-2"
@@ -93,7 +96,7 @@ export default function CTA() {
                   d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
               </svg>
-            </Link>
+            </button>
             </div>
           </ScrollAnimate>
 
