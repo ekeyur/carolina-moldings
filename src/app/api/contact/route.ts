@@ -7,7 +7,7 @@ export async function POST(request: Request) {
   const { name, company, phone, email, subject, message } =
     await request.json();
 
-  if (!name || !phone || !email || !subject || !message) {
+  if (!name || !email || !subject || !message) {
     return NextResponse.json(
       { error: "Missing required fields" },
       { status: 400 },
@@ -16,7 +16,7 @@ export async function POST(request: Request) {
 
   try {
     await resend.emails.send({
-      from: "Carolina Moldings <onboarding@resend.dev>",
+      from: "Carolina Moldings <noreply@carolinamoldings.com>",
       to: "contact@carolinamoldings.com",
       replyTo: email,
       subject: `Contact Form: ${subject}`,
