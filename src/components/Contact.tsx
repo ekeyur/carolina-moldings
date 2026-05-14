@@ -20,8 +20,7 @@ export default function Contact() {
   const validate = () => {
     const e: Record<string, string> = {};
     if (!formState.name.trim()) e.name = "Full name is required.";
-    if (!formState.phone.trim()) e.phone = "Phone number is required.";
-    else if (!/^[\d\s\-()+.]{7,}$/.test(formState.phone))
+    if (formState.phone.trim() && !/^[\d\s\-()+.]{7,}$/.test(formState.phone))
       e.phone = "Please enter a valid phone number.";
     if (!formState.email.trim()) e.email = "Email address is required.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email))
@@ -286,7 +285,7 @@ export default function Contact() {
                       htmlFor="phone"
                       className="block text-sm font-medium text-steel-700 mb-2"
                     >
-                      Phone <span className="text-accent-500">*</span>
+                      Phone
                     </label>
                     <input
                       type="tel"
