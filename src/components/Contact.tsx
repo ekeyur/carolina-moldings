@@ -9,7 +9,6 @@ export default function Contact() {
     company: "",
     phone: "",
     email: "",
-    subject: "",
     message: "",
   });
   const [status, setStatus] = useState<
@@ -25,7 +24,6 @@ export default function Contact() {
     if (!formState.email.trim()) e.email = "Email address is required.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email))
       e.email = "Please enter a valid email address.";
-    if (!formState.subject.trim()) e.subject = "Subject is required.";
     if (!formState.message.trim()) e.message = "Message is required.";
     return e;
   };
@@ -52,7 +50,6 @@ export default function Contact() {
           company: "",
           phone: "",
           email: "",
-          subject: "",
           message: "",
         });
       } else {
@@ -232,58 +229,60 @@ export default function Contact() {
 
           {/* Contact Form */}
           <ScrollAnimate animation="right" delay={200}>
-            <div className="bg-white rounded-xl p-8 lg:p-10 shadow-xl">
-              <h3 className="font-display text-2xl font-bold text-steel-900 mb-6">
+            <div className="bg-white rounded-xl p-6 lg:p-8 shadow-xl">
+              <h3 className="font-display text-2xl font-bold text-steel-900 mb-4">
                 Send us a message
               </h3>
-              <form onSubmit={handleSubmit} noValidate className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-steel-700 mb-2"
-                  >
-                    Full Name <span className="text-accent-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formState.name}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.name ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
-                    placeholder="John Doe"
-                  />
-                  {errors.name && (
-                    <p className="mt-1.5 text-sm text-accent-600 flex items-center gap-1">
-                      <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
-                      {errors.name}
-                    </p>
-                  )}
+              <form onSubmit={handleSubmit} noValidate className="space-y-4">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-steel-700 mb-1"
+                    >
+                      Full Name <span className="text-accent-500">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formState.name}
+                      onChange={handleChange}
+                      className={`w-full px-3 py-2 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.name ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
+                      placeholder="John Doe"
+                    />
+                    {errors.name && (
+                      <p className="mt-1 text-sm text-accent-600 flex items-center gap-1">
+                        <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
+                        {errors.name}
+                      </p>
+                    )}
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-medium text-steel-700 mb-1"
+                    >
+                      Company Name
+                    </label>
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={formState.company}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 bg-steel-50 border border-steel-200 rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
+                      placeholder="Acme Utilities"
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="company"
-                    className="block text-sm font-medium text-steel-700 mb-2"
-                  >
-                    Company Name
-                  </label>
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formState.company}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 bg-steel-50 border border-steel-200 rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="Acme Utilities"
-                  />
-                </div>
-
-                <div className="grid sm:grid-cols-2 gap-6">
+                <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label
                       htmlFor="phone"
-                      className="block text-sm font-medium text-steel-700 mb-2"
+                      className="block text-sm font-medium text-steel-700 mb-1"
                     >
                       Phone
                     </label>
@@ -293,11 +292,11 @@ export default function Contact() {
                       name="phone"
                       value={formState.phone}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.phone ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
+                      className={`w-full px-3 py-2 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.phone ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
                       placeholder="(555) 000-0000"
                     />
                     {errors.phone && (
-                      <p className="mt-1.5 text-sm text-accent-600 flex items-center gap-1">
+                      <p className="mt-1 text-sm text-accent-600 flex items-center gap-1">
                         <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                         {errors.phone}
                       </p>
@@ -306,7 +305,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-medium text-steel-700 mb-2"
+                      className="block text-sm font-medium text-steel-700 mb-1"
                     >
                       Email <span className="text-accent-500">*</span>
                     </label>
@@ -316,11 +315,11 @@ export default function Contact() {
                       name="email"
                       value={formState.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.email ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
+                      className={`w-full px-3 py-2 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.email ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
                       placeholder="john@example.com"
                     />
                     {errors.email && (
-                      <p className="mt-1.5 text-sm text-accent-600 flex items-center gap-1">
+                      <p className="mt-1 text-sm text-accent-600 flex items-center gap-1">
                         <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                         {errors.email}
                       </p>
@@ -330,32 +329,8 @@ export default function Contact() {
 
                 <div>
                   <label
-                    htmlFor="subject"
-                    className="block text-sm font-medium text-steel-700 mb-2"
-                  >
-                    Subject <span className="text-accent-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="subject"
-                    name="subject"
-                    value={formState.subject}
-                    onChange={handleChange}
-                    className={`w-full px-4 py-3 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all ${errors.subject ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
-                    placeholder="Product inquiry"
-                  />
-                  {errors.subject && (
-                    <p className="mt-1.5 text-sm text-accent-600 flex items-center gap-1">
-                      <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
-                      {errors.subject}
-                    </p>
-                  )}
-                </div>
-
-                <div>
-                  <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-steel-700 mb-2"
+                    className="block text-sm font-medium text-steel-700 mb-1"
                   >
                     Message <span className="text-accent-500">*</span>
                   </label>
@@ -365,11 +340,11 @@ export default function Contact() {
                     value={formState.message}
                     onChange={handleChange}
                     rows={4}
-                    className={`w-full px-4 py-3 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all resize-none ${errors.message ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
+                    className={`w-full px-3 py-2 bg-steel-50 border rounded-lg text-steel-900 placeholder-steel-400 focus:outline-none focus:ring-2 focus:border-transparent transition-all resize-none ${errors.message ? "border-accent-500 focus:ring-accent-400" : "border-steel-200 focus:ring-primary-500"}`}
                     placeholder="Tell us about your project or inquiry..."
                   />
                   {errors.message && (
-                    <p className="mt-1.5 text-sm text-accent-600 flex items-center gap-1">
+                    <p className="mt-1 text-sm text-accent-600 flex items-center gap-1">
                       <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" /></svg>
                       {errors.message}
                     </p>
@@ -377,13 +352,13 @@ export default function Contact() {
                 </div>
 
                 {status === "success" && (
-                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm font-medium">
+                  <div className="p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm font-medium">
                     Message sent! We&apos;ll get back to you as soon as
                     possible.
                   </div>
                 )}
                 {status === "error" && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm font-medium">
+                  <div className="p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm font-medium">
                     Something went wrong. Please try again or email us directly.
                   </div>
                 )}
