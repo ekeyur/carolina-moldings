@@ -96,13 +96,13 @@ export default function Contact() {
           {/* Contact Info */}
           <ScrollAnimate animation="left">
             <div>
-              <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+              <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-2">
                 Get In Touch
               </p>
-              <h2 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-6">
+              <h2 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-3">
                 Contact Us
               </h2>
-              <p className="text-steel-600 text-lg mb-12 max-w-lg">
+              <p className="text-steel-600 text-lg mb-6 max-w-lg">
                 We are available to answer any and all questions over the phone
                 about prices and products Mon-Fri 9am-3pm EST. For anything else
                 please e-mail us and we will get back to you as soon as
@@ -110,7 +110,7 @@ export default function Contact() {
               </p>
 
               {/* Contact Details */}
-              <div className="space-y-8">
+              <div className="space-y-4">
                 {/* Address */}
                 <div className="flex gap-4">
                   <div className="w-12 h-12 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center shrink-0">
@@ -207,8 +207,8 @@ export default function Contact() {
               </div>
 
               {/* Business Hours */}
-              <div className="mt-12 p-6 bg-steel-50 border border-steel-200 rounded-lg">
-                <h3 className="font-display text-lg font-semibold text-steel-900 mb-3">
+              <div className="mt-6 p-4 bg-steel-50 border border-steel-200 rounded-lg">
+                <h3 className="font-display text-lg font-semibold text-steel-900 mb-2">
                   Business Hours
                 </h3>
                 <div className="space-y-2 text-steel-600">
