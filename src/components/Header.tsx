@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -36,16 +36,25 @@ export default function Header() {
   const router = useRouter();
   const pathname = usePathname();
 
+  const scrollToCenter = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
+  useEffect(() => {
+    if (pathname === "/" && window.location.hash === "#contact") {
+      setTimeout(scrollToCenter, 100);
+    }
+  }, [pathname]);
+
   const scrollToContact = (e: React.MouseEvent) => {
     e.preventDefault();
-
     if (pathname !== "/") {
       router.push("/#contact");
     } else {
-      const contactSection = document.getElementById("contact");
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: "smooth", block: "end" });
-      }
+      scrollToCenter();
     }
     setMobileMenuOpen(false);
   };
