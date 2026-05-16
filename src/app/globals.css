@@ -61,9 +61,9 @@
 @layer components {
   .btn-primary {
     @apply inline-flex items-center justify-center px-8 py-3.5 font-display text-sm uppercase tracking-wider font-semibold
-           bg-primary-500 text-white rounded-sm
-           hover:bg-primary-600 transition-all duration-300
-           hover:shadow-lg hover:shadow-primary-500/30 hover:-translate-y-0.5
+           bg-accent-500 text-white rounded-sm
+           hover:bg-accent-600 transition-all duration-300
+           hover:shadow-lg hover:shadow-accent-900/30 hover:-translate-y-0.5
            active:translate-y-0;
   }
 
