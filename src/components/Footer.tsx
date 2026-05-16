@@ -41,7 +41,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-primary-800 border-t border-primary-700">
+    <footer className="bg-primary-500 border-t border-primary-400">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand */}
@@ -59,7 +59,7 @@ export default function Footer() {
                 <p className="font-display text-lg font-semibold text-white tracking-wide">
                   Carolina Moldings
                 </p>
-                <p className="text-xs text-white/80 font-medium tracking-wider uppercase">
+                <p className="text-xs text-white/60 font-medium tracking-wider uppercase">
                   Since 1975
                 </p>
               </div>
@@ -165,7 +165,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-primary-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-primary-400 flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/75">
             © {new Date().getFullYear()} Carolina Moldings, Inc. All rights
             reserved.
