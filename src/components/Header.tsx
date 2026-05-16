@@ -144,9 +144,9 @@ export default function Header() {
             <button
               onClick={scrollToContact}
               aria-label="Request a quote - navigate to contact form"
-              className="inline-flex items-center gap-2 px-6 py-2.5 bg-white text-primary-600 text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 hover:shadow-lg hover:shadow-primary-900/20 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
+              className="inline-flex items-center gap-2 px-6 py-2.5 bg-accent-500 text-white text-sm font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-600 transition-all duration-300 hover:shadow-lg hover:shadow-accent-900/20 hover:-translate-y-0.5 active:translate-y-0 cursor-pointer"
             >
-              Request a Quote
+              Contact Us
             </button>
           </div>
 
@@ -241,9 +241,9 @@ export default function Header() {
             <button
               onClick={scrollToContact}
               aria-label="Request a quote - navigate to contact form"
-              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-white text-primary-600 text-center font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-50 transition-all duration-300 cursor-pointer"
+              className="block w-[calc(100%-2rem)] mx-4 mt-4 px-6 py-3 bg-accent-500 text-white text-center font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-accent-600 transition-all duration-300 cursor-pointer"
             >
-              Request a Quote
+              Contact Us
             </button>
           </div>
         )}
