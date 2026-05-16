@@ -59,12 +59,12 @@ export default function Footer() {
                 <p className="font-display text-lg font-semibold text-white tracking-wide">
                   Carolina Moldings
                 </p>
-                <p className="text-xs text-white/60 font-medium tracking-wider uppercase">
+                <p className="text-xs text-white/85 font-medium tracking-wider uppercase">
                   Since 1975
                 </p>
               </div>
             </Link>
-            <p className="text-white/75 text-sm leading-relaxed max-w-sm mb-6">
+            <p className="text-white/90 text-sm leading-relaxed max-w-sm mb-6">
               One of the leading providers and creators of gas industry
               materials. You can&apos;t steal from{" "}
               <span className="text-accent-400 font-semibold">Snap Seal™</span>!
@@ -72,12 +72,12 @@ export default function Footer() {
 
             {/* Contact Info */}
             <div className="space-y-2 text-sm">
-              <p className="text-white/75">
-                <span className="text-white/75">Address:</span> 3600 Woodpark
+              <p className="text-white/90">
+                <span className="text-white/90">Address:</span> 3600 Woodpark
                 Blvd. Suite A, Charlotte NC, 28206
               </p>
-              <p className="text-white/75">
-                <span className="text-white/75">Phone:</span>{" "}
+              <p className="text-white/90">
+                <span className="text-white/90">Phone:</span>{" "}
                 <a
                   href="tel:18005237475"
                   className="hover:text-white transition-colors"
@@ -85,8 +85,8 @@ export default function Footer() {
                   1-800-523-7475
                 </a>
               </p>
-              <p className="text-white/75">
-                <span className="text-white/75">Email:</span>{" "}
+              <p className="text-white/90">
+                <span className="text-white/90">Email:</span>{" "}
                 <a
                   href="mailto:contact@carolinaMoldings.com"
                   className="hover:text-white transition-colors"
@@ -107,7 +107,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/75 hover:text-white transition-colors"
+                    className="text-sm text-white/90 hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -126,7 +126,7 @@ export default function Footer() {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-sm text-white/75 hover:text-white transition-colors"
+                    className="text-sm text-white/90 hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -146,14 +146,14 @@ export default function Footer() {
                   {item.href === "#contact" ? (
                     <button
                       onClick={scrollToContact}
-                      className="text-sm text-white/75 hover:text-white transition-colors cursor-pointer"
+                      className="text-sm text-white/90 hover:text-white transition-colors cursor-pointer"
                     >
                       {item.name}
                     </button>
                   ) : (
                     <Link
                       href={item.href}
-                      className="text-sm text-white/75 hover:text-white transition-colors"
+                      className="text-sm text-white/90 hover:text-white transition-colors"
                     >
                       {item.name}
                     </Link>
@@ -166,11 +166,11 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-primary-400 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-white/75">
+          <p className="text-sm text-white/90">
             © {new Date().getFullYear()} Carolina Moldings, Inc. All rights
             reserved.
           </p>
-          <p className="text-sm text-white/75">
+          <p className="text-sm text-white/90">
             You can&apos;t steal from{" "}
             <span className="text-accent-400 font-semibold">Snap Seal™</span>
           </p>

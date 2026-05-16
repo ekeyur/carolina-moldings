@@ -90,7 +90,7 @@ export default function Header() {
                 {item.children ? (
                   <>
                     <button
-                      className="px-4 py-2 text-sm font-medium text-white/85 hover:text-white transition-colors flex items-center gap-1"
+                      className="px-4 py-2 text-sm font-medium text-white hover:text-white transition-colors flex items-center gap-1"
                       onMouseEnter={() => setProductsOpen(true)}
                       onMouseLeave={() => setProductsOpen(false)}
                     >
@@ -130,7 +130,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-4 py-2 text-sm font-medium text-white/85 hover:text-white transition-colors"
+                    className="px-4 py-2 text-sm font-medium text-white hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -152,7 +152,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button
-            className="lg:hidden p-2 text-white/85 hover:text-white"
+            className="lg:hidden p-2 text-white hover:text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open menu</span>
@@ -197,7 +197,7 @@ export default function Header() {
                   <div>
                     <button
                       onClick={() => setProductsOpen(!productsOpen)}
-                      className="w-full flex items-center justify-between px-4 py-3 text-white/85 hover:text-white"
+                      className="w-full flex items-center justify-between px-4 py-3 text-white hover:text-white"
                     >
                       {item.name}
                       <svg
@@ -220,7 +220,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-white/75 hover:text-white"
+                            className="block px-4 py-2 text-sm text-white/90 hover:text-white"
                           >
                             {child.name}
                           </Link>
@@ -231,7 +231,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-white/85 hover:text-white"
+                    className="block px-4 py-3 text-white hover:text-white"
                   >
                     {item.name}
                   </Link>
