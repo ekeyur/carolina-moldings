@@ -365,7 +365,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="w-full btn-primary justify-center disabled:opacity-60 disabled:cursor-not-allowed"
+                  className="inline-flex items-center justify-center px-6 py-2.5 text-sm font-display uppercase tracking-wider font-semibold bg-accent-500 text-white rounded-sm hover:bg-accent-600 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {status === "loading" ? "Sending..." : "Send Message"}
                   {status !== "loading" && (
