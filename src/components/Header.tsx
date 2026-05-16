@@ -26,6 +26,8 @@ const navigation = [
       { name: "Miscellaneous", href: "/products/misc" },
     ],
   },
+  { name: "Index Covers", href: "/products/index-covers" },
+  { name: "Tamper System", href: "/products/tamper-system" },
   { name: "FAQ", href: "/faq" },
   { name: "About Us", href: "/about" },
 ];
