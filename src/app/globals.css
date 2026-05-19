@@ -335,7 +335,7 @@
     );
 }
 
-/* Noise texture overlay */
+/* Noise texture overlay  */
 .noise-overlay::before {
   content: "";
   position: absolute;
