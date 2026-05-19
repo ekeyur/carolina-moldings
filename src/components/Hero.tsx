@@ -94,11 +94,11 @@ export default function Hero() {
 
           {/* Main Heading */}
           <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-steel-900 leading-[0.9] tracking-tight mb-6 opacity-0 animate-fade-in-up">
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-600 to-primary-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-500 to-primary-300">
               Carolina
             </span>
             <br />
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-600 to-primary-400">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary-500 to-primary-300">
               Moldings
             </span>
             <span className="text-steel-900">, Inc.</span>

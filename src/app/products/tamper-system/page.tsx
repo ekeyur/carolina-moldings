@@ -489,7 +489,7 @@ export default function TamperSystemPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-linear-to-br from-primary-600 to-primary-800 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-primary-600 to-steel-900 flex items-center justify-center">
                   <div className="text-center text-white">
                     <svg
                       className="w-24 h-24 mx-auto mb-4 opacity-90"
@@ -531,7 +531,7 @@ export default function TamperSystemPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+              className="btn-primary"
             >
               Contact Us
             </Link>

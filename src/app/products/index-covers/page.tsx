@@ -323,7 +323,7 @@ export default function IndexCoversPage() {
               </div>
               <Link
                 href="/#contact"
-                className="inline-flex items-center mt-6 px-6 py-3 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+                className="btn-primary mt-6"
               >
                 Get Help
               </Link>
@@ -413,7 +413,7 @@ export default function IndexCoversPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+              className="btn-primary"
             >
               Contact Us
             </Link>

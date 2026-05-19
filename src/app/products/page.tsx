@@ -181,7 +181,7 @@ export default function ProductsPage() {
               <a
                 href="/CMI-Catalog-2023.pdf"
                 target="_blank"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all hover:shadow-lg hover:shadow-primary-500/30"
+                className="btn-primary"
               >
                 Download PDF
                 <svg

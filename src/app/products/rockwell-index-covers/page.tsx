@@ -333,7 +333,7 @@ export default function RockwellIndexCoversPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+              className="btn-primary"
             >
               Contact Us
             </Link>

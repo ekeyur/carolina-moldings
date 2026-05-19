@@ -133,8 +133,8 @@ export default function FullCatalogPage() {
                 className="bg-white rounded-xl border border-steel-200 overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 {/* Category Header */}
-                <div className="p-6 bg-primary-50 border-b border-steel-200">
-                  <div className="w-16 h-16 mb-4 bg-primary-100 border border-primary-200 rounded-lg flex items-center justify-center text-primary-600">
+                <div className="p-6 bg-steel-50 border-b border-steel-200">
+                  <div className="w-16 h-16 mb-4 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-600">
                     {category.icon}
                   </div>
                   <h2 className="font-display text-xl font-bold text-steel-900 mb-2">
@@ -231,7 +231,7 @@ export default function FullCatalogPage() {
               },
             ].map((feature) => (
               <div key={feature.description} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-full flex items-center justify-center text-primary-600">
                   {feature.icon}
                 </div>
                 <h3 className="font-display text-lg font-semibold text-steel-900 mb-2">
@@ -263,7 +263,7 @@ export default function FullCatalogPage() {
               <a
                 href="/CMI-Catalog-2023.pdf"
                 target="_blank"
-                className="inline-flex items-center justify-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all hover:shadow-lg hover:shadow-primary-500/30 whitespace-nowrap"
+                className="btn-primary whitespace-nowrap"
               >
                 Download PDF
                 <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -288,7 +288,7 @@ export default function FullCatalogPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+              className="btn-primary"
             >
               Contact Us
               <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">

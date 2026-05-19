@@ -88,7 +88,7 @@ export default function Features() {
                 className="group relative p-8 bg-white rounded-lg border border-steel-200 hover:border-primary-400/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary-100/50 h-full"
               >
               {/* Icon */}
-              <div className="w-16 h-16 mb-6 bg-primary-50 border border-primary-200 rounded-lg flex items-center justify-center text-primary-600 group-hover:bg-primary-100 group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-600 group-hover:bg-primary-500/20 group-hover:scale-110 transition-all duration-300">
                 {feature.icon}
               </div>
 
@@ -101,7 +101,7 @@ export default function Features() {
               </p>
 
               {/* Hover accent */}
-              <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary-600 to-primary-400 rounded-b-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <div className="absolute bottom-0 left-0 right-0 h-1 bg-linear-to-r from-primary-600 to-primary-300 rounded-b-lg transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
             </div>
             </ScrollAnimate>
           ))}

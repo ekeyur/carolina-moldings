@@ -274,7 +274,7 @@ export default function MeterScrewsPage() {
                 ].map((feature) => (
                   <li key={feature} className="flex items-center text-steel-700">
                     <svg
-                      className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0"
+                      className="w-5 h-5 text-primary-600 mr-3 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -293,7 +293,7 @@ export default function MeterScrewsPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-steel-200 to-steel-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-steel-200 to-steel-300 flex items-center justify-center">
                   <div className="text-center">
                     <svg
                       className="w-24 h-24 mx-auto text-steel-500 mb-4"
@@ -382,7 +382,7 @@ export default function MeterScrewsPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+              className="btn-primary"
             >
               Contact Us
             </Link>

@@ -143,7 +143,7 @@ export default function MiscPage() {
                 </div>
 
                 <div className="mb-2">
-                  <span className="inline-block px-2 py-1 bg-primary-100 text-primary-700 text-xs font-semibold rounded">
+                  <span className="inline-block px-2 py-1 bg-steel-100 text-primary-700 text-xs font-semibold rounded">
                     {product.model}
                   </span>
                 </div>
@@ -290,7 +290,7 @@ export default function MiscPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/#contact"
-              className="inline-flex items-center px-8 py-4 bg-primary-500 text-white font-display font-semibold uppercase tracking-wider rounded-sm hover:bg-primary-600 transition-all"
+              className="btn-primary"
             >
               Contact Us
             </Link>
