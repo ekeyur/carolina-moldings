@@ -79,7 +79,7 @@ export default function Header() {
               <p className="font-display text-base sm:text-lg font-semibold text-white tracking-wide">
                 Carolina Moldings
               </p>
-              <p className="text-xs text-primary-100 font-medium tracking-wider uppercase">
+              <p className="text-xs text-accent-500 font-medium tracking-wider uppercase">
                 Since 1975
               </p>
             </div>
