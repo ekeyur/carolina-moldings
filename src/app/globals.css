@@ -4,16 +4,16 @@
   --font-display: var(--font-oswald), sans-serif;
   --font-body: var(--font-source-sans), sans-serif;
 
-  --color-primary-50: #edf6fd;
-  --color-primary-100: #d0eaf8;
-  --color-primary-200: #9dd3f2;
+  --color-primary-50: #6ea7fe;
+  --color-primary-100: #5b9bfe;
+  --color-primary-200: #418cfd;
   --color-primary-300: #5bb5e8;
-  --color-primary-400: #2ba5df;
-  --color-primary-500: #8ab8fe;
-  --color-primary-600: #6ea7fe;
-  --color-primary-700: #5b9bfe;
-  --color-primary-800: #4890fd;
-  --color-primary-900: #3b88fd;
+  --color-primary-400: #025be4;
+  --color-primary-500: #2279fd;
+  --color-primary-600: #0f6dfd;
+  --color-primary-700: #0266fd;
+  --color-primary-800: #0260f0;
+  --color-primary-900: #025be4;
 
   --color-accent-50: #fcf3f3;
   --color-accent-100: #fae1e1;
