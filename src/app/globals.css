@@ -4,12 +4,12 @@
   --font-display: var(--font-oswald), sans-serif;
   --font-body: var(--font-source-sans), sans-serif;
 
-  --color-primary-50: #6ea7fe;
-  --color-primary-100: #5b9bfe;
-  --color-primary-200: #418cfd;
+  --color-primary-50: #edf6fd;
+  --color-primary-100: #d3e9f7;
+  --color-primary-200: #a8d3ef;
   --color-primary-300: #5bb5e8;
   --color-primary-400: #025be4;
-  --color-primary-500: #2279fd;
+  --color-primary-500: #369ed4;
   --color-primary-600: #0f6dfd;
   --color-primary-700: #0266fd;
   --color-primary-800: #0260f0;
@@ -45,7 +45,7 @@
 
   body {
     @apply font-body text-steel-800 antialiased;
-    background-color: #ffffff;
+    background-color: var(--color-primary-50);
   }
 
   h1,

@@ -83,11 +83,11 @@ export default function FAQPage() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-primary-50">
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 bg-primary-50">
+      <section className="pt-32 pb-16 bg-primary-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Support

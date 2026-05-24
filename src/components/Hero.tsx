@@ -145,24 +145,24 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="flex flex-wrap gap-12 my-4 pt-12 opacity-0 animate-fade-in-up animate-delay-400">
+          <div className="grid grid-cols-3 gap-4 sm:gap-12 my-4 pt-12 opacity-0 animate-fade-in-up animate-delay-400">
             <div>
-              <p className="font-display text-4xl font-bold text-steel-900">
+              <p className="font-display text-3xl sm:text-4xl font-bold text-steel-900">
                 50+
               </p>
-              <p className="text-sm text-steel-600 mt-1">Years Experience</p>
+              <p className="text-xs sm:text-sm text-steel-600 mt-1">Years Experience</p>
             </div>
             <div>
-              <p className="font-display text-4xl font-bold text-steel-900">
+              <p className="font-display text-3xl sm:text-4xl font-bold text-steel-900">
                 100+
               </p>
-              <p className="text-sm text-steel-600 mt-1">Products</p>
+              <p className="text-xs sm:text-sm text-steel-600 mt-1">Products</p>
             </div>
             <div>
-              <p className="font-display text-4xl font-bold text-steel-900">
+              <p className="font-display text-3xl sm:text-4xl font-bold text-steel-900">
                 1000+
               </p>
-              <p className="text-sm text-steel-600 mt-1">Clients Served</p>
+              <p className="text-xs sm:text-sm text-steel-600 mt-1">Clients Served</p>
             </div>
           </div>
         </div>
