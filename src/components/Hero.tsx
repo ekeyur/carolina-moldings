@@ -3,7 +3,9 @@
 import Image from "next/image";
 
 const scrollToContact = () => {
-  document.getElementById("contact")?.scrollIntoView({ behavior: "smooth", block: "end" });
+  document
+    .getElementById("contact")
+    ?.scrollIntoView({ behavior: "smooth", block: "end" });
 };
 
 export default function Hero() {
@@ -19,7 +21,7 @@ export default function Hero() {
       {/* Gas Meter Images - Spread across page */}
       <div className="hidden lg:block absolute inset-0 pointer-events-none overflow-hidden">
         {/* Main featured meter - American/Honeywell - right side */}
-        <div className="absolute right-[22%] top-[58%] w-80 h-80 opacity-90">
+        <div className="absolute right-[14%] top-[58%] w-80 h-80 opacity-90">
           <div
             className="relative w-full h-full opacity-0 animate-float-in-right animate-delay-300"
             style={{
@@ -119,7 +121,11 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animate-delay-300">
-            <button type="button" onClick={scrollToContact} className="btn-primary">
+            <button
+              type="button"
+              onClick={scrollToContact}
+              className="btn-primary"
+            >
               Request a Quote
             </button>
             <a
@@ -145,12 +151,14 @@ export default function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-3 gap-4 sm:gap-12 my-4 pt-12 opacity-0 animate-fade-in-up animate-delay-400">
+          <div className="grid grid-cols-3 gap-4 sm:gap-12 my-4 pt-12 opacity-0 animate-fade-in-up animate-delay-400 lg:max-w-sm xl:max-w-md">
             <div>
               <p className="font-display text-3xl sm:text-4xl font-bold text-steel-900">
                 50+
               </p>
-              <p className="text-xs sm:text-sm text-steel-600 mt-1">Years Experience</p>
+              <p className="text-xs sm:text-sm text-steel-600 mt-1">
+                Years Experience
+              </p>
             </div>
             <div>
               <p className="font-display text-3xl sm:text-4xl font-bold text-steel-900">
@@ -162,7 +170,9 @@ export default function Hero() {
               <p className="font-display text-3xl sm:text-4xl font-bold text-steel-900">
                 1000+
               </p>
-              <p className="text-xs sm:text-sm text-steel-600 mt-1">Clients Served</p>
+              <p className="text-xs sm:text-sm text-steel-600 mt-1">
+                Clients Served
+              </p>
             </div>
           </div>
         </div>
