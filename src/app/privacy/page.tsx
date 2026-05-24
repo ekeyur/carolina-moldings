@@ -74,14 +74,14 @@ export default function PrivacyPolicyPage() {
                 Questions about this policy? Contact us at{" "}
                 <a
                   href="mailto:contact@carolinamoldings.com"
-                  className="text-primary-600 hover:text-primary-700"
+                  className="text-primary-500 hover:text-primary-700"
                 >
                   contact@carolinamoldings.com
                 </a>{" "}
                 or call{" "}
                 <a
                   href="tel:18005237475"
-                  className="text-primary-600 hover:text-primary-700"
+                  className="text-primary-500 hover:text-primary-700"
                 >
                   1-800-523-7475
                 </a>
@@ -93,7 +93,7 @@ export default function PrivacyPolicyPage() {
           <div className="mt-12 pt-8 border-t border-steel-200">
             <Link
               href="/"
-              className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
+              className="inline-flex items-center text-primary-500 hover:text-primary-700 font-medium"
             >
               <svg
                 className="w-4 h-4 mr-2"

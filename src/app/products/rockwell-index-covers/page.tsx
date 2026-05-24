@@ -80,7 +80,7 @@ export default function RockwellIndexCoversPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-500 mb-6 transition-colors"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -97,7 +97,7 @@ export default function RockwellIndexCoversPage() {
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Index Covers
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -158,7 +158,7 @@ export default function RockwellIndexCoversPage() {
                   )}
                 </div>
 
-                <h3 className="font-display text-2xl font-bold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+                <h3 className="font-display text-2xl font-bold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                   {product.model}
                 </h3>
                 <p className="text-steel-600 mb-4">{product.description}</p>
@@ -170,7 +170,7 @@ export default function RockwellIndexCoversPage() {
                       className="flex items-start text-sm text-steel-600"
                     >
                       <svg
-                        className="w-4 h-4 text-primary-600 mr-2 mt-0.5 flex-shrink-0"
+                        className="w-4 h-4 text-primary-500 mr-2 mt-0.5 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -231,7 +231,7 @@ export default function RockwellIndexCoversPage() {
                 ].map((feature) => (
                   <li key={feature} className="flex items-center text-steel-700">
                     <svg
-                      className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -253,7 +253,7 @@ export default function RockwellIndexCoversPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-steel-200 flex items-center justify-center">
                   <div className="text-center">
                     <svg
-                      className="w-24 h-24 mx-auto text-primary-600 mb-4"
+                      className="w-24 h-24 mx-auto text-primary-500 mb-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -287,7 +287,7 @@ export default function RockwellIndexCoversPage() {
               href="/products/tamper-system"
               className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Snap Seal Tamper System
               </h3>
               <p className="text-steel-600 text-sm">
@@ -298,7 +298,7 @@ export default function RockwellIndexCoversPage() {
               href="/products/paint-covers"
               className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Paint Covers
               </h3>
               <p className="text-steel-600 text-sm">
@@ -309,7 +309,7 @@ export default function RockwellIndexCoversPage() {
               href="/products/american-index-covers"
               className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 American Index Covers
               </h3>
               <p className="text-steel-600 text-sm">

@@ -69,7 +69,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
               <div className="w-12 h-12 bg-white rounded-sm flex items-center justify-center transform group-hover:scale-105 transition-transform">
-                <span className="font-display text-xl font-bold text-primary-600">
+                <span className="font-display text-xl font-bold text-primary-500">
                   CMI
                 </span>
               </div>
@@ -121,7 +121,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2.5 text-sm text-steel-700 hover:text-primary-600 hover:bg-primary-50 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-steel-700 hover:text-primary-500 hover:bg-primary-50 transition-colors"
                           >
                             {child.name}
                           </Link>

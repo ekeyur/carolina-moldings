@@ -23,7 +23,7 @@ export default function AboutPage() {
           <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/40 rounded-full blur-3xl"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             About Us
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -192,7 +192,7 @@ export default function AboutPage() {
                 key={value.title}
                 className="p-8 bg-white rounded-xl border border-steel-200"
               >
-                <div className="w-16 h-16 mb-6 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
+                <div className="w-16 h-16 mb-6 bg-primary-100 rounded-lg flex items-center justify-center text-primary-500">
                   {value.icon}
                 </div>
                 <h3 className="font-display text-xl font-semibold text-steel-900 mb-3">

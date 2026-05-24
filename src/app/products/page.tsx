@@ -80,7 +80,7 @@ export default function ProductsPage() {
       {/* Hero */}
       <section className="pt-32 pb-16 bg-primary-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Our Products
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -124,7 +124,7 @@ export default function ProductsPage() {
                         />
                       ) : (
                         <svg
-                          className="w-6 h-6 text-steel-600 group-hover:text-primary-600"
+                          className="w-6 h-6 text-steel-600 group-hover:text-primary-500"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -138,13 +138,13 @@ export default function ProductsPage() {
                         </svg>
                       )}
                     </div>
-                    <h3 className="font-display text-lg font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+                    <h3 className="font-display text-lg font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                       {item.name}
                     </h3>
                     <p className="text-steel-600 text-sm mb-4">
                       {item.description}
                     </p>
-                    <span className="inline-flex items-center text-sm font-semibold text-primary-600">
+                    <span className="inline-flex items-center text-sm font-semibold text-primary-500">
                       View Products
                       <svg
                         className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform"

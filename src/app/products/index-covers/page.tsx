@@ -139,7 +139,7 @@ export default function IndexCoversPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-500 mb-6 transition-colors"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -156,7 +156,7 @@ export default function IndexCoversPage() {
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Core Products
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -201,7 +201,7 @@ export default function IndexCoversPage() {
                     />
                   </div>
 
-                  <h2 className="font-display text-2xl font-bold text-steel-900 mb-3 group-hover:text-primary-600 transition-colors">
+                  <h2 className="font-display text-2xl font-bold text-steel-900 mb-3 group-hover:text-primary-500 transition-colors">
                     {category.name}
                   </h2>
                   <p className="text-steel-600 mb-6">{category.description}</p>
@@ -217,7 +217,7 @@ export default function IndexCoversPage() {
                     ))}
                   </div>
 
-                  <div className="flex items-center text-primary-600 font-semibold">
+                  <div className="flex items-center text-primary-500 font-semibold">
                     View Products
                     <svg
                       className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
@@ -265,7 +265,7 @@ export default function IndexCoversPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {features.map((feature) => (
               <div key={feature.title} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-600">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center text-primary-500">
                   {feature.icon}
                 </div>
                 <h3 className="font-display text-lg font-semibold text-steel-900 mb-2">
@@ -333,7 +333,7 @@ export default function IndexCoversPage() {
                 <div className="absolute inset-0 bg-linear-to-br from-primary-100 to-steel-200 flex items-center justify-center">
                   <div className="text-center">
                     <svg
-                      className="w-32 h-32 mx-auto text-primary-600 mb-4"
+                      className="w-32 h-32 mx-auto text-primary-500 mb-4"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -367,7 +367,7 @@ export default function IndexCoversPage() {
               href="/products/tamper-system"
               className="group p-6 bg-steel-50 rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Snap Seal Tamper System
               </h3>
               <p className="text-steel-600 text-sm">
@@ -378,7 +378,7 @@ export default function IndexCoversPage() {
               href="/products/paint-covers"
               className="group p-6 bg-steel-50 rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Paint Covers
               </h3>
               <p className="text-steel-600 text-sm">
@@ -389,7 +389,7 @@ export default function IndexCoversPage() {
               href="/products/meter-screws"
               className="group p-6 bg-steel-50 rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Meter Screws
               </h3>
               <p className="text-steel-600 text-sm">

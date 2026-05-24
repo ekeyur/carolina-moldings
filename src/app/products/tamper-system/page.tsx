@@ -110,7 +110,7 @@ export default function TamperSystemPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-500 mb-6 transition-colors"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -127,7 +127,7 @@ export default function TamperSystemPage() {
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Security Products
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -141,7 +141,7 @@ export default function TamperSystemPage() {
           </p>
           <div className="inline-flex items-center px-6 py-3 bg-primary-100 border border-primary-300 rounded-lg">
             <svg
-              className="w-6 h-6 text-primary-600 mr-3"
+              className="w-6 h-6 text-primary-500 mr-3"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -190,7 +190,7 @@ export default function TamperSystemPage() {
                     className="flex items-center text-steel-700"
                   >
                     <svg
-                      className="w-5 h-5 text-primary-600 mr-3 shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -254,7 +254,7 @@ export default function TamperSystemPage() {
                     <div className="text-center p-4">
                       <div className="w-20 h-20 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
                         <svg
-                          className="w-10 h-10 text-primary-600"
+                          className="w-10 h-10 text-primary-500"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -273,7 +273,7 @@ export default function TamperSystemPage() {
                     </div>
                   )}
                 </div>
-                <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+                <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                   {product.model}
                 </h3>
                 <p className="text-steel-600 text-sm mb-4">
@@ -329,7 +329,7 @@ export default function TamperSystemPage() {
                     <div className="text-center p-4">
                       <div className="w-20 h-20 mx-auto mb-4 bg-primary-100 rounded-full flex items-center justify-center">
                         <svg
-                          className="w-10 h-10 text-primary-600"
+                          className="w-10 h-10 text-primary-500"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -348,7 +348,7 @@ export default function TamperSystemPage() {
                     </div>
                   )}
                 </div>
-                <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+                <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                   {cup.cup}
                 </h3>
                 <p className="text-steel-600 text-sm mb-4">
@@ -470,7 +470,7 @@ export default function TamperSystemPage() {
                     className="flex items-center text-steel-700"
                   >
                     <svg
-                      className="w-5 h-5 text-primary-600 mr-3 shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

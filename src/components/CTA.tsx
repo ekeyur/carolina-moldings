@@ -16,7 +16,7 @@ export default function CTA() {
       <div className="absolute top-0 right-0 w-1/2 h-full">
         <div className="absolute inset-0 bg-linear-to-l from-primary-600/5 to-transparent"></div>
         <svg
-          className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 text-primary-600/10"
+          className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 text-primary-500/10"
           viewBox="0 0 200 200"
         >
           <defs>
@@ -111,7 +111,7 @@ export default function CTA() {
                 <div className="text-center">
                   <div className="w-32 h-32 mx-auto mb-6 border-4 border-primary-600/30 rounded-full flex items-center justify-center">
                     <svg
-                      className="w-16 h-16 text-primary-600"
+                      className="w-16 h-16 text-primary-500"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"

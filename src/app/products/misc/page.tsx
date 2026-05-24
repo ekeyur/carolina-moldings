@@ -68,7 +68,7 @@ export default function MiscPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-500 mb-6 transition-colors"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -85,7 +85,7 @@ export default function MiscPage() {
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Accessories
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -147,7 +147,7 @@ export default function MiscPage() {
                     {product.model}
                   </span>
                 </div>
-                <h3 className="font-display text-xl font-bold text-steel-900 mb-3 group-hover:text-primary-600 transition-colors">
+                <h3 className="font-display text-xl font-bold text-steel-900 mb-3 group-hover:text-primary-500 transition-colors">
                   {product.name}
                 </h3>
                 <p className="text-steel-600 text-sm leading-relaxed">
@@ -188,7 +188,7 @@ export default function MiscPage() {
                 ].map((feature) => (
                   <li key={feature} className="flex items-center text-steel-700">
                     <svg
-                      className="w-5 h-5 text-primary-600 mr-3 flex-shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -244,7 +244,7 @@ export default function MiscPage() {
               href="/products/meter-screws"
               className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Meter Screws
               </h3>
               <p className="text-steel-600 text-sm">
@@ -255,7 +255,7 @@ export default function MiscPage() {
               href="/products/paint-covers"
               className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Paint Covers
               </h3>
               <p className="text-steel-600 text-sm">
@@ -266,7 +266,7 @@ export default function MiscPage() {
               href="/products/tamper-system"
               className="group p-6 bg-white rounded-lg border border-steel-200 hover:border-primary-300 hover:shadow-lg transition-all"
             >
-              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+              <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                 Snap Seal Tamper System
               </h3>
               <p className="text-steel-600 text-sm">

@@ -103,14 +103,14 @@ export default function FullCatalogPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
-            className="inline-flex items-center text-steel-600 hover:text-primary-600 mb-6 transition-colors"
+            className="inline-flex items-center text-steel-600 hover:text-primary-500 mb-6 transition-colors"
           >
             <svg className="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
             Back to Products
           </Link>
-          <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+          <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
             Complete Selection
           </p>
           <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-steel-900 tracking-tight mb-6">
@@ -134,7 +134,7 @@ export default function FullCatalogPage() {
               >
                 {/* Category Header */}
                 <div className="p-6 bg-steel-50 border-b border-steel-200">
-                  <div className="w-16 h-16 mb-4 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-600">
+                  <div className="w-16 h-16 mb-4 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-500">
                     {category.icon}
                   </div>
                   <h2 className="font-display text-xl font-bold text-steel-900 mb-2">
@@ -157,11 +157,11 @@ export default function FullCatalogPage() {
                           href={product.href}
                           className="group flex items-center justify-between p-3 rounded-lg hover:bg-steel-50 transition-colors"
                         >
-                          <span className="text-steel-700 group-hover:text-primary-600 transition-colors">
+                          <span className="text-steel-700 group-hover:text-primary-500 transition-colors">
                             {product.name}
                           </span>
                           <svg
-                            className="w-4 h-4 text-steel-400 group-hover:text-primary-600 group-hover:translate-x-1 transition-all"
+                            className="w-4 h-4 text-steel-400 group-hover:text-primary-500 group-hover:translate-x-1 transition-all"
                             fill="none"
                             viewBox="0 0 24 24"
                             stroke="currentColor"
@@ -231,7 +231,7 @@ export default function FullCatalogPage() {
               },
             ].map((feature) => (
               <div key={feature.description} className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-full flex items-center justify-center text-primary-600">
+                <div className="w-16 h-16 mx-auto mb-4 bg-primary-500/10 rounded-full flex items-center justify-center text-primary-500">
                   {feature.icon}
                 </div>
                 <h3 className="font-display text-lg font-semibold text-steel-900 mb-2">

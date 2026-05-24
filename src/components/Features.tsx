@@ -66,7 +66,7 @@ export default function Features() {
         {/* Section Header */}
         <ScrollAnimate>
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
+            <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-4">
               Why Choose Us
             </p>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-6">
@@ -88,7 +88,7 @@ export default function Features() {
                 className="group relative p-8 bg-white rounded-lg border border-steel-200 hover:border-primary-400/60 transition-all duration-300 hover:shadow-lg hover:shadow-primary-100/50 h-full"
               >
               {/* Icon */}
-              <div className="w-16 h-16 mb-6 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-600 group-hover:bg-primary-500/20 group-hover:scale-110 transition-all duration-300">
+              <div className="w-16 h-16 mb-6 bg-primary-500/10 border border-primary-500/20 rounded-lg flex items-center justify-center text-primary-500 group-hover:bg-primary-500/20 group-hover:scale-110 transition-all duration-300">
                 {feature.icon}
               </div>
 

@@ -83,13 +83,13 @@ export default function Products() {
 
               {/* Content */}
               <div className="p-6">
-                <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-600 transition-colors">
+                <h3 className="font-display text-xl font-semibold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                   {brand.name}
                 </h3>
                 <p className="text-steel-600 text-sm leading-relaxed mb-4">
                   {brand.description}
                 </p>
-                <span className="inline-flex items-center text-sm font-semibold text-primary-600 group-hover:gap-3 gap-2 transition-all">
+                <span className="inline-flex items-center text-sm font-semibold text-primary-500 group-hover:gap-3 gap-2 transition-all">
                   View Products
                   <svg
                     className="w-4 h-4 transition-transform group-hover:translate-x-1"
@@ -143,7 +143,7 @@ export default function Products() {
               >
                 <div className="w-12 h-12 bg-steel-200 rounded-lg flex items-center justify-center group-hover:bg-primary-100 transition-colors">
                   <svg
-                    className="w-6 h-6 text-steel-600 group-hover:text-primary-600 transition-colors"
+                    className="w-6 h-6 text-steel-600 group-hover:text-primary-500 transition-colors"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -182,7 +182,7 @@ export default function Products() {
                     )}
                   </svg>
                 </div>
-                <span className="font-display font-semibold text-steel-900 group-hover:text-primary-600 transition-colors">
+                <span className="font-display font-semibold text-steel-900 group-hover:text-primary-500 transition-colors">
                   {category.name}
                 </span>
               </Link>

@@ -96,7 +96,7 @@ export default function Contact() {
           {/* Contact Info */}
           <ScrollAnimate animation="left">
             <div>
-              <p className="text-primary-600 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-2">
+              <p className="text-primary-500 font-display text-sm uppercase tracking-[0.2em] font-semibold mb-2">
                 Get In Touch
               </p>
               <h2 className="font-display text-4xl md:text-5xl font-bold text-steel-900 tracking-tight mb-3">
@@ -168,7 +168,7 @@ export default function Contact() {
                     </h3>
                     <a
                       href="tel:18005237475"
-                      className="text-steel-600 hover:text-primary-600 transition-colors"
+                      className="text-steel-600 hover:text-primary-500 transition-colors"
                     >
                       1-800-523-7475
                     </a>
@@ -198,7 +198,7 @@ export default function Contact() {
                     </h3>
                     <a
                       href="mailto:contact@carolinamoldings.com"
-                      className="text-steel-600 hover:text-primary-600 transition-colors"
+                      className="text-steel-600 hover:text-primary-500 transition-colors"
                     >
                       contact@carolinamoldings.com
                     </a>
