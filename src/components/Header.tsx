@@ -92,7 +92,7 @@ export default function Header() {
                 {item.children ? (
                   <>
                     <button
-                      className="px-4 py-2 text-sm font-medium text-white hover:text-white transition-colors flex items-center gap-1"
+                      className={`px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors flex items-center gap-1 rounded ${pathname.startsWith("/products") ? "bg-white/25" : ""}`}
                       onMouseEnter={() => setProductsOpen(true)}
                       onMouseLeave={() => setProductsOpen(false)}
                     >
@@ -132,7 +132,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="px-4 py-2 text-sm font-medium text-white hover:text-white transition-colors"
+                    className={`px-4 py-2 text-sm font-medium text-white hover:bg-white/10 transition-colors rounded ${pathname === item.href ? "bg-white/25" : ""}`}
                   >
                     {item.name}
                   </Link>
@@ -222,7 +222,7 @@ export default function Header() {
                           <Link
                             key={child.name}
                             href={child.href}
-                            className="block px-4 py-2 text-sm text-white/90 hover:text-white"
+                            className={`block px-4 py-2 text-sm rounded transition-colors hover:bg-white/10 ${pathname === child.href ? "text-white font-semibold bg-white/20" : "text-white/90 hover:text-white"}`}
                           >
                             {child.name}
                           </Link>
@@ -233,7 +233,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="block px-4 py-3 text-white hover:text-white"
+                    className={`block px-4 py-3 text-white rounded transition-colors hover:bg-white/10 ${pathname === item.href ? "bg-white/25 font-semibold" : ""}`}
                   >
                     {item.name}
                   </Link>
