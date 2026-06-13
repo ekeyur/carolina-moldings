@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Gas Meter Accessories | ERT Protectors, Vents & Hardware | Carolina Moldings",
+  title:
+    "Gas Meter Accessories | ERT Protectors, Vents & Hardware | Carolina Moldings",
   description:
     "Complete selection of gas meter accessories including ERT protectors, instrument drive covers, regulator vents, and hardware. Quality products for index cover installations.",
   keywords:
@@ -186,9 +187,12 @@ export default function MiscPage() {
                   "Complete hardware selection",
                   "Custom solutions available",
                 ].map((feature) => (
-                  <li key={feature} className="flex items-center text-steel-700">
+                  <li
+                    key={feature}
+                    className="flex items-center text-steel-700"
+                  >
                     <svg
-                      className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -207,7 +211,7 @@ export default function MiscPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-steel-200 to-steel-300 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-steel-200 to-steel-300 flex items-center justify-center">
                   <div className="text-center">
                     <svg
                       className="w-24 h-24 mx-auto text-steel-500 mb-4"
@@ -288,10 +292,7 @@ export default function MiscPage() {
             accessories for your gas meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#contact"
-              className="btn-primary"
-            >
+            <Link href="/#contact" className="btn-primary">
               Contact Us
             </Link>
             <Link

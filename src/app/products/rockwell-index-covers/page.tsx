@@ -3,9 +3,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import FeatureList from "@/components/FeatureList";
 
 export const metadata: Metadata = {
-  title: "Rockwell & Sensus Index Covers | R-103, R-104, R-105, R-40G, R-100G | Carolina Moldings",
+  title:
+    "Rockwell & Sensus Index Covers | R-103, R-104, R-105, R-40G, R-100G | Carolina Moldings",
   description:
     "Premium index covers for Rockwell and Sensus gas meters. Models R-103, R-104, R-105, R-40G, R-100G available with Sure Seal gasket and Snap Seal tamper plug options.",
   keywords:
@@ -27,7 +29,7 @@ const rockwellCovers = [
   {
     model: "R-104",
     description: "Comes with or without our Sure Seal preapplied gasket",
-    features: ["Does not accept Snap Seal tamper plugs"],
+    features: ["Incompatible with Snap Seal tamper plugs"],
     unitsPerCase: "260",
     tamperCompatible: false,
     image: "/products/R-104.png",
@@ -46,10 +48,7 @@ const rockwellCovers = [
   {
     model: "R-40G",
     description: "Comes with or without our Sure Seal preapplied gasket",
-    features: [
-      "Accepts 2 Tophat tamper plugs",
-      "Tamper System Kit available",
-    ],
+    features: ["Accepts 2 Tophat tamper plugs", "Tamper System Kit available"],
     unitsPerCase: "80",
     tamperCompatible: true,
     image: "/products/R-40G.png",
@@ -57,10 +56,7 @@ const rockwellCovers = [
   {
     model: "R-100G",
     description: "Does not use Sure Seal preapplied gasket",
-    features: [
-      "Accepts 2 Tophat tamper plugs",
-      "Tamper System Kit available",
-    ],
+    features: ["Accepts 2 Tophat tamper plugs", "Tamper System Kit available"],
     unitsPerCase: "60",
     tamperCompatible: true,
     image: "/products/R-100G.png",
@@ -163,29 +159,7 @@ export default function RockwellIndexCoversPage() {
                 </h3>
                 <p className="text-steel-600 mb-4">{product.description}</p>
 
-                <ul className="space-y-2 mb-4">
-                  {product.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-sm text-steel-600"
-                    >
-                      <svg
-                        className="w-4 h-4 text-primary-500 mr-2 mt-0.5 flex-shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <FeatureList features={product.features} />
 
                 <div className="pt-4 border-t border-steel-100">
                   <p className="text-sm text-steel-500">
@@ -229,7 +203,10 @@ export default function RockwellIndexCoversPage() {
                   "Multiple tamper plug options",
                   "High-volume case quantities available",
                 ].map((feature) => (
-                  <li key={feature} className="flex items-center text-steel-700">
+                  <li
+                    key={feature}
+                    className="flex items-center text-steel-700"
+                  >
                     <svg
                       className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0"
                       fill="none"
@@ -331,10 +308,7 @@ export default function RockwellIndexCoversPage() {
             index cover for your Rockwell or Sensus meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#contact"
-              className="btn-primary"
-            >
+            <Link href="/#contact" className="btn-primary">
               Contact Us
             </Link>
             <Link

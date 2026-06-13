@@ -3,9 +3,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Link from "next/link";
 import Image from "next/image";
+import FeatureList from "@/components/FeatureList";
 
 export const metadata: Metadata = {
-  title: "American & Honeywell Index Covers | A-101, A-103, A-40G, A-100G | Carolina Moldings",
+  title:
+    "American & Honeywell Index Covers | A-101, A-103, A-40G, A-100G | Carolina Moldings",
   description:
     "Precision-fit index covers for American and Honeywell gas meters. Models A-101, A-101 OS, A-103, A-103 OS, A-40G, A-100G with Sure Seal gasket and Snap Seal tamper plug compatibility.",
   keywords:
@@ -27,7 +29,7 @@ const americanCovers = [
   {
     model: "A-101 OS",
     description: "Available with or without Sure Seal preapplied gasket",
-    features: ["Does not accommodate Snap Seal tamper plugs"],
+    features: ["Incompatible with Snap Seal tamper plugs"],
     unitsPerCase: 105,
     tamperCompatible: false,
     image: "/products/A-101_OS.png",
@@ -171,29 +173,7 @@ export default function AmericanIndexCoversPage() {
                 </h3>
                 <p className="text-steel-600 mb-4">{product.description}</p>
 
-                <ul className="space-y-2 mb-4">
-                  {product.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className="flex items-start text-sm text-steel-600"
-                    >
-                      <svg
-                        className="w-4 h-4 text-primary-500 mr-2 mt-0.5 shrink-0"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
+                <FeatureList features={product.features} />
 
                 <div className="pt-4 border-t border-steel-100">
                   <p className="text-sm text-steel-500">
@@ -341,10 +321,7 @@ export default function AmericanIndexCoversPage() {
             index cover for your American or Honeywell meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#contact"
-              className="btn-primary"
-            >
+            <Link href="/#contact" className="btn-primary">
               Contact Us
             </Link>
             <Link
