@@ -208,7 +208,7 @@ export default function RockwellIndexCoversPage() {
                     className="flex items-center text-steel-700"
                   >
                     <svg
-                      className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -227,7 +227,7 @@ export default function RockwellIndexCoversPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-steel-200 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-primary-100 to-steel-200 flex items-center justify-center">
                   <div className="text-center">
                     <svg
                       className="w-24 h-24 mx-auto text-primary-500 mb-4"
@@ -242,7 +242,7 @@ export default function RockwellIndexCoversPage() {
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
-                    <p className="font-display text-xl text-primary-700 uppercase tracking-wider">
+                    <p className="font-display text-xl text-primary-400 uppercase tracking-wider">
                       Quality Assured
                     </p>
                   </div>

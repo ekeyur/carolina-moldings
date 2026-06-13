@@ -144,7 +144,7 @@ export default function MiscPage() {
                 </div>
 
                 <div className="mb-2">
-                  <span className="inline-block px-2 py-1 bg-steel-100 text-primary-700 text-xs font-semibold rounded">
+                  <span className="inline-block px-2 py-1 bg-steel-100 text-primary-400 text-xs font-semibold rounded">
                     {product.model}
                   </span>
                 </div>

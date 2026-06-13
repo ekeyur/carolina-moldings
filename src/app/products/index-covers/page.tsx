@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Gas Meter Index Covers | American, Rockwell & Itron | Carolina Moldings",
+  title:
+    "Gas Meter Index Covers | American, Rockwell & Itron | Carolina Moldings",
   description:
     "High-quality gas meter index covers for American, Rockwell, Itron, and Sprague meters. Compatible with Snap Seal tamper plugs and Sure Seal gaskets. Trusted by utilities since 1975.",
   keywords:
@@ -321,10 +322,7 @@ export default function IndexCoversPage() {
                   will help you find the perfect match.
                 </p>
               </div>
-              <Link
-                href="/#contact"
-                className="btn-primary mt-6"
-              >
+              <Link href="/#contact" className="btn-primary mt-6">
                 Get Help
               </Link>
             </div>
@@ -345,7 +343,7 @@ export default function IndexCoversPage() {
                         d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
                       />
                     </svg>
-                    <p className="font-display text-2xl text-primary-700 uppercase tracking-wider">
+                    <p className="font-display text-2xl text-primary-400 uppercase tracking-wider">
                       Index Covers
                     </p>
                   </div>
@@ -411,10 +409,7 @@ export default function IndexCoversPage() {
             index covers for your meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#contact"
-              className="btn-primary"
-            >
+            <Link href="/#contact" className="btn-primary">
               Contact Us
             </Link>
             <Link

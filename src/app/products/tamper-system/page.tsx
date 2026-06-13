@@ -358,7 +358,7 @@ export default function TamperSystemPage() {
                   <span className="px-2 py-1 bg-steel-100 text-steel-600 text-xs rounded">
                     {cup.compatibleSeal}
                   </span>
-                  <span className="px-2 py-1 bg-primary-100 text-primary-700 text-xs rounded font-medium">
+                  <span className="px-2 py-1 bg-primary-100 text-primary-500 text-xs rounded font-medium">
                     Screw: {cup.screwType}
                   </span>
                 </div>
@@ -529,10 +529,7 @@ export default function TamperSystemPage() {
             right seals and cups for your meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#contact"
-              className="btn-primary"
-            >
+            <Link href="/#contact" className="btn-primary">
               Contact Us
             </Link>
             <Link

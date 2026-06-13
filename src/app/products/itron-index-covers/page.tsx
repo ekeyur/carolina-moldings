@@ -5,7 +5,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Itron & Sprague Index Covers | I-100G, S-105 & Endpoint Covers | Carolina Moldings",
+  title:
+    "Itron & Sprague Index Covers | I-100G, S-105 & Endpoint Covers | Carolina Moldings",
   description:
     "Quality index covers for Itron and Sprague gas meters including I-100G, S-105, and endpoint covers. Compatible with Snap Seal tamper plugs and Tophat tamper systems.",
   keywords:
@@ -142,7 +143,8 @@ export default function ItronIndexCoversPage() {
               Itron / Sprague Index Covers
             </h2>
             <p className="text-steel-600">
-              Index covers specifically designed for Itron and Sprague gas meters.
+              Index covers specifically designed for Itron and Sprague gas
+              meters.
             </p>
           </div>
 
@@ -201,7 +203,7 @@ export default function ItronIndexCoversPage() {
                       className="flex items-start text-sm text-steel-600"
                     >
                       <svg
-                        className="w-4 h-4 text-primary-500 mr-2 mt-0.5 flex-shrink-0"
+                        className="w-4 h-4 text-primary-500 mr-2 mt-0.5 shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -293,7 +295,9 @@ export default function ItronIndexCoversPage() {
                 <h3 className="font-display text-xl font-bold text-steel-900 mb-2 group-hover:text-primary-500 transition-colors">
                   {product.model}
                 </h3>
-                <p className="text-steel-600 text-sm mb-3">{product.description}</p>
+                <p className="text-steel-600 text-sm mb-3">
+                  {product.description}
+                </p>
 
                 <div className="pt-3 border-t border-steel-200">
                   <p className="text-sm text-steel-500">
@@ -325,9 +329,9 @@ export default function ItronIndexCoversPage() {
                   the field.
                 </p>
                 <p>
-                  All tamper-compatible models work seamlessly with our Snap Seal
-                  tamper system, providing security and tamper evidence for your
-                  utility meters.
+                  All tamper-compatible models work seamlessly with our Snap
+                  Seal tamper system, providing security and tamper evidence for
+                  your utility meters.
                 </p>
               </div>
               <ul className="mt-6 space-y-3">
@@ -337,9 +341,12 @@ export default function ItronIndexCoversPage() {
                   "Durable construction",
                   "Bulk quantities available",
                 ].map((feature) => (
-                  <li key={feature} className="flex items-center text-steel-700">
+                  <li
+                    key={feature}
+                    className="flex items-center text-steel-700"
+                  >
                     <svg
-                      className="w-5 h-5 text-primary-500 mr-3 flex-shrink-0"
+                      className="w-5 h-5 text-primary-500 mr-3 shrink-0"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -358,7 +365,7 @@ export default function ItronIndexCoversPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-100 to-steel-200 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-primary-100 to-steel-200 flex items-center justify-center">
                   <div className="text-center">
                     <svg
                       className="w-24 h-24 mx-auto text-primary-500 mb-4"
@@ -373,7 +380,7 @@ export default function ItronIndexCoversPage() {
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
-                    <p className="font-display text-xl text-primary-700 uppercase tracking-wider">
+                    <p className="font-display text-xl text-primary-400 uppercase tracking-wider">
                       Quality Assured
                     </p>
                   </div>
@@ -439,10 +446,7 @@ export default function ItronIndexCoversPage() {
             index cover for your Itron or Sprague meters.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/#contact"
-              className="btn-primary"
-            >
+            <Link href="/#contact" className="btn-primary">
               Contact Us
             </Link>
             <Link

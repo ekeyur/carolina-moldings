@@ -88,8 +88,8 @@ export default function Hero() {
         <div className="max-w-4xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-white border border-primary-300 rounded-full mb-8 opacity-0 animate-fade-in">
-            <span className="w-2 h-2 bg-primary-500 rounded-full animate-pulse"></span>
-            <span className="text-sm text-primary-800 font-medium">
+            <span className="w-2 h-2 bg-accent-500 rounded-full animate-pulse"></span>
+            <span className="text-sm text-accent-500 font-medium">
               Family Owned Since 1975
             </span>
           </div>
