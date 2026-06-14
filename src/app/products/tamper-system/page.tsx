@@ -489,7 +489,7 @@ export default function TamperSystemPage() {
             </div>
             <div className="relative">
               <div className="aspect-square bg-steel-100 rounded-2xl overflow-hidden">
-                <div className="absolute inset-0 bg-linear-to-br from-primary-600 to-steel-900 flex items-center justify-center">
+                <div className="absolute inset-0 bg-linear-to-br from-primary-500 to-steel-500 flex items-center justify-center">
                   <div className="text-center text-white">
                     <svg
                       className="w-24 h-24 mx-auto mb-4 opacity-90"
@@ -507,7 +507,7 @@ export default function TamperSystemPage() {
                     <p className="font-display text-2xl font-bold uppercase tracking-wider text-accent-300">
                       Snap Seal™
                     </p>
-                    <p className="text-primary-200 mt-2">Trusted Security</p>
+                    <p className="text-primary-100 mt-2">Trusted Security</p>
                   </div>
                 </div>
               </div>

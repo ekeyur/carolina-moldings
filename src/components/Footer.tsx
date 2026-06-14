@@ -41,7 +41,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-primary-500 border-t border-primary-400">
+    <footer className="bg-primary-500 border-t border-primary-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
           {/* Brand */}
@@ -165,7 +165,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-16 pt-8 border-t border-primary-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+        <div className="mt-16 pt-8 border-t border-white flex flex-col sm:flex-row justify-between items-center gap-4">
           <p className="text-sm text-white/90">
             © {new Date().getFullYear()} Carolina Moldings, Inc. All rights
             reserved.
