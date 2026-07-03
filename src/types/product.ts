@@ -15,6 +15,7 @@ export type Product = {
   material?: string;
   pack?: string;
   fits?: string;
+  spec?: string;
   tamperCompatible?: boolean;
   kit?: boolean;
   bullets?: string[];

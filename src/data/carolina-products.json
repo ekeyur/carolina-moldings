@@ -648,6 +648,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "A-101, A-101-OS",
+      "spec": "1/4-20 x 5/8 fillister head",
       "desc": "1/4-20 x 5/8 fillister-head index cover screw for American A-101 and A-101-OS covers.",
       "images": []
     },
@@ -660,6 +661,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Cup #2",
+      "spec": "1/4-20 x 3/4 pan head",
       "desc": "1/4-20 x 3/4 pan-head screw for Cup #2.",
       "images": []
     },
@@ -672,6 +674,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "A-103, A-103-OS",
+      "spec": "12-24 x 1/2 fillister head",
       "desc": "12-24 x 1/2 fillister-head index cover screw for American A-103 and A-103-OS covers.",
       "images": []
     },
@@ -684,6 +687,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Back of A-103 / A-103-OS, Cup #8",
+      "spec": "8-32 x 5/8 binder head",
       "desc": "8-32 x 5/8 binder-head index mounting screw for the back of A-103 / A-103-OS covers and Cup #8.",
       "images": []
     },
@@ -696,6 +700,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Cup ABP",
+      "spec": "18 x 18 x 1-1/8 fillister head",
       "desc": "18 x 18 x 1-1/8 fillister-head screw for Cup ABP.",
       "images": []
     },
@@ -708,6 +713,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Cup AHH",
+      "spec": "3/8-16 x 1-1/2 allen head",
       "desc": "3/8 x 1-1/2 allen-head screw for Cup AHH.",
       "images": []
     },
@@ -720,6 +726,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "American AL-175 / 250 index",
+      "spec": "8-32 x 3/16 round head",
       "desc": "8-32 x 3/16 round-head screw for the American AL-175 / 250 index.",
       "images": []
     },
@@ -732,6 +739,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Rockwell combo case",
+      "spec": "1/4-20 x 3/4",
       "desc": "1/4-20 x 3/4 Rockwell combo case screw.",
       "images": []
     },
@@ -744,6 +752,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "R-103, R-103-OS, S-105",
+      "spec": "10-24 x 1/2 fillister head",
       "desc": "10-24 x 1/2 fillister-head screw for R-103 / R-103-OS index covers and the Sprague S-105.",
       "images": []
     },
@@ -756,6 +765,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "R-104, Rockwell ERT index cover",
+      "spec": "10-24 x 3/4 fillister head",
       "desc": "10-24 x 3/4 fillister-head screw for R-104 and the Rockwell ERT index cover.",
       "images": []
     },
@@ -768,6 +778,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "RHH Cup & R-105 index cover",
+      "spec": "5/16-18 x 1 allen head",
       "desc": "5/16 x 18 x 1 allen-head screw for the RHH Cup and R-105 index cover.",
       "images": []
     },
@@ -780,6 +791,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Cup #1",
+      "spec": "10-24 x 5/8 pan head",
       "desc": "10-24 x 5/8 pan-head screw for Cup #1.",
       "images": []
     },
@@ -792,6 +804,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "R-105",
+      "spec": "5/16-18 x 1 fillister head",
       "desc": "5/16 x 18 x 1 fillister-head screw for R-105.",
       "images": []
     },
@@ -804,6 +817,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Rockwell index",
+      "spec": "6-32 x 5/8 fillister head",
       "desc": "6-32 x 5/8 fillister-head screw for the Rockwell index.",
       "images": []
     },
@@ -816,6 +830,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "R-103, Rockwell hand-hole cover",
+      "spec": "10-24 x 5/8 fillister head (long-thread)",
       "desc": "10-24 x 5/8 longer-thread fillister-head screw for R-103 and the Rockwell hand-hole cover.",
       "images": []
     },
@@ -828,6 +843,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "S-104",
+      "spec": "10-24 x 1 x 5/8 flat head",
       "desc": "10-24 x 1 x 5/8 flat-head screw for the Sprague S-104.",
       "images": []
     },
@@ -840,6 +856,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "S-104 & S-105 badge plate",
+      "spec": "#6 drive stud",
       "desc": "#6 drive stud for the badge plate on Sprague S-104 and S-105.",
       "images": []
     },
@@ -852,6 +869,7 @@
       "material": "Plated steel",
       "pack": "Bulk",
       "fits": "Residential Sprague index",
+      "spec": "10-24 x 1/4 pan head",
       "desc": "10-24 x 1/4 pan-head screw for the residential Sprague index.",
       "images": []
     },

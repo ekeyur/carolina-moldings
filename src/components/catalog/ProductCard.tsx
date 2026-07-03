@@ -4,6 +4,7 @@ import Image from "next/image";
 import { Shield, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQuote } from "@/context/QuoteContext";
+import { screwCompatibility } from "@/data/screw-compatibility";
 import type { Product } from "@/types/product";
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
 export function ProductCard({ product, onOpen, priority }: Props) {
   const { add, isInQuote } = useQuote();
   const inQuote = isInQuote(product.id);
+  const screwPartNos = screwCompatibility[product.id];
 
   return (
     <div className="bg-white rounded-[6px] border border-line hover:shadow-[0_8px_24px_rgba(19,41,75,.09)] transition-shadow flex flex-col">
@@ -54,6 +56,13 @@ export function ProductCard({ product, onOpen, priority }: Props) {
           {product.brand || product.cat}
         </p>
 
+        {/* Screw spec (thread size / head type) */}
+        {product.spec && (
+          <p className="text-slate-500 text-[11px] font-mono-brand leading-snug">
+            {product.spec}
+          </p>
+        )}
+
         {/* Name */}
         <button
           type="button"
@@ -75,6 +84,13 @@ export function ProductCard({ product, onOpen, priority }: Props) {
         {product.fits && (
           <p className="text-slate-500 text-[11px] leading-snug line-clamp-2">
             Fits: {product.fits}
+          </p>
+        )}
+
+        {/* Screws needed */}
+        {screwPartNos && screwPartNos.length > 0 && (
+          <p className="text-carolina text-[11px] leading-snug font-medium">
+            Screws: {screwPartNos.join(", ")}
           </p>
         )}
 

@@ -12,6 +12,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useQuote } from "@/context/QuoteContext";
+import { getSuggestedScrews } from "@/data/screw-compatibility";
+import catalogData from "@/data/carolina-products.json";
+import type { CatalogData } from "@/types/product";
+
+const allProducts = (catalogData as CatalogData).products;
 
 const schema = z.object({
   name: z.string().min(2, "Full name is required"),
@@ -24,7 +29,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 export default function QuotePage() {
-  const { items, setQty, remove, clear } = useQuote();
+  const { items, add, setQty, remove, clear } = useQuote();
   const [submitted, setSubmitted] = useState(false);
 
   const {
@@ -35,6 +40,10 @@ export default function QuotePage() {
 
   const carolinaItems = items.filter((i) => i.supplier === "carolina");
   const nutsAndSwivelsItems = items.filter((i) => i.supplier === "nuts-and-swivels");
+  const suggestedScrews = getSuggestedScrews(
+    items.map((i) => i.id),
+    allProducts,
+  );
 
   const onSubmit = async (data: FormData) => {
     await fetch("/api/quote", {
@@ -179,6 +188,45 @@ export default function QuotePage() {
                     setQty={setQty}
                     remove={remove}
                   />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Recommended screws upsell */}
+          {suggestedScrews.length > 0 && (
+            <div className="px-5 py-4 border-t border-line bg-surface">
+              <p className="font-mono-brand text-slate-400 text-[11px] tracking-widest uppercase font-medium mb-3">
+                You might also need
+              </p>
+              <div className="space-y-2">
+                {suggestedScrews.map((screw) => (
+                  <div
+                    key={screw.id}
+                    className="flex items-center gap-3 rounded-[3px] border border-line bg-white px-3 py-2"
+                  >
+                    <span className="bg-navy text-white font-mono-brand text-[10px] font-semibold px-1.5 py-0.5 rounded-[3px] shrink-0">
+                      {screw.partNo}
+                    </span>
+                    <span className="text-ink text-xs leading-snug flex-1">
+                      {screw.desc}
+                    </span>
+                    <Button
+                      size="sm"
+                      onClick={() =>
+                        add({
+                          id: screw.id,
+                          name: screw.name,
+                          partNo: screw.partNo,
+                          supplier: "carolina",
+                          image: screw.images[0],
+                        })
+                      }
+                      className="rounded-[3px] text-xs font-semibold shrink-0 bg-surface-2 border border-line text-ink hover:bg-navy hover:text-white"
+                    >
+                      + Add
+                    </Button>
+                  </div>
                 ))}
               </div>
             </div>

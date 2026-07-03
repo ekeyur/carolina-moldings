@@ -11,7 +11,11 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { useQuote } from "@/context/QuoteContext";
-import type { Product } from "@/types/product";
+import { getRecommendedScrews } from "@/data/screw-compatibility";
+import catalogData from "@/data/carolina-products.json";
+import type { CatalogData, Product } from "@/types/product";
+
+const allProducts = (catalogData as CatalogData).products;
 
 type Props = {
   product: Product | null;
@@ -26,6 +30,7 @@ export function ProductDialog({ product, open, onClose }: Props) {
   if (!product) return null;
 
   const inQuote = isInQuote(product.id);
+  const recommendedScrews = getRecommendedScrews(product.id, allProducts);
 
   const handleAdd = () => {
     add({
@@ -164,6 +169,20 @@ export function ProductDialog({ product, open, onClose }: Props) {
               </div>
             )}
 
+            {/* Recommended screws upsell */}
+            {recommendedScrews.length > 0 && (
+              <div className="border-t border-line pt-5">
+                <p className="font-mono-brand text-slate-400 text-[11px] tracking-widest uppercase font-medium mb-3">
+                  Screws for this cover
+                </p>
+                <div className="space-y-2">
+                  {recommendedScrews.map((screw) => (
+                    <RecommendedScrewRow key={screw.id} screw={screw} />
+                  ))}
+                </div>
+              </div>
+            )}
+
             {/* Add to quote */}
             <Button
               onClick={handleAdd}
@@ -179,5 +198,38 @@ export function ProductDialog({ product, open, onClose }: Props) {
         </div>
       </DialogContent>
     </Dialog>
+  );
+}
+
+function RecommendedScrewRow({ screw }: { screw: Product }) {
+  const { add, isInQuote } = useQuote();
+  const inQuote = isInQuote(screw.id);
+
+  return (
+    <div className="flex items-center gap-3 rounded-[3px] border border-line bg-surface px-3 py-2">
+      <span className="bg-navy text-white font-mono-brand text-[10px] font-semibold px-1.5 py-0.5 rounded-[3px] shrink-0">
+        {screw.partNo}
+      </span>
+      <span className="text-ink text-xs leading-snug flex-1">{screw.desc}</span>
+      <Button
+        size="sm"
+        onClick={() =>
+          add({
+            id: screw.id,
+            name: screw.name,
+            partNo: screw.partNo,
+            supplier: "carolina",
+            image: screw.images[0],
+          })
+        }
+        className={`rounded-[3px] text-xs font-semibold shrink-0 ${
+          inQuote
+            ? "bg-green-bg text-green border border-green hover:bg-green hover:text-white"
+            : "bg-surface-2 border border-line text-ink hover:bg-navy hover:text-white"
+        }`}
+      >
+        {inQuote ? "✓ Added" : "+ Add"}
+      </Button>
+    </div>
   );
 }
