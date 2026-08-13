@@ -86,7 +86,7 @@ function SwivelControls({ family, onPartChange }: ControlProps) {
           </Label>
           <Select value={variantBase} onValueChange={selectValue(setVariantBase)}>
             <SelectTrigger className="rounded-[3px] w-full">
-              <SelectValue />
+              <SelectValue>{variant?.name}</SelectValue>
             </SelectTrigger>
             <SelectContent className="min-w-(--radix-select-trigger-width)">
               {family.variants?.map((v) => (
@@ -167,7 +167,7 @@ function AccessoryControls({ family, onPartChange }: ControlProps) {
           </Label>
           <Select value={variantBase} onValueChange={selectValue(setVariantBase)}>
             <SelectTrigger className="rounded-[3px] w-full">
-              <SelectValue />
+              <SelectValue>{variant?.name}</SelectValue>
             </SelectTrigger>
             <SelectContent className="min-w-(--radix-select-trigger-width)">
               {family.variants?.map((v) => (
@@ -287,7 +287,7 @@ function MeterBarControls({
         </Label>
         <Select value={mbType} onValueChange={selectValue(setMbType)}>
           <SelectTrigger className="rounded-[3px] w-full">
-            <SelectValue />
+            <SelectValue>{typeConfig.name}</SelectValue>
           </SelectTrigger>
           <SelectContent>
             {meterBarConfig.types.map((t) => (
@@ -310,14 +310,20 @@ function MeterBarControls({
             onChange: setLength,
             items: meterBarConfig.lengths.map((l) => ({ value: l.id, label: l.name })),
           },
-        ].map(({ label, value, onChange, items }) => (
+        ].map(({ label, value, onChange, items }) => {
+          const selectedItem = items.find((item) =>
+            typeof item === "string" ? item === value : item.value === value
+          );
+          const displayLabel =
+            typeof selectedItem === "string" ? selectedItem : selectedItem?.label;
+          return (
           <div key={label} className="space-y-1.5">
             <Label className="font-mono-brand text-[10px] text-slate-500 tracking-[0.14em] uppercase">
               {label}
             </Label>
             <Select value={value} onValueChange={selectValue(onChange)}>
               <SelectTrigger className="rounded-[3px] w-full">
-                <SelectValue />
+                <SelectValue>{displayLabel}</SelectValue>
               </SelectTrigger>
               <SelectContent>
                 {items.map((item) =>
@@ -334,7 +340,8 @@ function MeterBarControls({
               </SelectContent>
             </Select>
           </div>
-        ))}
+          );
+        })}
       </div>
 
       {typeConfig.gasketUnion && (
