@@ -41,15 +41,20 @@ function SheetContent({
   children,
   side = "right",
   showCloseButton = true,
+  initialFocus,
   ...props
 }: SheetPrimitive.Popup.Props & {
   side?: "top" | "right" | "bottom" | "left";
   showCloseButton?: boolean;
 }) {
+  const popupRef = React.useRef<HTMLDivElement>(null);
   return (
     <SheetPortal>
       <SheetOverlay />
       <SheetPrimitive.Popup
+        ref={popupRef}
+        tabIndex={-1}
+        initialFocus={initialFocus ?? popupRef}
         data-slot="sheet-content"
         data-side={side}
         className={cn(

@@ -461,7 +461,7 @@ export function ConfiguratorDialog({ family, open, onClose }: Props) {
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
       {isMeterBar ? (
         /* ── Meter bar: single column, compact image header ── */
-        <DialogContent className="sm:max-w-lg p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-hidden gap-0">
+        <DialogContent className="sm:max-w-lg p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-y-auto overflow-x-hidden gap-0">
           <div className="flex items-start gap-4 p-5 border-b border-line bg-surface">
             <div className="relative w-14 h-14 shrink-0 bg-white rounded-[6px] border border-line overflow-hidden">
               <Image
@@ -483,7 +483,7 @@ export function ConfiguratorDialog({ family, open, onClose }: Props) {
             </div>
           </div>
 
-          <div className="p-5 space-y-4 overflow-y-auto max-h-[70vh]">
+          <div className="p-5 space-y-4">
             <MeterBarControls key={family.id} onPartChange={handlePartChange} />
 
             <PartNumberBox partNo={currentPartNo} specLine={currentSpecLine} />
@@ -520,7 +520,7 @@ export function ConfiguratorDialog({ family, open, onClose }: Props) {
         </DialogContent>
       ) : (
         /* ── Swivel / Accessory: two-column, image panel left ── */
-        <DialogContent className="sm:max-w-2xl p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-hidden gap-0">
+        <DialogContent className="sm:max-w-2xl p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-y-auto overflow-x-hidden gap-0">
           <div className="grid grid-cols-1 md:grid-cols-[40%_60%]">
             {/* Left: image + product info */}
             <div className="bg-surface p-5 flex flex-col gap-4 md:border-r border-b md:border-b-0 border-line">
@@ -555,7 +555,7 @@ export function ConfiguratorDialog({ family, open, onClose }: Props) {
             </div>
 
             {/* Right: configure panel */}
-            <div className="p-6 flex flex-col gap-4 overflow-y-auto max-h-[85vh]">
+            <div className="p-6 flex flex-col gap-4 md:overflow-y-auto md:max-h-[85vh]">
               <h3 className="font-heading font-bold text-navy text-lg">Configure your part</h3>
 
               <div key={family.id}>

@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { Search, X } from "lucide-react";
+import Link from "next/link";
+import { Search, X, Settings2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "./ProductCard";
@@ -81,6 +82,17 @@ export function ProductGrid({
               </Button>
             ))}
 
+            {/* Nuts & Swivels — links out to its own configurator/catalog page */}
+            <Button
+              size="sm"
+              render={<Link href="/nuts-and-swivels" />}
+              nativeButton={false}
+              className="rounded-[3px] text-xs font-semibold h-8 px-3.5 bg-surface border border-line text-ink hover:bg-surface-2 gap-1.5"
+            >
+              <Settings2 className="h-3.5 w-3.5" />
+              Nuts & Swivels
+            </Button>
+
             {/* Search — full width on mobile, auto on larger */}
             <div className="relative w-full sm:w-auto sm:flex-1 sm:max-w-xs">
               <Search className="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-slate-400" />
@@ -111,7 +123,7 @@ export function ProductGrid({
                 onClick={() => setActiveBrand("all")}
                 className={`rounded-[3px] text-xs h-7 px-3 ${
                   activeBrand === "all"
-                    ? "bg-carolina text-white"
+                    ? "bg-brand-red text-white"
                     : "bg-surface border border-line text-slate-600 hover:bg-surface-2"
                 }`}
               >

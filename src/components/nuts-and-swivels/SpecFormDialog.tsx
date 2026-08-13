@@ -82,7 +82,7 @@ export function SpecFormDialog({ family, open, onClose }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && handleClose()}>
-      <DialogContent className="sm:max-w-lg p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-hidden gap-0">
+      <DialogContent className="sm:max-w-lg p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-y-auto overflow-x-hidden gap-0">
         {/* Header: thumbnail + title */}
         <div className="flex items-start gap-4 p-5 border-b border-line bg-surface">
           <div className="relative w-14 h-14 shrink-0 bg-white rounded-[6px] border border-line overflow-hidden">
@@ -120,10 +120,7 @@ export function SpecFormDialog({ family, open, onClose }: Props) {
             </Button>
           </div>
         ) : (
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="overflow-y-auto max-h-[70vh]"
-          >
+          <form onSubmit={handleSubmit(onSubmit)}>
             <div className="p-5 space-y-4">
               {form.fields.map((field) => (
                 <div key={field.key} className="space-y-1.5">

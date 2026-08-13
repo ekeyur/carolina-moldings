@@ -16,7 +16,7 @@ export default async function CatalogPage({
     <>
       {/* Page header */}
       <div className="bg-navy py-10">
-        <div className="max-w-[1240px] mx-auto px-6">
+        <div className="max-w-310 mx-auto px-6">
           <p className="font-mono-brand text-carolina text-xs font-semibold tracking-[0.16em] uppercase mb-2">
             Product Catalog
           </p>
@@ -24,7 +24,8 @@ export default async function CatalogPage({
             Carolina Moldings Products
           </h1>
           <p className="text-white/60 mt-2 text-sm">
-            {data.products.length} products across {data.categories.length} categories
+            {data.products.length} products across {data.categories.length}{" "}
+            categories
           </p>
         </div>
       </div>

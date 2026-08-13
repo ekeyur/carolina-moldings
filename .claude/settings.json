@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(lsof -ti:3000 -sTCP:LISTEN)",
+      "Bash(xargs -r kill)",
+      "Bash(disown)",
+      "Bash(timeout 60 bash -c 'until curl -sf http://localhost:3000 >/dev/null; do sleep 1; done')",
+      "Bash(curl -sf http://localhost:3000)",
+      "Bash(break)",
+      "Bash(npx playwright *)",
+      "Bash(node .mobile-test.mjs)"
+    ]
+  }
+}

@@ -44,7 +44,7 @@ export function ProductDialog({ product, open, onClose }: Props) {
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="sm:max-w-4xl p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-hidden">
+      <DialogContent className="sm:max-w-4xl p-0 rounded-[8px] shadow-[0_40px_80px_rgba(0,0,0,.3)] overflow-y-auto overflow-x-hidden">
         <div className="grid grid-cols-1 md:grid-cols-[40%_60%]">
           {/* Image panel */}
           <div className="bg-white p-5 flex flex-col gap-3 md:border-r border-b md:border-b-0 border-line">
@@ -91,7 +91,7 @@ export function ProductDialog({ product, open, onClose }: Props) {
           </div>
 
           {/* Info panel */}
-          <div className="p-6 md:p-8 flex flex-col gap-5 overflow-y-auto max-h-[60vh] md:max-h-[85vh]">
+          <div className="p-6 md:p-8 flex flex-col gap-5 md:overflow-y-auto md:max-h-[85vh]">
             <DialogHeader className="gap-2">
               <p className="font-mono-brand text-carolina text-xs font-semibold tracking-widest uppercase">
                 {product.brand || product.cat}
