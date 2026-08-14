@@ -31,6 +31,7 @@ type FormData = z.infer<typeof schema>;
 export default function QuotePage() {
   const { items, add, setQty, remove, clear } = useQuote();
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
 
   const {
     register,
@@ -46,11 +47,16 @@ export default function QuotePage() {
   );
 
   const onSubmit = async (data: FormData) => {
-    await fetch("/api/quote", {
+    setSubmitError(false);
+    const res = await fetch("/api/quote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...data, items }),
     });
+    if (!res.ok) {
+      setSubmitError(true);
+      return;
+    }
     setSubmitted(true);
     clear();
   };
@@ -308,6 +314,13 @@ export default function QuotePage() {
                 className="rounded-[3px] resize-none"
               />
             </div>
+            {submitError && (
+              <p className="text-brand-red text-xs">
+                Something went wrong sending your request. Please try again, or call us at
+                1-800-523-7475.
+              </p>
+            )}
+
             <Button
               type="submit"
               disabled={isSubmitting}

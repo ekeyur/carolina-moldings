@@ -25,6 +25,7 @@ type FormData = z.infer<typeof schema>;
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState(false);
   const {
     register,
     handleSubmit,
@@ -33,11 +34,16 @@ export default function ContactPage() {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = async (data: FormData) => {
-    await fetch("/api/contact", {
+    setSubmitError(false);
+    const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
+    if (!res.ok) {
+      setSubmitError(true);
+      return;
+    }
     setSubmitted(true);
     reset();
   };
@@ -188,6 +194,13 @@ export default function ContactPage() {
                     <p className="text-brand-red text-xs">{errors.message.message}</p>
                   )}
                 </div>
+
+                {submitError && (
+                  <p className="text-brand-red text-sm">
+                    Something went wrong sending your message. Please try again, or call us at
+                    1-800-523-7475.
+                  </p>
+                )}
 
                 <Button
                   type="submit"
