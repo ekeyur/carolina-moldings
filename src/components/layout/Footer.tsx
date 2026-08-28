@@ -12,8 +12,8 @@ export function Footer() {
               <Image
                 src="/branding/logo-ondark.svg"
                 alt="Carolina Moldings, Inc."
-                width={40}
-                height={40}
+                width={346}
+                height={299}
                 style={{ height: "2.5rem", width: "auto" }}
               />
               <div className="leading-tight">

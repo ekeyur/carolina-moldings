@@ -54,8 +54,8 @@ export default function AboutPage() {
             <Image
               src="/branding/logo-ondark.svg"
               alt="Carolina Moldings"
-              width={200}
-              height={200}
+              width={346}
+              height={299}
               style={{
                 width: "200px",
                 height: "auto",
