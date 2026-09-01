@@ -22,12 +22,13 @@ export function Hero() {
             </span>
           </div>
           <h1 className="font-heading text-white leading-[1.05] md:leading-[1.02] tracking-[-0.02em] mb-6 text-[clamp(1.875rem,7vw,3.625rem)] font-extrabold text-balance">
-            Gas Meter Parts Built to Protect, Perform, and{" "}
-            <span className="block text-carolina">Same or next day shipping.</span>
+            Gas Meter Index Covers &amp; Tamper Seals,{" "}
+            <span className="block text-carolina">built to protect and perform.</span>
           </h1>
           <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-4">
-            Manufacturer of index covers, Snap Seal™ tamper systems, meter
-            screws, paint covers, and gas fittings.
+            U.S. manufacturer of gas meter index covers, Snap Seal™ tamper
+            systems, meter screws, paint covers, and gas fittings — with same or
+            next-day shipping.
           </p>
           {/* Snap Seal slogan with red accent bar */}
           <div className="flex items-center gap-3 mb-8">

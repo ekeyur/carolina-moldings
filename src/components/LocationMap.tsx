@@ -5,9 +5,10 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import type { Map as LeafletMap } from "leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { SITE_GEO } from "@/lib/site";
 
-const LAT = 35.2667;
-const LON = -80.8238;
+const LAT = SITE_GEO.latitude;
+const LON = SITE_GEO.longitude;
 
 const CARTO_KEY = process.env.NEXT_PUBLIC_CARTO_MAP_KEY;
 const tileUrl =

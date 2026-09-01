@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { CheckCircle2, XCircle } from "lucide-react";
+import { productSlug } from "@/lib/products";
 import {
   Dialog,
   DialogContent,
@@ -101,11 +103,17 @@ export function ProductDialog({ product, open, onClose }: Props) {
               </DialogTitle>
             </DialogHeader>
 
-            {/* Part number chip */}
-            <div className="inline-flex">
+            {/* Part number chip + full page link */}
+            <div className="flex items-center gap-3 flex-wrap">
               <span className="bg-navy text-white font-mono-brand text-xs font-semibold px-3 py-1.5 rounded-[3px] tracking-wider">
                 {product.partNo}
               </span>
+              <Link
+                href={`/catalog/${productSlug(product)}`}
+                className="text-carolina-ink text-xs font-semibold hover:underline"
+              >
+                View full details →
+              </Link>
             </div>
 
             {/* Description */}

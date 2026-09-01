@@ -1,7 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+
+export const metadata: Metadata = {
+  title: "About — 50 Years of U.S. Gas Meter Parts Manufacturing",
+  description:
+    "Since 1975, Carolina Moldings has molded gas meter index covers, Snap Seal™ tamper seals, and meter parts in Charlotte, NC. Three generations, family owned, every order hand-inspected.",
+  alternates: { canonical: "/about" },
+};
 
 const stats = [
   { value: "50", label: "Years in Business" },
@@ -31,6 +40,13 @@ const principles = [
 export default function AboutPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "About", path: "/about" },
+        ]}
+      />
+
       {/* Hero — two-column, navy dot-grid */}
       <section className="bg-navy dot-grid py-12 md:py-24">
         <div className="max-w-310 mx-auto px-6 grid grid-cols-1 md:grid-cols-[1.2fr_.8fr] gap-8 md:gap-12 items-center">

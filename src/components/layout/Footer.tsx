@@ -41,9 +41,9 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm text-white/60">
               {[
-                { href: "/catalog?cat=tamper", label: "Tamper System" },
-                { href: "/catalog?cat=index", label: "Index Covers" },
-                { href: "/catalog?cat=screws", label: "Meter Screws" },
+                { href: "/catalog/category/tamper", label: "Tamper System" },
+                { href: "/catalog/category/index", label: "Index Covers" },
+                { href: "/catalog/category/screws", label: "Meter Screws" },
                 { href: "/nuts-and-swivels", label: "Nuts & Swivels" },
                 { href: "/catalog", label: "Full Catalog" },
               ].map(({ href, label }) => (
@@ -67,6 +67,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-white/60">
               {[
                 { href: "/about", label: "About Us" },
+                { href: "/faq", label: "FAQ" },
                 { href: "/contact", label: "Contact" },
                 { href: "/quote", label: "Request a Quote" },
               ].map(({ href, label }) => (

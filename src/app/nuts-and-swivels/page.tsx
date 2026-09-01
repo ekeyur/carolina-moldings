@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
 import { NutsAndSwivelsGrid } from "@/components/nuts-and-swivels/NutsAndSwivelsGrid";
 import catalog from "@/data/nuts-and-swivels-catalog.json";
 import type { NutsAndSwivelsFamily } from "@/types/nuts-and-swivels";
+
+export const metadata: Metadata = {
+  title: "Nuts & Swivels — Gas Meter Swivels, Meter Bars & Assemblies",
+  description:
+    "Configure gas meter swivels, meter accessories, meter bars, and custom assemblies online, then add them to your quote. Manufactured in the USA by Carolina Moldings.",
+  alternates: { canonical: "/nuts-and-swivels" },
+};
 
 const families = catalog.nutsAndSwivelsFamilies as NutsAndSwivelsFamily[];
 

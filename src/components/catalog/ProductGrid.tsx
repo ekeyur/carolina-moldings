@@ -15,6 +15,7 @@ type Props = {
   meterBrands: string[];
   initialCat?: string;
   initialBrand?: string;
+  initialSearch?: string;
 };
 
 export function ProductGrid({
@@ -23,10 +24,11 @@ export function ProductGrid({
   meterBrands,
   initialCat,
   initialBrand,
+  initialSearch,
 }: Props) {
   const [activeCat, setActiveCat] = useState(initialCat || "all");
   const [activeBrand, setActiveBrand] = useState(initialBrand || "all");
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState(initialSearch || "");
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   const showBrandFilter = activeCat === "all" || activeCat === "index";

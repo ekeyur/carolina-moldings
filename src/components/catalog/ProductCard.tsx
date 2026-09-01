@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Shield, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQuote } from "@/context/QuoteContext";
 import { screwCompatibility } from "@/data/screw-compatibility";
+import { productSlug } from "@/lib/products";
 import type { Product } from "@/types/product";
 
 type Props = {
@@ -64,13 +66,12 @@ export function ProductCard({ product, onOpen, priority }: Props) {
         )}
 
         {/* Name */}
-        <button
-          type="button"
-          onClick={() => onOpen(product)}
+        <Link
+          href={`/catalog/${productSlug(product)}`}
           className="font-heading font-bold text-navy text-sm text-left hover:text-carolina transition-colors leading-snug"
         >
           {product.name}
-        </button>
+        </Link>
 
         {/* Tamper badge */}
         {product.tamperCompatible && (
