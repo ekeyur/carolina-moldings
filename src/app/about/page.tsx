@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* Our Story — two-column with image slot */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-14 md:py-20">
         <div className="max-w-310 mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div>
             <p className="font-mono-brand text-brand-red text-xs font-semibold tracking-[0.16em] uppercase mb-4">
@@ -129,7 +129,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values — light gray bg, white cards, centered heading */}
-      <section className="bg-surface-2 border-t border-line py-20">
+      <section className="bg-surface-2 border-t border-line py-14 md:py-20">
         <div className="max-w-310 mx-auto px-6">
           <h2 className="font-heading font-extrabold text-navy text-[2rem] leading-[1.1] tracking-[-0.015em] mb-10 text-center">
             What hasn't changed since 1975
@@ -156,7 +156,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA — white bg, navy primary button */}
-      <section className="bg-white py-17.5">
+      <section className="bg-white py-14 md:py-17.5">
         <div className="max-w-310 mx-auto px-6 text-center">
           <h2 className="font-heading font-extrabold text-navy text-[1.875rem] mb-3">
             Let's get you the right parts.

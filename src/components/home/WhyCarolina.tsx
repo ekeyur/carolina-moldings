@@ -38,7 +38,7 @@ export function WhyCarolina() {
         <p className="font-mono-brand text-brand-red text-xs font-semibold tracking-[0.16em] uppercase mb-3">
           Why Carolina Moldings
         </p>
-        <h2 className="font-heading font-extrabold text-navy text-[2rem] mb-10">
+        <h2 className="font-heading font-extrabold text-navy text-2xl sm:text-[2rem] mb-10">
           The standard every utility deserves
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

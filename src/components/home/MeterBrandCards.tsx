@@ -33,7 +33,7 @@ export function MeterBrandCards() {
         <p className="font-mono-brand text-brand-red text-xs font-semibold tracking-[0.16em] uppercase mb-3">
           Shop by Meter Brand
         </p>
-        <h2 className="font-heading font-extrabold text-navy text-[2rem] mb-10">
+        <h2 className="font-heading font-extrabold text-navy text-2xl sm:text-[2rem] mb-10">
           Find your meter type
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -48,7 +48,7 @@ export function MeterBrandCards() {
                   src={brand.image}
                   alt={brand.name}
                   fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="112px"
                   className="object-contain"
                 />
               </div>
@@ -60,7 +60,7 @@ export function MeterBrandCards() {
                   {brand.desc}
                 </p>
               </div>
-              <div className="flex items-center gap-1 text-carolina text-sm font-semibold mt-auto group-hover:gap-2 transition-all">
+              <div className="flex items-center gap-1 text-carolina-ink text-sm font-semibold mt-auto group-hover:gap-2 transition-all">
                 Browse products <ArrowRight className="h-4 w-4" />
               </div>
             </Link>

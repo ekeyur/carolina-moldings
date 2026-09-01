@@ -23,7 +23,7 @@ export function CustomCTABand() {
           <Button
             render={<Link href="/contact" />}
             nativeButton={false}
-            className="bg-brand-red hover:bg-red-700 text-white font-semibold rounded-[3px] px-8 gap-2"
+            className="w-full sm:w-auto bg-brand-red hover:bg-red-700 text-white font-semibold rounded-[3px] px-8 gap-2"
           >
             Talk to us <ArrowRight className="h-4 w-4" />
           </Button>

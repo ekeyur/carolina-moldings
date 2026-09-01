@@ -5,8 +5,8 @@ import { Button } from "@/components/ui/button";
 
 export function SnapSealBand() {
   return (
-    <section className="bg-surface-2 border-y border-line py-20">
-      <div className="max-w-310 mx-auto px-6 grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr] gap-14 items-center">
+    <section className="bg-surface-2 border-y border-line py-14 md:py-20">
+      <div className="max-w-310 mx-auto px-6 grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr] gap-10 md:gap-14 items-center">
         {/* Left — CMI badge */}
         <div className="flex items-center justify-center">
           <Image
@@ -24,7 +24,7 @@ export function SnapSealBand() {
           <p className="font-mono-brand text-brand-red text-xs font-semibold tracking-[0.16em] uppercase mb-4">
             The Tamper System
           </p>
-          <h2 className="font-heading font-extrabold text-navy text-4xl md:text-[2.5rem] leading-[1.04] tracking-[-0.02em] mb-5">
+          <h2 className="font-heading font-extrabold text-navy text-3xl sm:text-4xl md:text-[2.5rem] leading-[1.04] tracking-[-0.02em] mb-5">
             You can't steal
             <br />
             from Snap Seal™

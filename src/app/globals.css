@@ -42,6 +42,8 @@
   /* Brand colors */
   --color-navy: #13294B;
   --color-carolina: #4B9CD3;
+  /* AA-compliant blue for text/links on light backgrounds (carolina fails contrast) */
+  --color-carolina-ink: #2C7099;
   --color-brand-red: #C8102E;
   --color-ink: #16202E;
   --color-slate-700: #46586E;

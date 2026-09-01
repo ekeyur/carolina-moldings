@@ -76,7 +76,7 @@ export function Header() {
             <div className="font-heading font-bold text-navy text-base leading-none">
               Carolina Moldings, Inc.
             </div>
-            <div className="text-slate-500 text-[11px] tracking-wide font-body">
+            <div className="text-slate-600 text-[11px] tracking-wide font-body">
               Protecting every connection
             </div>
           </div>

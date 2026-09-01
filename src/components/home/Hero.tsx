@@ -12,7 +12,7 @@ const trustItems = [
 export function Hero() {
   return (
     <section className="bg-navy dot-grid relative overflow-hidden">
-      <div className="max-w-310 mx-auto px-6 py-14 md:py-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+      <div className="max-w-310 mx-auto px-6 pt-8 pb-14 md:pt-14 md:pb-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left: copy */}
         <div>
           <div className="inline-flex items-center gap-2.5 border border-carolina/40 rounded-full px-4 py-1.5 mb-7">
@@ -21,27 +21,27 @@ export function Hero() {
               Family&nbsp;Owned&nbsp;·&nbsp;Est.&nbsp;1975
             </span>
           </div>
-          <h1 className="font-heading text-white leading-[1.02] tracking-[-0.02em] mb-6 text-[clamp(2.5rem,5vw,3.625rem)] font-extrabold">
+          <h1 className="font-heading text-white leading-[1.05] md:leading-[1.02] tracking-[-0.02em] mb-6 text-[clamp(1.875rem,7vw,3.625rem)] font-extrabold text-balance">
             Gas Meter Parts Built to Protect, Perform, and{" "}
-            <p className="text-carolina">Same or next day shipping.</p>
+            <span className="block text-carolina">Same or next day shipping.</span>
           </h1>
-          <p className="text-white/70 text-lg leading-relaxed mb-4">
+          <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-4">
             Manufacturer of index covers, Snap Seal™ tamper systems, meter
             screws, paint covers, and gas fittings.
           </p>
           {/* Snap Seal slogan with red accent bar */}
           <div className="flex items-center gap-3 mb-8">
             <div className="w-1 h-8 bg-brand-red rounded-full shrink-0" />
-            <p className="text-white italic text-lg font-medium">
+            <p className="text-white italic text-base sm:text-lg font-medium">
               "You can't steal from Snap Seal™"
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-3 mb-10">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10">
             <Button
               render={<Link href="/catalog" />}
               nativeButton={false}
-              className="bg-brand-red hover:bg-red-700 text-white font-semibold rounded-[3px] px-6"
+              className="w-full sm:w-auto bg-brand-red hover:bg-red-700 text-white font-semibold rounded-[3px] px-6"
             >
               Browse the Catalog
             </Button>
@@ -49,7 +49,7 @@ export function Hero() {
               render={<Link href="/contact" />}
               nativeButton={false}
               variant="outline"
-              className="border-white/40 text-white hover:bg-white/10 hover:text-white rounded-[3px] px-6 bg-transparent"
+              className="w-full sm:w-auto border-white/40 text-white hover:bg-white/10 hover:text-white rounded-[3px] px-6 bg-transparent"
             >
               Request Info
             </Button>
@@ -69,42 +69,42 @@ export function Hero() {
         </div>
 
         {/* Right: meter images */}
-        <div className="flex flex-col items-center gap-4">
-          {/* Primary meter — 2× the secondary size (320px vs 160px) */}
+        <div className="flex flex-col items-center gap-4 w-full min-w-0">
+          {/* Primary meter — 2× the secondary size */}
           <div className="flex flex-col items-center gap-1.5">
-            <div className="relative w-60 h-60 aspect-square">
+            <div className="relative w-48 h-48 sm:w-60 sm:h-60 aspect-square">
               <Image
                 src="/meters/american-honeywell.png"
                 alt="American / Honeywell gas meter"
                 fill
-                sizes="240px"
+                sizes="(max-width: 640px) 192px, 240px"
                 className="object-contain drop-shadow-2xl"
                 priority
               />
             </div>
             <span className="font-mono-brand text-white/50 text-[10px] tracking-widest uppercase">American / Honeywell</span>
           </div>
-          {/* Secondary meters — 160px each */}
-          <div className="flex items-center gap-6">
+          {/* Secondary meters */}
+          <div className="flex items-center gap-4 sm:gap-6">
             <div className="flex flex-col items-center gap-1.5">
-              <div className="relative w-40 h-40">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40">
                 <Image
                   src="/meters/rockwell-xylem.png"
                   alt="Rockwell / Xylem gas meter"
                   fill
-                  sizes="160px"
+                  sizes="(max-width: 640px) 128px, 160px"
                   className="object-contain drop-shadow-lg opacity-80"
                 />
               </div>
               <span className="font-mono-brand text-white/50 text-[10px] tracking-widest uppercase">Rockwell / Xylem</span>
             </div>
             <div className="flex flex-col items-center gap-1.5">
-              <div className="relative w-40 h-40">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40">
                 <Image
                   src="/meters/sprague-itron.png"
                   alt="Sprague / Itron gas meter"
                   fill
-                  sizes="160px"
+                  sizes="(max-width: 640px) 128px, 160px"
                   className="object-contain drop-shadow-lg opacity-80"
                 />
               </div>

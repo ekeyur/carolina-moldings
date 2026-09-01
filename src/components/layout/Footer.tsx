@@ -20,7 +20,7 @@ export function Footer() {
                 <div className="font-heading font-bold text-white text-base leading-none">
                   Carolina Moldings, Inc.
                 </div>
-                <div className="text-white/50 text-[11px] tracking-wide font-body">
+                <div className="text-white/70 text-[11px] tracking-wide font-body">
                   Protecting every connection
                 </div>
               </div>
@@ -113,7 +113,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/40">
+        <div className="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-white/70">
           <span>
             © {new Date().getFullYear()} Carolina Moldings, Inc. All rights
             reserved.
