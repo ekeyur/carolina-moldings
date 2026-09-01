@@ -1,5 +1,6 @@
 import catalogData from "@/data/carolina-products.json";
 import type { CatalogData, Category, Product } from "@/types/product";
+import { legacyProductSlug, productSlug, slugify } from "./slug";
 
 const data = catalogData as CatalogData;
 
@@ -7,18 +8,7 @@ export const products = data.products;
 export const categories = data.categories;
 export const meterBrands = data.meterBrands;
 
-/** URL-safe, keyword-rich slug derived from a human string. */
-export function slugify(value: string): string {
-  return value
-    .toLowerCase()
-    .replace(/[™®]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
-
-export function productSlug(product: Product): string {
-  return slugify(product.name);
-}
+export { slugify, productSlug, legacyProductSlug };
 
 const bySlug = new Map<string, Product>(
   products.map((p) => [productSlug(p), p]),

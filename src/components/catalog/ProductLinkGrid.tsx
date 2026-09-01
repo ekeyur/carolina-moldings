@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { productSlug } from "@/lib/products";
+import { formatFits, productSlug } from "@/lib/slug";
 import type { Product } from "@/types/product";
 
 /**
@@ -40,7 +40,7 @@ export function ProductLinkGrid({ products }: { products: Product[] }) {
               </span>
               {p.fits && (
                 <span className="text-slate-500 text-[11px] leading-snug">
-                  Fits: {p.fits}
+                  Fits: {formatFits(p.fits)}
                 </span>
               )}
             </div>

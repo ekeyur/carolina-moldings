@@ -13,6 +13,7 @@ import {
   products,
   relatedProducts,
 } from "@/lib/products";
+import { formatFits } from "@/lib/slug";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -33,15 +34,14 @@ export async function generateMetadata({
   if (!product) return {};
 
   const cover = isIndexCover(product.name);
-  const title = product.fits
-    ? `${product.name} — fits ${product.fits}`
+  const fits = product.fits ? formatFits(product.fits) : undefined;
+  const title = fits
+    ? `${product.name} — fits ${fits}`
     : `${product.name} — Part ${product.partNo}`;
 
   const description =
     (product.desc ||
-      `${product.name} (${product.partNo})${
-        product.fits ? `, fits ${product.fits}` : ""
-      }.`) +
+      `${product.name} (${product.partNo})${fits ? `, fits ${fits}` : ""}.`) +
     (cover ? ` Direct replacement index box / index cover.` : "") +
     ` Made in the USA.`;
 
@@ -58,7 +58,7 @@ export async function generateMetadata({
       `${product.partNo} ${category?.name ?? "gas meter part"}`,
       ...(cover ? [`${product.partNo} index box`, "gas meter index box"] : []),
       ...(brand ? [`${brand.name} ${category?.name ?? "meter parts"}`] : []),
-      ...(product.fits ? [`index cover for ${product.fits}`] : []),
+      ...(fits ? [`index cover for ${fits}`] : []),
     ],
     alternates: { canonical: `/catalog/${slug}` },
     openGraph: {
@@ -96,6 +96,7 @@ export default async function ProductPage({
   const related = relatedProducts(product);
   const image = product.images?.[0];
   const cover = isIndexCover(product.name);
+  const fits = product.fits ? formatFits(product.fits) : undefined;
 
   return (
     <>
@@ -114,8 +115,8 @@ export default async function ProductPage({
           brand: { "@type": "Brand", name: "Carolina Moldings" },
           manufacturer: { "@type": "Organization", name: SITE_NAME },
           url: `${SITE_URL}/catalog/${slug}`,
-          isAccessoryOrSparePartFor: product.fits
-            ? { "@type": "Product", name: `${product.fits} gas meters` }
+          isAccessoryOrSparePartFor: fits
+            ? { "@type": "Product", name: fits }
             : undefined,
           offers: {
             "@type": "Offer",
@@ -227,8 +228,8 @@ export default async function ProductPage({
 
           {cover && (
             <p className="text-slate-500 text-sm">
-              Also known as the {product.partNo} index box
-              {product.fits ? ` for ${product.fits}` : ""}.
+              Also sold as the {product.partNo} index box
+              {fits ? `, fitting ${fits}` : ""}.
             </p>
           )}
 
@@ -254,7 +255,7 @@ export default async function ProductPage({
           )}
 
           <div className="border-t border-line pt-4">
-            {product.fits && <SpecRow label="Fits" value={product.fits} />}
+            {fits && <SpecRow label="Fits" value={fits} />}
             {product.material && (
               <SpecRow label="Material" value={product.material} />
             )}

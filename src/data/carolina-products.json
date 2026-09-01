@@ -118,27 +118,6 @@
       ]
     },
     {
-      "id": "a40g",
-      "name": "A-40G Index Cover",
-      "partNo": "A-40G",
-      "cat": "index",
-      "brand": "American / Honeywell",
-      "ph": "INDEX COVER",
-      "material": "Polycarbonate",
-      "pack": "68 / Case",
-      "fits": "Itron 40G ERT — American",
-      "tamperCompatible": true,
-      "kit": true,
-      "bullets": [
-        "Accepts 2 Tophat tamper plugs (not included)",
-        "Tamper System Kit available"
-      ],
-      "desc": "Index cover for the Itron 40G ERT on American meters. Available with or without the Sure Seal preapplied gasket.",
-      "images": [
-        "/products/a40g.png"
-      ]
-    },
-    {
       "id": "a100g",
       "name": "A-100G Index Cover",
       "partNo": "A-100G",

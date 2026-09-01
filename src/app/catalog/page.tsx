@@ -2,11 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
-import {
-  METER_BRANDS,
-  productSlug,
-  productsByCategory,
-} from "@/lib/products";
+import { METER_BRANDS, productsByCategory } from "@/lib/products";
+import { formatFits, productSlug } from "@/lib/slug";
 import catalogData from "@/data/carolina-products.json";
 import type { CatalogData } from "@/types/product";
 
@@ -113,7 +110,7 @@ export default async function CatalogPage({
                           </span>
                           {p.fits && (
                             <span className="block text-slate-500 text-xs mt-0.5 leading-snug">
-                              Fits {p.fits}
+                              Fits {formatFits(p.fits)}
                             </span>
                           )}
                         </span>

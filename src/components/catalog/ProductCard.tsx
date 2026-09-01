@@ -6,7 +6,7 @@ import { Shield, Plus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useQuote } from "@/context/QuoteContext";
 import { screwCompatibility } from "@/data/screw-compatibility";
-import { productSlug } from "@/lib/products";
+import { productSlug } from "@/lib/slug";
 import type { Product } from "@/types/product";
 
 type Props = {

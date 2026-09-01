@@ -4,7 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, XCircle } from "lucide-react";
-import { productSlug } from "@/lib/products";
+import { productSlug } from "@/lib/slug";
 import {
   Dialog,
   DialogContent,
