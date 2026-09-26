@@ -54,9 +54,7 @@
         "Tamper System Kit available"
       ],
       "desc": "Index cover for American / Honeywell AL-175 and AL-425 meters. Comes with or without the Sure Seal preapplied gasket.",
-      "images": [
-        "/products/a101.png"
-      ]
+      "images": ["/products/a101.png"]
     },
     {
       "id": "a101os",
@@ -69,13 +67,9 @@
       "pack": "105 / Case",
       "fits": "American AL-175, AL-425",
       "tamperCompatible": false,
-      "bullets": [
-        "Incompatible with Snap Seal tamper plugs"
-      ],
+      "bullets": ["Incompatible with Snap Seal tamper plugs"],
       "desc": "Open-style A-101 index cover for American / Honeywell AL-175 and AL-425 meters. Available with or without the Sure Seal preapplied gasket.",
-      "images": [
-        "/products/a101os.png"
-      ]
+      "images": ["/products/a101os.png"]
     },
     {
       "id": "a103",
@@ -94,9 +88,7 @@
         "Tamper System Kit available"
       ],
       "desc": "Index cover for American 35B–500B, AL-800–AL5000 and Turbine meters. Includes the optional Sure Seal preapplied gasket.",
-      "images": [
-        "/products/a103.png"
-      ]
+      "images": ["/products/a103.png"]
     },
     {
       "id": "a103os",
@@ -109,34 +101,28 @@
       "pack": "54 / Case",
       "fits": "American 35B–500B, AL-800–AL5000, Turbine",
       "tamperCompatible": false,
-      "bullets": [
-        "Incompatible with Snap Seal tamper plugs"
-      ],
+      "bullets": ["Incompatible with Snap Seal tamper plugs"],
       "desc": "Open-style A-103 index cover for American 35B–500B and AL-800–AL5000 meters. Optional Sure Seal preapplied gasket.",
-      "images": [
-        "/products/a103os.png"
-      ]
+      "images": ["/products/a103os.png"]
     },
     {
       "id": "a100g",
-      "name": "A-100G Index Cover",
-      "partNo": "A-100G",
+      "name": "100G-A Index Cover",
+      "partNo": "100G-A",
       "cat": "index",
       "brand": "American / Honeywell",
       "ph": "INDEX COVER",
       "material": "Polycarbonate",
       "pack": "52 / Case",
-      "fits": "Itron 100G endpoints — American",
+      "fits": "Itron 100G/500G/550G endpoints — American",
       "tamperCompatible": true,
       "kit": true,
       "bullets": [
         "Compatible with 2 Tophat tamper plugs (not included)",
         "Tamper System Kit available"
       ],
-      "desc": "Index cover for Itron 100G endpoints on American meters. Does not use the Sure Seal preapplied gasket.",
-      "images": [
-        "/products/a100g.png"
-      ]
+      "desc": "Index cover for Itron 100G,500G or 550G endpoints on American meters. Does not use the Sure Seal preapplied gasket.",
+      "images": ["/products/a100g.png"]
     },
     {
       "id": "r103",
@@ -155,9 +141,7 @@
         "Available with or without Sure Seal gasket"
       ],
       "desc": "Index cover for Rockwell / Xylem 150 and 415 short-screw meters.",
-      "images": [
-        "/products/r103.png"
-      ]
+      "images": ["/products/r103.png"]
     },
     {
       "id": "r103os",
@@ -170,94 +154,28 @@
       "pack": "220 / Case",
       "fits": "Rockwell 150, 415 short-screw",
       "tamperCompatible": false,
-      "bullets": [
-        "Incompatible with Snap Seal tamper plugs"
-      ],
+      "bullets": ["Incompatible with Snap Seal tamper plugs"],
       "desc": "Open-style R-103 index cover for Rockwell / Xylem 150 and 415 short-screw meters. Optional Sure Seal preapplied gasket.",
       "images": []
     },
     {
-      "id": "r104",
-      "name": "R-104 Index Cover",
-      "partNo": "R-104",
-      "cat": "index",
-      "brand": "Rockwell / Xylem",
-      "ph": "INDEX COVER",
-      "material": "Polycarbonate",
-      "pack": "260 / Case",
-      "fits": "Rockwell 150–415 long-screw",
-      "tamperCompatible": true,
-      "bullets": [
-        "Accepts 2 #1 Snap Seal tamper plugs (sold separately)",
-        "Available with or without Sure Seal gasket"
-      ],
-      "desc": "Index cover for Rockwell / Xylem 150–415 long-screw meters.",
-      "images": [
-        "/products/r104.png"
-      ]
-    },
-    {
-      "id": "r105",
-      "name": "R-105 Index Cover",
-      "partNo": "R-105",
-      "cat": "index",
-      "brand": "Rockwell / Xylem",
-      "ph": "INDEX COVER",
-      "material": "Polycarbonate",
-      "pack": "45 / Case",
-      "fits": "Rockwell R-750–R5000",
-      "tamperCompatible": true,
-      "kit": true,
-      "bullets": [
-        "Compatible with 2 #2 Snap Seal tamper plugs (not included)",
-        "Commercial Tamper System Kit available"
-      ],
-      "desc": "Index cover for Rockwell R-750–R5000 meters.",
-      "images": [
-        "/products/r105.png"
-      ]
-    },
-    {
-      "id": "r40g",
-      "name": "R-40G Index Cover",
-      "partNo": "R-40G",
-      "cat": "index",
-      "brand": "Rockwell / Xylem",
-      "ph": "INDEX COVER",
-      "material": "Polycarbonate",
-      "pack": "80 / Case",
-      "fits": "Itron 40G ERT — Rockwell",
-      "tamperCompatible": true,
-      "kit": true,
-      "bullets": [
-        "Accepts 2 Tophat tamper plugs (not included)",
-        "Tamper System Kit available"
-      ],
-      "desc": "Index cover for the Itron 40G ERT on Rockwell meters.",
-      "images": [
-        "/products/r40g.png"
-      ]
-    },
-    {
       "id": "r100g",
-      "name": "R-100G Index Cover",
-      "partNo": "R-100G",
+      "name": "100G-R Index Cover",
+      "partNo": "100G-R",
       "cat": "index",
       "brand": "Rockwell / Xylem",
       "ph": "INDEX COVER",
       "material": "Polycarbonate",
       "pack": "60 / Case",
-      "fits": "Itron 100G endpoints — Rockwell",
+      "fits": "Itron 100G/500G/550G endpoints — Rockwell",
       "tamperCompatible": true,
       "kit": true,
       "bullets": [
         "Compatible with 2 Tophat tamper plugs (not included)",
         "Tamper System Kit available"
       ],
-      "desc": "Index cover for Itron 100G endpoints on Rockwell meters. Does not use the Sure Seal preapplied gasket.",
-      "images": [
-        "/products/r100g.png"
-      ]
+      "desc": "Index cover for Itron 100G/500G/550G endpoints on Rockwell Residential meters.",
+      "images": ["/products/r100g.png"]
     },
     {
       "id": "s105",
@@ -275,20 +193,18 @@
         "Available with or without Sure Seal gasket"
       ],
       "desc": "Index cover for Sprague 175–400 slant-face meters.",
-      "images": [
-        "/products/s105.png"
-      ]
+      "images": ["/products/s105.png"]
     },
     {
       "id": "i100g",
-      "name": "I-100G Index Cover",
-      "partNo": "I-100G",
+      "name": "100G-I Index Cover",
+      "partNo": "100G-I",
       "cat": "index",
       "brand": "Sprague / Itron",
       "ph": "INDEX COVER",
       "material": "Polycarbonate",
       "pack": "60 / Case",
-      "fits": "Itron 100G endpoints — Itron",
+      "fits": "Itron 100G/500G endpoints — Itron",
       "tamperCompatible": true,
       "kit": true,
       "bullets": [
@@ -296,9 +212,7 @@
         "Tamper System Kit available"
       ],
       "desc": "Index cover for Itron 100G endpoints on Itron meters.",
-      "images": [
-        "/products/i100g.png"
-      ]
+      "images": ["/products/i100g.png"]
     },
     {
       "id": "ss1",
@@ -308,11 +222,9 @@
       "ph": "SNAP SEAL",
       "material": "High-impact polymer",
       "pack": "1000 / Bag",
-      "fits": "A-101, A-103, R-103, S-104–S-107, M-110, N-108",
+      "fits": "A-101, A-103, R-103, M-110, N-108",
       "desc": "The original red-plug tamper seal that set the industry standard. Fits index covers A-101, A-103, W-175, R-103, R-109, S-104–S-107, M-110, N-108 and Cup #1 / Cup #8. Snaps on and cannot be removed without visibly breaking.",
-      "images": [
-        "/products/ss1.png"
-      ]
+      "images": ["/products/ss1.png"]
     },
     {
       "id": "ss2",
@@ -324,9 +236,7 @@
       "pack": "1000 / Bag",
       "fits": "R-105 index cover, Cup #2",
       "desc": "Larger Snap Seal sized for the R-105 index cover and Cup #2.",
-      "images": [
-        "/products/ss2.png"
-      ]
+      "images": ["/products/ss2.png"]
     },
     {
       "id": "ss3",
@@ -338,37 +248,31 @@
       "pack": "As needed",
       "fits": "AHH / ABP / RHH Cup #3 bushings",
       "desc": "Commercial Snap Seal that seats in AHH, ABP and RHH Cup #3 bushings — protects hand-hole and baseplate screws on commercial American and Rockwell meters.",
-      "images": [
-        "/products/ss3.png"
-      ]
+      "images": ["/products/ss3.png"]
     },
     {
       "id": "tophat",
-      "name": "Tophat Tamper Plug",
+      "name": "Tophat Security Seal",
       "partNo": "Tophat",
       "cat": "tamper",
-      "ph": "TAMPER PLUG",
+      "ph": "SECURITY SEAL",
       "material": "Molded polymer",
       "pack": "1000 / Bag",
       "fits": "American covers, cups, top castings; Itron ERT",
-      "desc": "Tophat tamper plug for American Meter index covers, cups and meter top castings. Also fits Itron ERT covers.",
-      "images": [
-        "/products/tophat.png"
-      ]
+      "desc": "Tophat Security Seal for American Meter index covers, cups and meter top castings. Also fits Itron ERT covers.",
+      "images": ["/products/tophat.png"]
     },
     {
       "id": "tsplug",
       "name": "TS Plug",
       "partNo": "TS Plug",
       "cat": "tamper",
-      "ph": "TAMPER PLUG",
+      "ph": "SECURITY SEAL",
       "material": "Molded polymer",
       "pack": "1000 / Bag",
       "fits": "Rockwell covers, cups, top castings",
-      "desc": "Tamper plug for Rockwell Meter index covers, cups and meter top castings.",
-      "images": [
-        "/products/tsplug.png"
-      ]
+      "desc": "Security Seal for Rockwell Meter index covers, cups and meter top castings.",
+      "images": ["/products/tsplug.png"]
     },
     {
       "id": "cup1",
@@ -380,9 +284,7 @@
       "pack": "500 / Bag",
       "fits": "Rockwell & Sprague residential hand-hole",
       "desc": "Fits Rockwell and Sprague residential hand-hole plates. Uses Snap Seal #1 and a 10-24 pan-head screw.",
-      "images": [
-        "/products/cup1.png"
-      ]
+      "images": ["/products/cup1.png"]
     },
     {
       "id": "cup2",
@@ -394,9 +296,7 @@
       "pack": "500 / Bag",
       "fits": "American residential hand-hole plate",
       "desc": "Fits the American residential hand-hole plate. Uses Snap Seal #2 and a 1/4-20 pan-head screw.",
-      "images": [
-        "/products/cup2.png"
-      ]
+      "images": ["/products/cup2.png"]
     },
     {
       "id": "cup8",
@@ -408,9 +308,7 @@
       "pack": "500 / Bag",
       "fits": "American commercial index mounting screw",
       "desc": "Fits the American commercial index mounting screw. Uses Snap Seal #1 and an 8/32 x 5/8 pan-head screw.",
-      "images": [
-        "/products/cup8.png"
-      ]
+      "images": ["/products/cup8.png"]
     },
     {
       "id": "cuptophat",
@@ -422,9 +320,7 @@
       "pack": "500 / Bag",
       "fits": "American residential hand hole",
       "desc": "Hand-hole corner-tab cup for the American residential hand hole. Uses a Tophat tamper plug and a 1/4-20 pan-head screw.",
-      "images": [
-        "/products/cuptophat.png"
-      ]
+      "images": ["/products/cuptophat.png"]
     },
     {
       "id": "cuphex",
@@ -436,9 +332,7 @@
       "pack": "500 / Bag",
       "fits": "American residential hex hand-hole plate",
       "desc": "Fits the American residential hex hand-hole plate. Uses Snap Seal #1 and a 1/4-20 fillister-head screw.",
-      "images": [
-        "/products/cuphex.png"
-      ]
+      "images": ["/products/cuphex.png"]
     },
     {
       "id": "cup3",
@@ -450,9 +344,7 @@
       "pack": "As needed",
       "fits": "Commercial American & Rockwell hand-hole / baseplate",
       "desc": "Commercial bushings used with SS #3: AHH protects the American hand-hole (35B–AL5000, 3/8 allen), RHH protects the Rockwell hand-hole (R-415–3000, 5/16 allen), ABP protects the American baseplate (18×18 fillister).",
-      "images": [
-        "/products/cup3.png"
-      ]
+      "images": ["/products/cup3.png"]
     },
     {
       "id": "a103kit",
@@ -488,9 +380,7 @@
       "pack": "As needed",
       "fits": "A-101, A-101-OS index covers",
       "desc": "Snap-on paint cover that protects the register and reading window of A-101 and A-101-OS index covers while meter sets are field-painted.",
-      "images": [
-        "/products/pca1.png"
-      ]
+      "images": ["/products/pca1.png"]
     },
     {
       "id": "pca3",
@@ -502,9 +392,7 @@
       "pack": "As needed",
       "fits": "A-103, A-103-OS index covers",
       "desc": "Paint cover for A-103 and A-103-OS index covers.",
-      "images": [
-        "/products/pca3.png"
-      ]
+      "images": ["/products/pca3.png"]
     },
     {
       "id": "pca40g",
@@ -516,9 +404,7 @@
       "pack": "As needed",
       "fits": "A-40G index cover",
       "desc": "Paint cover for the A-40G index cover.",
-      "images": [
-        "/products/pca40g.png"
-      ]
+      "images": ["/products/pca40g.png"]
     },
     {
       "id": "pca100g",
@@ -530,9 +416,7 @@
       "pack": "As needed",
       "fits": "A-100G index cover",
       "desc": "Paint cover for the A-100G index cover.",
-      "images": [
-        "/products/pca100g.png"
-      ]
+      "images": ["/products/pca100g.png"]
     },
     {
       "id": "pca340g",
@@ -544,9 +428,7 @@
       "pack": "As needed",
       "fits": "A-103 Index Cover & Commercial American 40G ERT",
       "desc": "Paint cover for the A-103 index cover and the commercial American 40G ERT.",
-      "images": [
-        "/products/pca340g.png"
-      ]
+      "images": ["/products/pca340g.png"]
     },
     {
       "id": "pca3hinged",
@@ -558,9 +440,7 @@
       "pack": "As needed",
       "fits": "A-103 Index Cover",
       "desc": "Hinged paint cover designed for the A-103 index cover — flips open for meter reading without removing the cover.",
-      "images": [
-        "/products/pca3hinged.png"
-      ]
+      "images": ["/products/pca3hinged.png"]
     },
     {
       "id": "pcr3",
@@ -572,9 +452,7 @@
       "pack": "As needed",
       "fits": "R-103, R-103-OS, R-104 index covers",
       "desc": "Paint cover for R-103, R-103-OS and R-104 index covers.",
-      "images": [
-        "/products/pcr3.png"
-      ]
+      "images": ["/products/pcr3.png"]
     },
     {
       "id": "pcr40g",
@@ -586,23 +464,19 @@
       "pack": "As needed",
       "fits": "R-40G index cover",
       "desc": "Paint cover for the R-40G index cover.",
-      "images": [
-        "/products/pcr40g.png"
-      ]
+      "images": ["/products/pcr40g.png"]
     },
     {
       "id": "pcr100g",
-      "name": "PC R-100G Paint Cover",
-      "partNo": "PC R-100G",
+      "name": "PC 100G-R Paint Cover",
+      "partNo": "PC 100G-R",
       "cat": "paint",
       "ph": "PAINT COVER",
       "material": "LDPE",
       "pack": "As needed",
-      "fits": "R-100G index cover",
+      "fits": "100G-R index cover",
       "desc": "Paint cover for the R-100G index cover.",
-      "images": [
-        "/products/pcr100g.png"
-      ]
+      "images": ["/products/pcr100g.png"]
     },
     {
       "id": "pcr5",
@@ -614,9 +488,7 @@
       "pack": "As needed",
       "fits": "R-105 Index Cover",
       "desc": "Paint cover for the R-105 index cover.",
-      "images": [
-        "/products/pcr5.png"
-      ]
+      "images": ["/products/pcr5.png"]
     },
     {
       "id": "s30",
@@ -862,9 +734,7 @@
       "pack": "As needed",
       "fits": "Commercial ERT meters",
       "desc": "Commercial ERT protector — guards the wriggler of your meter before anything bad happens. Essential protection for exposed meter components.",
-      "images": [
-        "/products/cep.png"
-      ]
+      "images": ["/products/cep.png"]
     },
     {
       "id": "idc",
@@ -876,9 +746,7 @@
       "pack": "As needed",
       "fits": "Standard meter drives",
       "desc": "Protective cover that safeguards the wriggler of your meter from damage and environmental factors.",
-      "images": [
-        "/products/idc.png"
-      ]
+      "images": ["/products/idc.png"]
     },
     {
       "id": "m110os",
@@ -890,9 +758,7 @@
       "pack": "169 / Case",
       "fits": "Mercury Instruments meters",
       "desc": "Specialized instrument drive cover designed for Mercury meters, providing reliable protection. Optional Sure Seal preapplied gasket available.",
-      "images": [
-        "/products/m110os.png"
-      ]
+      "images": ["/products/m110os.png"]
     },
     {
       "id": "rv250",
@@ -904,9 +770,7 @@
       "pack": "400 / Case",
       "fits": "Universal relief piping",
       "desc": "Screen-protected regulator vent designed to prevent bugs and debris from entering and compromising meter interiors.",
-      "images": [
-        "/products/rv250.png"
-      ]
+      "images": ["/products/rv250.png"]
     },
     {
       "id": "g30c",
