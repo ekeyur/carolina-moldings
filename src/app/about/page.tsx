@@ -8,7 +8,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 export const metadata: Metadata = {
   title: "About — 50 Years of U.S. Gas Meter Parts Manufacturing",
   description:
-    "Since 1975, Carolina Moldings has molded gas meter index covers, Snap Seal™ tamper seals, and meter parts in Charlotte, NC. Three generations, family owned, every order hand-inspected.",
+    "Since 1975, Carolina Moldings has molded gas meter index covers, Snap Seal™ security seals, and meter parts in Charlotte, NC. Three generations, family owned, every order hand-inspected.",
   alternates: { canonical: "/about" },
 };
 

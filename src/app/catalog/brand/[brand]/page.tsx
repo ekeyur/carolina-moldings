@@ -15,17 +15,13 @@ import type { Product } from "@/types/product";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 function brandFaqs(brand: MeterBrand, items: Product[]): FaqItem[] {
-  const covers = items
-    .filter((p) => p.cat === "index")
-    .map((p) => p.partNo);
+  const covers = items.filter((p) => p.cat === "index").map((p) => p.partNo);
   return [
     {
       q: `Which index covers fit ${brand.name} meters?`,
       a:
         `Carolina Moldings makes ${items.length} parts for ${brand.models}` +
-        (covers.length
-          ? `, including index covers ${covers.join(", ")}`
-          : "") +
+        (covers.length ? `, including index covers ${covers.join(", ")}` : "") +
         `. Every part is molded from UV-stable polycarbonate in the USA and is a direct replacement for the OEM part.`,
     },
     {
@@ -55,7 +51,7 @@ export async function generateMetadata({
   if (!brand) return {};
 
   const count = productsForBrand(brand).length;
-  const title = `${brand.name} Gas Meter Index Covers, Screws & Tamper Seals`;
+  const title = `${brand.name} Gas Meter Index Covers, Screws & Security Seals`;
   const description = `${count} made-in-USA parts for ${brand.models} — index covers (index boxes), Snap Seal™ tamper seals, meter screws, and paint covers. Ships same or next day.`;
 
   return {
@@ -134,8 +130,8 @@ export default async function BrandPage({
           </h1>
           <p className="text-white/60 mt-2 text-sm max-w-2xl leading-relaxed">
             {items.length} parts for {brand.models}. Index covers (index boxes),
-            Snap Seal™ tamper seals, meter screws, and paint covers — molded in
-            the USA and shipped same or next day.
+            Snap Seal™ security seals, meter screws, and paint covers — molded
+            in the USA and shipped same or next day.
           </p>
         </div>
       </div>
@@ -143,7 +139,9 @@ export default async function BrandPage({
       {/* Other brands */}
       <div className="border-b border-line bg-surface-2">
         <div className="max-w-310 mx-auto px-6 py-3 flex flex-wrap gap-2 text-xs">
-          <span className="text-slate-500 font-semibold py-1">Other meters:</span>
+          <span className="text-slate-500 font-semibold py-1">
+            Other meters:
+          </span>
           {METER_BRANDS.filter((b) => b.slug !== slug).map((b) => (
             <Link
               key={b.slug}

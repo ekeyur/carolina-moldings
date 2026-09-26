@@ -10,7 +10,7 @@ import type { CatalogData } from "@/types/product";
 const data = catalogData as CatalogData;
 
 export const metadata: Metadata = {
-  title: "Gas Meter Index Covers, Tamper Seals & Meter Screws",
+  title: "Gas Meter Index Covers, Security Seals & Meter Screws",
   description:
     "Gas meter parts made in the USA — index covers (index boxes) for American/Honeywell, Rockwell/Xylem and Sprague/Itron meters, Snap Seal™ tamper plugs, meter screws, and paint covers. Build a quote online.",
   alternates: { canonical: "/catalog" },
@@ -42,13 +42,13 @@ export default async function CatalogPage({
             Product Catalog
           </p>
           <h1 className="font-heading font-extrabold text-white text-3xl">
-            Gas Meter Index Covers, Tamper Seals &amp; Meter Parts
+            Gas Meter Index Covers, Security Seals &amp; Meter Parts
           </h1>
           <p className="text-white/60 mt-2 text-sm max-w-2xl leading-relaxed">
-            All parts made in the USA — index covers (index boxes) for American /
-            Honeywell, Rockwell / Xylem and Sprague / Itron meters, Snap Seal™
-            tamper plugs, meter screws, paint covers, and gas fittings. Filter by
-            meter brand and build a quote in minutes.
+            All parts made in the USA — index covers (index boxes) for American
+            / Honeywell, Rockwell / Xylem and Sprague / Itron meters, Snap Seal™
+            tamper plugs, meter screws, paint covers, and gas fittings. Filter
+            by meter brand and build a quote in minutes.
           </p>
         </div>
       </div>

@@ -120,11 +120,12 @@ export const CATEGORY_SEO: Record<string, CategorySeo> = {
     ],
   },
   tamper: {
-    title: "Snap Seal™ Tamper Seals, Plugs & Meter Locks",
+    title: "Snap Seal™ Security Seals, Plugs & Meter Locks",
     intro:
       "The Snap Seal™ tamper-evident system: snap-on seals, security cups, and tamper plugs that lock over the meter connection and can't be removed without visibly breaking. Color-coded and sequentially numbered for inventory control. “You can't steal from Snap Seal.”",
     keywords: [
       "gas meter tamper seals",
+      "gas meter security seals",
       "meter security seals",
       "Snap Seal",
       "meter tamper plugs",
@@ -175,7 +176,10 @@ export function productsForCategory(catId: string): Product[] {
 }
 
 /** All products grouped by category, in catalog order — for the flat index. */
-export function productsByCategory(): { category: Category; items: Product[] }[] {
+export function productsByCategory(): {
+  category: Category;
+  items: Product[];
+}[] {
   return categories
     .map((category) => ({
       category,

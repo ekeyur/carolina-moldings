@@ -18,7 +18,7 @@ const faqs: FaqItem[] = [
   },
   {
     q: "Which gas meters do your parts fit?",
-    a: "We make index covers, tamper seals, meter screws, and paint covers for the three major diaphragm-meter families: American / Honeywell (AL-175, AL-425, AL-800, 35B–500B, 40G, 100G), Rockwell / Xylem (150, 415, R-750–R5000, 40G, 100G), and Sprague / Itron (175–400 and 40G / 100G endpoints). Each product page lists the exact meters it fits.",
+    a: "We make index covers, security seals, meter screws, and paint covers for the three major diaphragm-meter families: American / Honeywell (AL-175, AL-425, AL-800, 35B–500B, 40G, 100G), Rockwell / Xylem (150, 415, R-750–R5000, 40G, 100G), and Sprague / Itron (175–400 and 40G / 100G endpoints). Each product page lists the exact meters it fits.",
   },
   {
     q: "Are your index covers a direct replacement for the OEM part?",

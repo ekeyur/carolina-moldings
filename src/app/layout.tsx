@@ -39,7 +39,8 @@ const ibmPlexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const TITLE = "Carolina Moldings, Inc. — Gas Meter Index Covers & Tamper Seals";
+const TITLE =
+  "Carolina Moldings, Inc. — Gas Meter Index Covers & Security Seals";
 const DESCRIPTION =
   "Family-owned U.S. manufacturer of gas meter index covers, Snap Seal™ tamper systems, meter screws, paint covers, and gas fittings. Same or next-day shipping since 1975.";
 
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
     "gas meter index covers",
     "meter index covers",
     "gas meter parts",
-    "tamper seals",
+    "security seals",
     "Snap Seal",
     "gas meter tamper system",
     "meter screws",
@@ -87,7 +88,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html
       lang="en"
