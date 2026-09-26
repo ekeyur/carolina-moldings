@@ -105,7 +105,7 @@ export default function FaqPage() {
               Didn't find your answer?
             </h2>
             <p className="text-slate-600 text-sm mb-5 max-w-xl">
-              Call 1-800-523-7475 (Mon–Fri, 9am–3pm EST) or send us the meter
+              Call 1-800-523-7475 (Mon–Fri, 9am–5pm EST) or send us the meter
               you're working on and we'll point you to the right part.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

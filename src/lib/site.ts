@@ -21,9 +21,11 @@ export const SITE_GEO = { latitude: 35.2667, longitude: -80.8238 } as const;
 
 export const SITE_MAP_URL =
   "https://www.google.com/maps/search/?api=1&query=" +
-  encodeURIComponent("Carolina Moldings, 3600 Woodpark Blvd, Charlotte, NC 28206");
+  encodeURIComponent(
+    "Carolina Moldings, 3600 Woodpark Blvd, Charlotte, NC 28206",
+  );
 
-export const SITE_HOURS = "Mon–Fri · 9am–3pm EST";
+export const SITE_HOURS = "Mon–Fri · 9am–5pm EST";
 
 /**
  * Public profiles that unambiguously represent this business — used for the

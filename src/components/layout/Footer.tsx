@@ -109,7 +109,7 @@ export function Footer() {
                   contact@carolinamoldings.com
                 </a>
               </li>
-              <li>Mon–Fri · 9am–3pm EST</li>
+              <li>Mon–Fri · 9am–5pm EST</li>
             </ul>
           </div>
         </div>
