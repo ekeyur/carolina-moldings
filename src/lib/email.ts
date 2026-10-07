@@ -15,10 +15,10 @@ export const CONTACT_TO_EMAIL =
   process.env.CONTACT_TO_EMAIL || "contact@carolinamoldings.com";
 export const QUOTE_TO_EMAIL = process.env.QUOTE_TO_EMAIL || CONTACT_TO_EMAIL;
 
-// Sending address. Must be on a domain verified in Resend to avoid spam folders;
-// falls back to Resend's shared sandbox domain if not set.
+// Sending address. Must be on a domain verified in Resend — the shared
+// onboarding@resend.dev sandbox can only deliver to the Resend account owner.
 export const EMAIL_FROM =
-  process.env.EMAIL_FROM || "Carolina Moldings Website <onboarding@resend.dev>";
+  process.env.EMAIL_FROM || "Carolina Moldings Website <noreply@carolinamoldings.com>";
 
 export function escapeHtml(value: string) {
   return value
