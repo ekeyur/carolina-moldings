@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { X, ShoppingCart } from "lucide-react";
+import { X, ShoppingCart, Check } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -65,7 +65,9 @@ export default function QuotePage() {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
         <div className="text-center max-w-md px-6">
-          <div className="text-6xl mb-4">✅</div>
+          <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-surface-2 border border-line">
+            <Check className="h-7 w-7 text-navy" strokeWidth={2.25} />
+          </div>
           <h1 className="font-heading font-extrabold text-navy text-3xl mb-3">
             Quote Request Sent!
           </h1>
