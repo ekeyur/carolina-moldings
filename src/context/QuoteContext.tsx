@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { getCaseQty } from "@/lib/case-qty";
 
 export type QuoteItem = {
   id: string;
@@ -26,6 +27,13 @@ const QuoteContext = createContext<QuoteContextValue | null>(null);
 
 const STORAGE_KEY = "cmi-quote";
 
+// Case-packed items are always a whole number of cases (at least one).
+function snapToCase(id: string, quantity: number) {
+  const caseQty = getCaseQty(id);
+  if (!caseQty) return quantity;
+  return Math.max(1, Math.ceil(quantity / caseQty)) * caseQty;
+}
+
 export function QuoteProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<QuoteItem[]>([]);
   const [mounted, setMounted] = useState(false);
@@ -34,7 +42,10 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
     setMounted(true);
     try {
       const stored = localStorage.getItem(STORAGE_KEY);
-      if (stored) setItems(JSON.parse(stored));
+      if (stored) {
+        const parsed: QuoteItem[] = JSON.parse(stored);
+        setItems(parsed.map((i) => ({ ...i, quantity: snapToCase(i.id, i.quantity) })));
+      }
     } catch {
       // ignore corrupt storage
     }
@@ -46,12 +57,13 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
   }, [items, mounted]);
 
   const add = (item: Omit<QuoteItem, "quantity">) => {
+    const step = getCaseQty(item.id) ?? 1;
     setItems((prev) => {
       const existing = prev.find((i) => i.id === item.id);
       if (existing) {
-        return prev.map((i) => (i.id === item.id ? { ...i, quantity: i.quantity + 1 } : i));
+        return prev.map((i) => (i.id === item.id ? { ...i, quantity: i.quantity + step } : i));
       }
-      return [...prev, { ...item, quantity: 1 }];
+      return [...prev, { ...item, quantity: step }];
     });
   };
 
@@ -59,7 +71,9 @@ export function QuoteProvider({ children }: { children: React.ReactNode }) {
     if (quantity <= 0) {
       setItems((prev) => prev.filter((i) => i.id !== id));
     } else {
-      setItems((prev) => prev.map((i) => (i.id === id ? { ...i, quantity } : i)));
+      setItems((prev) =>
+        prev.map((i) => (i.id === id ? { ...i, quantity: snapToCase(id, quantity) } : i)),
+      );
     }
   };
 

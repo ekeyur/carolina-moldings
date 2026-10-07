@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { getCaseQty } from "@/lib/case-qty";
 import { EMAIL_FROM, QUOTE_TO_EMAIL, emailField, escapeHtml, getResend } from "@/lib/email";
 
 const itemSchema = z.object({
@@ -7,7 +8,7 @@ const itemSchema = z.object({
   name: z.string(),
   partNo: z.string(),
   supplier: z.enum(["carolina", "nuts-and-swivels"]),
-  quantity: z.number(),
+  quantity: z.number().int().positive(),
   image: z.string().optional(),
   specLine: z.string().optional(),
 });
@@ -18,8 +19,21 @@ const schema = z.object({
   email: z.string().email(),
   phone: z.string().optional(),
   message: z.string().optional(),
-  items: z.array(itemSchema).min(1),
+  items: z
+    .array(itemSchema)
+    .min(1)
+    .refine(
+      (items) => items.every((item) => item.quantity % (getCaseQty(item.id) ?? 1) === 0),
+      "Case-packed items must be ordered in whole cases",
+    ),
 });
+
+function formatQty(item: z.infer<typeof itemSchema>) {
+  const caseQty = getCaseQty(item.id);
+  if (!caseQty) return String(item.quantity);
+  const cases = item.quantity / caseQty;
+  return `${item.quantity} (${cases} case${cases !== 1 ? "s" : ""} × ${caseQty})`;
+}
 
 function itemsTable(items: z.infer<typeof itemSchema>[]) {
   const rows = items
@@ -29,7 +43,7 @@ function itemsTable(items: z.infer<typeof itemSchema>[]) {
           <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.name)}</td>
           <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.partNo)}</td>
           <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.specLine || "")}</td>
-          <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;text-align:right;">${item.quantity}</td>
+          <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;text-align:right;">${formatQty(item)}</td>
         </tr>`
     )
     .join("");

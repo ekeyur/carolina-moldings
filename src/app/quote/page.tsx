@@ -13,6 +13,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useQuote } from "@/context/QuoteContext";
 import { getSuggestedScrews } from "@/data/screw-compatibility";
+import { getCaseQty } from "@/lib/case-qty";
 import catalogData from "@/data/carolina-products.json";
 import type { CatalogData } from "@/types/product";
 
@@ -347,19 +348,27 @@ type QuoteRowProps = {
 };
 
 function QuoteRow({ item, setQty, remove }: QuoteRowProps) {
+  // Case-packed items are entered as a number of cases; everything else in units.
+  const caseQty = getCaseQty(item.id);
+  const unitsPerStep = caseQty ?? 1;
   const [displayQty, setDisplayQty] = useState(
-    item.quantity.toLocaleString("en-US"),
+    (item.quantity / unitsPerStep).toLocaleString("en-US"),
   );
 
   const handleQtyChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const raw = e.target.value.replace(/[^0-9]/g, "");
     setDisplayQty(raw ? parseInt(raw, 10).toLocaleString("en-US") : "");
     const num = parseInt(raw, 10);
-    if (!isNaN(num)) setQty(item.id, num);
+    if (!isNaN(num)) setQty(item.id, num * unitsPerStep);
+  };
+
+  // Re-sync if the field was left blank or the cart adjusted the quantity.
+  const handleQtyBlur = () => {
+    setDisplayQty((item.quantity / unitsPerStep).toLocaleString("en-US"));
   };
 
   return (
-    <div className="flex items-center gap-3 px-5 py-4 bg-white">
+    <div className="flex flex-wrap sm:flex-nowrap items-center gap-3 px-5 py-4 bg-white">
       {/* Thumbnail */}
       <div className="relative w-14 h-14 shrink-0 rounded border border-line bg-surface overflow-hidden">
         {item.image ? (
@@ -392,17 +401,42 @@ function QuoteRow({ item, setQty, remove }: QuoteRowProps) {
         )}
       </div>
 
-      {/* Quantity */}
-      <div className="flex flex-col items-end gap-1 shrink-0">
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
-          Quantity
-        </span>
-        <Input
-          value={displayQty}
-          onChange={handleQtyChange}
-          className="w-28 text-right rounded-[3px] text-sm h-8 font-mono-brand"
-          aria-label="Quantity"
-        />
+      {/* Quantity — drops to its own line under the name on small screens */}
+      <div className="order-last sm:order-none w-full sm:w-auto pl-[68px] sm:pl-0 flex items-start gap-3 shrink-0">
+        <div className="flex flex-col items-start sm:items-end gap-1 shrink-0">
+          <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+            {caseQty ? "Cases" : "Quantity"}
+          </span>
+          <Input
+            value={displayQty}
+            onChange={handleQtyChange}
+            onBlur={handleQtyBlur}
+            inputMode="numeric"
+            className={`${caseQty ? "w-20" : "w-28"} text-right rounded-[3px] text-sm h-8 font-mono-brand`}
+            aria-label={caseQty ? "Number of cases" : "Quantity"}
+          />
+          {caseQty && (
+            <span className="text-[11px] text-slate-500">{caseQty} / case</span>
+          )}
+        </div>
+
+        {/* Units (case-packed items) */}
+        {caseQty && (
+          <div className="flex flex-col items-start sm:items-end gap-1 shrink-0">
+            <span className="text-[10px] font-semibold uppercase tracking-wider text-slate-400">
+              Units
+            </span>
+            <div
+              className="w-24 h-8 flex items-center justify-end px-2.5 rounded-[3px] border border-line bg-surface-2 text-sm font-mono-brand text-navy"
+              aria-label="Total units"
+            >
+              {item.quantity.toLocaleString("en-US")}
+            </div>
+            <span className="text-[11px] text-transparent select-none" aria-hidden>
+              &nbsp;
+            </span>
+          </div>
+        )}
       </div>
 
       {/* Remove */}
