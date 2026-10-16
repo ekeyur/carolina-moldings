@@ -116,3 +116,9 @@
   background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
   background-size: 20px 20px;
 }
+
+/* Dot-grid texture for light backgrounds */
+.dot-grid-light {
+  background-image: radial-gradient(circle, rgba(19,41,75,0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+}

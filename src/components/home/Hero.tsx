@@ -11,21 +11,20 @@ const trustItems = [
 
 export function Hero() {
   return (
-    <section className="bg-navy dot-grid relative overflow-hidden">
+    <section className="bg-surface dot-grid-light border-b border-line relative overflow-hidden">
       <div className="max-w-310 mx-auto px-6 pt-8 pb-14 md:pt-14 md:pb-28 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* Left: copy */}
         <div>
-          <div className="inline-flex items-center gap-2.5 border border-carolina/40 rounded-full px-4 py-1.5 mb-7">
+          <div className="inline-flex items-center gap-2.5 border border-carolina/40 bg-carolina/5 rounded-full px-4 py-1.5 mb-7">
             <span className="w-1.75 h-1.75 rounded-full bg-brand-red shrink-0" />
-            <span className="font-mono-brand text-[11.5px] font-semibold tracking-[0.16em] text-[#A9C6E2] uppercase">
+            <span className="font-mono-brand text-[11.5px] font-semibold tracking-[0.16em] text-carolina-ink uppercase">
               Family&nbsp;Owned&nbsp;·&nbsp;Est.&nbsp;1975
             </span>
           </div>
-          <h1 className="font-heading text-white leading-[1.05] md:leading-[1.02] tracking-[-0.02em] mb-6 text-[clamp(1.875rem,7vw,3.625rem)] font-extrabold text-balance">
-            Gas Meter Index Covers &amp; Tamper Seals,{" "}
-            <span className="block text-carolina">built to protect and perform.</span>
+          <h1 className="font-heading text-navy leading-[1.05] md:leading-[1.02] tracking-[-0.02em] mb-6 text-[clamp(1.875rem,7vw,3.625rem)] font-extrabold text-balance">
+            Gas Meter Index Covers &amp; Security Seals,{" "}
           </h1>
-          <p className="text-white/70 text-base sm:text-lg leading-relaxed mb-4">
+          <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
             U.S. manufacturer of gas meter index covers, Snap Seal™ tamper
             systems, meter screws, paint covers, and gas fittings — with same or
             next-day shipping.
@@ -33,7 +32,7 @@ export function Hero() {
           {/* Snap Seal slogan with red accent bar */}
           <div className="flex items-center gap-3 mb-8">
             <div className="w-1 h-8 bg-brand-red rounded-full shrink-0" />
-            <p className="text-white italic text-base sm:text-lg font-medium">
+            <p className="text-navy italic text-base sm:text-lg font-medium">
               "You can't steal from Snap Seal™"
             </p>
           </div>
@@ -50,7 +49,7 @@ export function Hero() {
               render={<Link href="/contact" />}
               nativeButton={false}
               variant="outline"
-              className="w-full sm:w-auto border-white/40 text-white hover:bg-white/10 hover:text-white rounded-[3px] px-6 bg-transparent"
+              className="w-full sm:w-auto border-navy/30 text-navy hover:bg-navy/5 hover:text-navy rounded-[3px] px-6 bg-white"
             >
               Request Info
             </Button>
@@ -60,10 +59,10 @@ export function Hero() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
             {trustItems.map(({ label, sub }) => (
               <div key={label} className="text-center">
-                <div className="text-carolina font-heading font-bold text-sm">
+                <div className="text-carolina-ink font-heading font-bold text-sm">
                   {label}
                 </div>
-                <div className="text-white/50 text-xs">{sub}</div>
+                <div className="text-slate-500 text-xs">{sub}</div>
               </div>
             ))}
           </div>
@@ -83,7 +82,9 @@ export function Hero() {
                 priority
               />
             </div>
-            <span className="font-mono-brand text-white/50 text-[10px] tracking-widest uppercase">American / Honeywell</span>
+            <span className="font-mono-brand text-slate-500 text-[10px] tracking-widest uppercase">
+              American / Honeywell
+            </span>
           </div>
           {/* Secondary meters */}
           <div className="flex items-center gap-4 sm:gap-6">
@@ -94,10 +95,12 @@ export function Hero() {
                   alt="Rockwell / Xylem gas meter"
                   fill
                   sizes="(max-width: 640px) 128px, 160px"
-                  className="object-contain drop-shadow-lg opacity-80"
+                  className="object-contain drop-shadow-lg"
                 />
               </div>
-              <span className="font-mono-brand text-white/50 text-[10px] tracking-widest uppercase">Rockwell / Xylem</span>
+              <span className="font-mono-brand text-slate-500 text-[10px] tracking-widest uppercase">
+                Rockwell / Xylem
+              </span>
             </div>
             <div className="flex flex-col items-center gap-1.5">
               <div className="relative w-32 h-32 sm:w-40 sm:h-40">
@@ -106,10 +109,12 @@ export function Hero() {
                   alt="Sprague / Itron gas meter"
                   fill
                   sizes="(max-width: 640px) 128px, 160px"
-                  className="object-contain drop-shadow-lg opacity-80"
+                  className="object-contain drop-shadow-lg"
                 />
               </div>
-              <span className="font-mono-brand text-white/50 text-[10px] tracking-widest uppercase">Sprague / Itron</span>
+              <span className="font-mono-brand text-slate-500 text-[10px] tracking-widest uppercase">
+                Sprague / Itron
+              </span>
             </div>
           </div>
         </div>
