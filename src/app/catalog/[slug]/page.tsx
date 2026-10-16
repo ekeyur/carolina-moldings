@@ -6,6 +6,7 @@ import { ChevronRight, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { AddToQuoteButton } from "@/components/catalog/AddToQuoteButton";
 import {
+  ertProducts,
   getCategory,
   getProductBySlug,
   primaryBrandFor,
@@ -14,6 +15,7 @@ import {
   relatedProducts,
 } from "@/lib/products";
 import { formatFits } from "@/lib/slug";
+import { alternatePartNumbers } from "@/lib/part-numbers";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
@@ -35,6 +37,7 @@ export async function generateMetadata({
 
   const cover = isIndexCover(product.name);
   const fits = product.fits ? formatFits(product.fits) : undefined;
+  const alts = alternatePartNumbers(product);
   const title = fits
     ? `${product.name} — fits ${fits}`
     : `${product.name} — Part ${product.partNo}`;
@@ -43,6 +46,9 @@ export async function generateMetadata({
     (product.desc ||
       `${product.name} (${product.partNo})${fits ? `, fits ${fits}` : ""}.`) +
     (cover ? ` Direct replacement index box / index cover.` : "") +
+    (product.altPartNos?.length
+      ? ` Cross-references: ${product.altPartNos.join(", ")}.`
+      : "") +
     ` Made in the USA.`;
 
   const brand = primaryBrandFor(product);
@@ -55,6 +61,7 @@ export async function generateMetadata({
     keywords: [
       product.name,
       product.partNo,
+      ...alts,
       `${product.partNo} ${category?.name ?? "gas meter part"}`,
       ...(cover ? [`${product.partNo} index box`, "gas meter index box"] : []),
       ...(brand ? [`${brand.name} ${category?.name ?? "meter parts"}`] : []),
@@ -97,6 +104,8 @@ export default async function ProductPage({
   const image = product.images?.[0];
   const cover = isIndexCover(product.name);
   const fits = product.fits ? formatFits(product.fits) : undefined;
+  const alts = alternatePartNumbers(product);
+  const isErt = ertProducts().some((p) => p.id === product.id);
 
   return (
     <>
@@ -105,9 +114,19 @@ export default async function ProductPage({
           "@context": "https://schema.org",
           "@type": "Product",
           name: product.name,
-          alternateName: cover ? `${product.partNo} Index Box` : undefined,
+          alternateName: [
+            ...(cover ? [`${product.partNo} Index Box`] : []),
+            ...alts,
+          ],
           sku: product.partNo,
           mpn: product.partNo,
+          additionalProperty: alts.length
+            ? alts.map((value) => ({
+                "@type": "PropertyValue",
+                name: "Alternate part number",
+                value,
+              }))
+            : undefined,
           description: product.desc || undefined,
           category: category?.name,
           image: image ? `${SITE_URL}${image}` : undefined,
@@ -254,8 +273,20 @@ export default async function ProductPage({
             </ul>
           )}
 
+          {isErt && (
+            <Link
+              href="/itron-ert-covers"
+              className="text-carolina-ink text-sm font-semibold hover:underline"
+            >
+              See all Itron ERT covers &amp; parts →
+            </Link>
+          )}
+
           <div className="border-t border-line pt-4">
             {fits && <SpecRow label="Fits" value={fits} />}
+            {alts.length > 0 && (
+              <SpecRow label="Also known as" value={alts.join(", ")} />
+            )}
             {product.material && (
               <SpecRow label="Material" value={product.material} />
             )}

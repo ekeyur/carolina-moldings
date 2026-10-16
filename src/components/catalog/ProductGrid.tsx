@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { ProductCard } from "./ProductCard";
 import { ProductDialog } from "./ProductDialog";
+import { matchesPartNumber } from "@/lib/part-numbers";
 import type { Product, Category } from "@/types/product";
 
 type Props = {
@@ -42,7 +43,7 @@ export function ProductGrid({
         const q = search.toLowerCase();
         return (
           p.name.toLowerCase().includes(q) ||
-          p.partNo.toLowerCase().includes(q) ||
+          matchesPartNumber(p, search) ||
           (p.brand || "").toLowerCase().includes(q) ||
           (p.fits || "").toLowerCase().includes(q)
         );

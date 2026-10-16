@@ -187,3 +187,14 @@ export function productsByCategory(): {
     }))
     .filter((g) => g.items.length > 0);
 }
+
+/* ------------------------------------------------------------------ *
+ * Itron ERT landing page
+ * ------------------------------------------------------------------ */
+
+const ERT_MATCH = /\bERT\b|\b(40|100|500|550)G\b|itron/i;
+
+/** Covers, gaskets, paint covers and seals made for Itron ERT endpoints. */
+export function ertProducts(): Product[] {
+  return products.filter((p) => ERT_MATCH.test(brandHaystack(p)));
+}

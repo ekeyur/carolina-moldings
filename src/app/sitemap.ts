@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
     { path: "/", priority: 1 },
     { path: "/catalog", priority: 0.9 },
+    { path: "/itron-ert-covers", priority: 0.9 },
     { path: "/nuts-and-swivels", priority: 0.8 },
     { path: "/faq", priority: 0.6 },
     { path: "/about", priority: 0.5 },

@@ -35,12 +35,25 @@ export function MeterPartsIndex() {
                     href={`/catalog/brand/${b.slug}`}
                     className="group inline-flex items-center gap-1.5 font-heading font-bold text-navy hover:text-carolina transition-colors"
                   >
-                    {b.name} index covers &amp; parts
+                    <span>{`${b.name} index covers & parts`}</span>
                     <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                   </Link>
                   <p className="text-slate-500 text-sm mt-1">Fits {b.models}.</p>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/itron-ert-covers"
+                  className="group inline-flex items-center gap-1.5 font-heading font-bold text-navy hover:text-carolina transition-colors"
+                >
+                  <span>Itron ERT covers</span>
+                  <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
+                </Link>
+                <p className="text-slate-500 text-sm mt-1">
+                  Index covers, gaskets &amp; seals for Itron 100G / 500G / 550G
+                  endpoints.
+                </p>
+              </li>
             </ul>
           </div>
 

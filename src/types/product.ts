@@ -9,6 +9,8 @@ export type Product = {
   id: string;
   name: string;
   partNo: string;
+  /** OEM / competitor cross-reference numbers this part replaces. */
+  altPartNos?: string[];
   cat: string;
   brand?: string;
   ph: string;

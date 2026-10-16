@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { productSlug } from "@/lib/slug";
+import { alternatePartNumbers } from "@/lib/part-numbers";
 import {
   Dialog,
   DialogContent,
@@ -115,6 +116,12 @@ export function ProductDialog({ product, open, onClose }: Props) {
                 View full details →
               </Link>
             </div>
+
+            {alternatePartNumbers(product).length > 0 && (
+              <p className="text-slate-500 text-xs -mt-2">
+                Also known as: {alternatePartNumbers(product).join(", ")}
+              </p>
+            )}
 
             {/* Description */}
             {product.desc && (

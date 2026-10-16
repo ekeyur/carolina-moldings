@@ -4,7 +4,7 @@
       "id": "tamper",
       "name": "Tamper System",
       "tag": "Snap Seal™",
-      "blurb": "Tamper-evident seals & locks that make theft obvious."
+      "blurb": "Tamper-evident security seals & locks that make theft obvious."
     },
     {
       "id": "index",
@@ -22,7 +22,7 @@
       "id": "paint",
       "name": "Paint Covers",
       "tag": "Protective",
-      "blurb": "Keep registers clean during field painting."
+      "blurb": "Keep index registers and covers clean during painting at the meter shop"
     },
     {
       "id": "misc",
@@ -39,36 +39,36 @@
   "products": [
     {
       "id": "a101",
-      "name": "A-101 Index Cover",
+      "name": "A-101 Index Cover for American AC-250, AL-425 and AC-630 meters",
       "partNo": "A-101",
       "cat": "index",
       "brand": "American / Honeywell",
       "ph": "INDEX COVER",
       "material": "Polycarbonate",
       "pack": "105 / Case",
-      "fits": "American AL-175, AL-425",
+      "fits": "American AC-250, AL-425 and AC-630 meters",
       "tamperCompatible": true,
       "kit": true,
       "bullets": [
         "Accepts 2 #1 Snap Seal tamper plugs (sold separately)",
         "Tamper System Kit available"
       ],
-      "desc": "Index cover for American / Honeywell AL-175 and AL-425 meters. Comes with or without the Sure Seal preapplied gasket.",
+      "desc": "Index cover for American / Honeywell AC-250, AC-630 and AL-425 meters. Comes with or without the Sure Seal preapplied gasket.",
       "images": ["/products/a101.png"]
     },
     {
       "id": "a101os",
-      "name": "A-101 OS Index Cover",
+      "name": "A-101 Old Style Index Cover",
       "partNo": "A-101 OS",
       "cat": "index",
       "brand": "American / Honeywell",
       "ph": "INDEX COVER",
       "material": "Polycarbonate",
       "pack": "105 / Case",
-      "fits": "American AL-175, AL-425",
+      "fits": "American AC-250, AL-425 and AC-630 meters",
       "tamperCompatible": false,
       "bullets": ["Incompatible with Snap Seal tamper plugs"],
-      "desc": "Open-style A-101 index cover for American / Honeywell AL-175 and AL-425 meters. Available with or without the Sure Seal preapplied gasket.",
+      "desc": "Open-style A-101 index cover for American / Honeywell AC-250, AC-630 and AL-425 meters. Available with or without the Sure Seal preapplied gasket.",
       "images": ["/products/a101os.png"]
     },
     {
