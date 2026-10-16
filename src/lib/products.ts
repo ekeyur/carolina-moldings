@@ -133,9 +133,9 @@ export const CATEGORY_SEO: Record<string, CategorySeo> = {
     ],
   },
   screws: {
-    title: "Gas Meter Screws — Index, Bonnet & Security",
+    title: "Gas Meter Screws — Index box & Index",
     intro:
-      "Brass and stainless index screws, bonnet screws, and drilled-head sealing screws for American, Rockwell, Sprague and Itron gas meters. Matched by thread size and head type to every index cover we make.",
+      "Brass and stainless index screws and drilled-head sealing screws for American, Rockwell, Sprague and Itron gas meters. Matched by thread size and head type to every index cover we make.",
     keywords: [
       "gas meter screws",
       "meter cover screws",
