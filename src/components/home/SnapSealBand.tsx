@@ -22,7 +22,7 @@ export function SnapSealBand() {
         {/* Right — copy */}
         <div>
           <p className="font-mono-brand text-brand-red text-xs font-semibold tracking-[0.16em] uppercase mb-4">
-            The Tamper System
+            The Security System
           </p>
           <h2 className="font-heading font-extrabold text-navy text-3xl sm:text-4xl md:text-[2.5rem] leading-[1.04] tracking-[-0.02em] mb-5">
             You can't steal
@@ -40,7 +40,7 @@ export function SnapSealBand() {
             nativeButton={false}
             className="bg-navy hover:bg-navy/90 text-white font-bold rounded-[3px] px-7 gap-2"
           >
-            Explore the Tamper System <ArrowRight className="h-4 w-4" />
+            Explore the Security System <ArrowRight className="h-4 w-4" />
           </Button>
         </div>
       </div>

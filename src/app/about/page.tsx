@@ -61,7 +61,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-[#B9CCE2] text-lg leading-relaxed max-w-140">
               Since 1975, Carolina Moldings has been one of the leading creators
-              of gas industry materials in the United States — molding tamper
+              of gas industry materials in the United States — molding security
               seals, index covers, and meter parts that utilities and OEMs trust
               in the field every day.
             </p>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                 exactly what we do.
               </p>
               <p>
-                Our Snap Seal™ tamper system became the standard for
+                Our Snap Seal™ security system became the standard for
                 theft-evident metering — "you can't steal from Snap Seal." Today
                 we mold a full line of index covers for every major meter, plus
                 screws, gaskets, and the small parts that keep a meter shop

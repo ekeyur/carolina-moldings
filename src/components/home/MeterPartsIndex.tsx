@@ -15,7 +15,7 @@ export function MeterPartsIndex() {
         <p className="text-slate-600 text-[15px] leading-relaxed max-w-3xl mb-10">
           Carolina Moldings molds and stocks a full line of gas meter parts in
           Charlotte, North Carolina: replacement <strong>index covers</strong>{" "}
-          (also called index boxes), the <strong>Snap Seal™ tamper system</strong>{" "}
+          (also called index boxes), the <strong>Snap Seal™ security system</strong>{" "}
           of security seals and plugs, <strong>meter screws</strong> in brass and
           stainless, snap-on <strong>paint covers</strong>, and shop supplies
           like gaskets, caps, and connection plugs. Everything is made in the USA

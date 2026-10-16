@@ -24,6 +24,44 @@ const discontinuedRedirects = [
   permanent: true,
 }));
 
+/** Slugs that changed when a product was renamed or its fitment list updated. */
+const renamedRedirects = [
+  // A-101 / A-101 OS: added AM-250, AT-210, AT-250 to the fitment list.
+  [
+    "a-101-index-cover-for-american-ac-250-al-425-and-ac-630-meters-fits-american-ac-250-al-425-and-ac-630-meters",
+    "a-101-index-cover-for-american-ac-250-am-250-at-210-at-250-al-425-and-ac-630-meters-fits-american-ac-250-am-250-at-210-at-250-al-425",
+  ],
+  [
+    "a-101-index-cover-for-american-ac-250-al-425-and-ac-630-meters",
+    "a-101-index-cover-for-american-ac-250-am-250-at-210-at-250-al-425-and-ac-630-meters-fits-american-ac-250-am-250-at-210-at-250-al-425",
+  ],
+  [
+    "a-101-old-style-index-cover-fits-american-ac-250-al-425-and-ac-630-meters",
+    "a-101-old-style-index-cover-fits-american-ac-250-am-250-at-210-at-250-al-425",
+  ],
+  // Commercial Tamper Kits renamed to Commercial Security Kits.
+  [
+    "a-103-commercial-tamper-kit-fits-american-35b-500b-al-800-al5000",
+    "a-103-commercial-security-kit-fits-american-35b-500b-al-800-al5000",
+  ],
+  [
+    "a-103-commercial-tamper-kit",
+    "a-103-commercial-security-kit-fits-american-35b-500b-al-800-al5000",
+  ],
+  [
+    "r-105-commercial-tamper-kit-fits-rockwell-r-415-750-3000",
+    "r-105-commercial-security-kit-fits-rockwell-r-415-750-3000",
+  ],
+  [
+    "r-105-commercial-tamper-kit",
+    "r-105-commercial-security-kit-fits-rockwell-r-415-750-3000",
+  ],
+].map(([from, to]) => ({
+  source: `/catalog/${from}`,
+  destination: `/catalog/${to}`,
+  permanent: true,
+}));
+
 const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
@@ -32,7 +70,7 @@ const nextConfig: NextConfig = {
     ],
   },
   async redirects() {
-    return [...productRedirects, ...discontinuedRedirects];
+    return [...productRedirects, ...renamedRedirects, ...discontinuedRedirects];
   },
 };
 

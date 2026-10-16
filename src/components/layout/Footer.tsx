@@ -41,7 +41,7 @@ export function Footer() {
             </h3>
             <ul className="space-y-2 text-sm text-white/60">
               {[
-                { href: "/catalog/category/tamper", label: "Tamper System" },
+                { href: "/catalog/category/tamper", label: "Security System" },
                 { href: "/catalog/category/index", label: "Index Covers" },
                 { href: "/catalog/category/screws", label: "Meter Screws" },
                 { href: "/nuts-and-swivels", label: "Nuts & Swivels" },

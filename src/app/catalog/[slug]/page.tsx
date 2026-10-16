@@ -24,7 +24,7 @@ export function generateStaticParams() {
   return products.map((p) => ({ slug: productSlug(p) }));
 }
 
-const isIndexCover = (name: string) => /index (cover|box)/i.test(name);
+const isIndexCover = (product: { cat: string }) => product.cat === "index";
 
 export async function generateMetadata({
   params,
@@ -35,7 +35,7 @@ export async function generateMetadata({
   const product = getProductBySlug(slug);
   if (!product) return {};
 
-  const cover = isIndexCover(product.name);
+  const cover = isIndexCover(product);
   const fits = product.fits ? formatFits(product.fits) : undefined;
   const alts = alternatePartNumbers(product);
   const title = fits
@@ -46,6 +46,9 @@ export async function generateMetadata({
     (product.desc ||
       `${product.name} (${product.partNo})${fits ? `, fits ${fits}` : ""}.`) +
     (cover ? ` Direct replacement index box / index cover.` : "") +
+    (product.altNames?.length
+      ? ` Also called: ${product.altNames.join(", ")}.`
+      : "") +
     (product.altPartNos?.length
       ? ` Cross-references: ${product.altPartNos.join(", ")}.`
       : "") +
@@ -61,6 +64,7 @@ export async function generateMetadata({
     keywords: [
       product.name,
       product.partNo,
+      ...(product.altNames ?? []),
       ...alts,
       `${product.partNo} ${category?.name ?? "gas meter part"}`,
       ...(cover ? [`${product.partNo} index box`, "gas meter index box"] : []),
@@ -102,7 +106,7 @@ export default async function ProductPage({
   const brand = primaryBrandFor(product);
   const related = relatedProducts(product);
   const image = product.images?.[0];
-  const cover = isIndexCover(product.name);
+  const cover = isIndexCover(product);
   const fits = product.fits ? formatFits(product.fits) : undefined;
   const alts = alternatePartNumbers(product);
   const isErt = ertProducts().some((p) => p.id === product.id);
@@ -116,6 +120,7 @@ export default async function ProductPage({
           name: product.name,
           alternateName: [
             ...(cover ? [`${product.partNo} Index Box`] : []),
+            ...(product.altNames ?? []),
             ...alts,
           ],
           sku: product.partNo,
@@ -261,7 +266,7 @@ export default async function ProductPage({
           {product.tamperCompatible && (
             <p className="flex items-center gap-1.5 text-green text-sm font-semibold">
               <ShieldCheck className="h-4 w-4" />
-              Snap Seal™ tamper compatible
+              Snap Seal™ security compatible
             </p>
           )}
 
@@ -284,8 +289,11 @@ export default async function ProductPage({
 
           <div className="border-t border-line pt-4">
             {fits && <SpecRow label="Fits" value={fits} />}
-            {alts.length > 0 && (
-              <SpecRow label="Also known as" value={alts.join(", ")} />
+            {(product.altNames?.length || alts.length > 0) && (
+              <SpecRow
+                label="Also known as"
+                value={[...(product.altNames ?? []), ...alts].join(", ")}
+              />
             )}
             {product.material && (
               <SpecRow label="Material" value={product.material} />

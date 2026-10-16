@@ -27,7 +27,11 @@ export function formatFits(fits: string): string {
 /** Turn a `fits` string into a readable slug fragment. */
 function fitsSlug(fits: string): string {
   let s = slugify(formatFits(fits));
-  if (s.length > 50) s = s.slice(0, 50).replace(/-[^-]*$/, "");
+  if (s.length > 50)
+    s = s
+      .slice(0, 50)
+      .replace(/-[^-]*$/, "")
+      .replace(/-(and|or|for|on)$/, "");
   return s;
 }
 

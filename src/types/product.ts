@@ -8,6 +8,8 @@ export type Category = {
 export type Product = {
   id: string;
   name: string;
+  /** Other names the part is known by ("Combo Head Screw for Index Box"). */
+  altNames?: string[];
   partNo: string;
   /** OEM / competitor cross-reference numbers this part replaces. */
   altPartNos?: string[];

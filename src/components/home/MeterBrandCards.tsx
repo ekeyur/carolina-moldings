@@ -5,13 +5,13 @@ import { ArrowRight } from "lucide-react";
 const brands = [
   {
     name: "American / Honeywell",
-    desc: "Index covers and tamper products for American AL-175, AL-425, and Honeywell meter families.",
+    desc: "Index covers and security products for American AL-175, AL-425, and Honeywell meter families.",
     href: "/catalog/brand/american-honeywell",
     image: "/meters/american-honeywell.png",
   },
   {
     name: "Rockwell / Xylem",
-    desc: "Full line of index covers, screws, and tamper kits for Rockwell and Xylem meters.",
+    desc: "Full line of index covers, screws, and security kits for Rockwell and Xylem meters.",
     href: "/catalog/brand/rockwell-xylem",
     image: "/meters/rockwell-sensus.png",
   },

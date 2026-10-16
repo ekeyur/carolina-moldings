@@ -52,7 +52,7 @@ export async function generateMetadata({
 
   const count = productsForBrand(brand).length;
   const title = `${brand.name} Gas Meter Index Covers, Screws & Security Seals`;
-  const description = `${count} made-in-USA parts for ${brand.models} — index covers (index boxes), Snap Seal™ tamper seals, meter screws, and paint covers. Ships same or next day.`;
+  const description = `${count} made-in-USA parts for ${brand.models} — index covers (index boxes), Snap Seal™ security seals, meter screws, and paint covers. Ships same or next day.`;
 
   return {
     title,
@@ -87,7 +87,7 @@ export default async function BrandPage({
           "@type": "CollectionPage",
           name: `${brand.name} Gas Meter Parts`,
           url: `${SITE_URL}/catalog/brand/${slug}`,
-          about: `Replacement index covers, tamper seals and screws for ${brand.models}.`,
+          about: `Replacement index covers, security seals and screws for ${brand.models}.`,
           isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
         }}
       />

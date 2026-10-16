@@ -7,7 +7,7 @@ import { SITE_URL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Gas Meter Parts FAQ — Index Covers, Snap Seal™ & Shipping",
   description:
-    "Answers about Carolina Moldings gas meter parts: index cover vs. index box, which meters our parts fit, Snap Seal™ tamper seals, materials, shipping times, and how to get pricing.",
+    "Answers about Carolina Moldings gas meter parts: index cover vs. index box, which meters our parts fit, Snap Seal™ security seals, materials, shipping times, and how to get pricing.",
   alternates: { canonical: "/faq" },
 };
 
@@ -22,11 +22,11 @@ const faqs: FaqItem[] = [
   },
   {
     q: "Are your index covers a direct replacement for the OEM part?",
-    a: "Yes. Our index covers are dimensional replacements that install on the original meter with no modification, available bare or with a pre-applied Sure Seal™ gasket, and are ready to accept Snap Seal™ tamper plugs.",
+    a: "Yes. Our index covers are dimensional replacements that install on the original meter with no modification, available bare or with a pre-applied Sure Seal™ gasket, and are ready to accept Snap Seal™ security plugs.",
   },
   {
-    q: "What is the Snap Seal™ tamper system?",
-    a: "Snap Seal™ is our tamper-evident sealing system: a snap-on seal or security cup locks over the meter connection and can't be removed without visibly breaking. It's color-coded and sequentially numbered for inventory control, and installs by hand with no tools — “you can't steal from Snap Seal.”",
+    q: "What is the Snap Seal™ security system?",
+    a: "Snap Seal™ is our tamper-evident sealing system: a snap-on seal or security cup locks over the meter connection and can't be removed without visibly breaking — “you can't steal from Snap Seal.”",
   },
   {
     q: "What material are the index covers made from?",
@@ -86,7 +86,7 @@ export default function FaqPage() {
             Gas meter parts, answered
           </h1>
           <p className="text-white/60 text-base leading-relaxed max-w-2xl">
-            Common questions about our index covers, Snap Seal™ tamper system,
+            Common questions about our index covers, Snap Seal™ security system,
             meter screws, materials, and how to order. Still stuck?{" "}
             <Link href="/contact" className="text-carolina hover:underline">
               Talk to a real person

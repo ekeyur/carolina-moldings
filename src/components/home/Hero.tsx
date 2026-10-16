@@ -25,7 +25,7 @@ export function Hero() {
             Gas Meter Index Covers &amp; Security Seals,{" "}
           </h1>
           <p className="text-slate-600 text-base sm:text-lg leading-relaxed mb-4">
-            U.S. manufacturer of gas meter index covers, Snap Seal™ tamper
+            U.S. manufacturer of gas meter index covers, Snap Seal™ security
             systems, meter screws, paint covers, and gas fittings — with same or
             next-day shipping.
           </p>

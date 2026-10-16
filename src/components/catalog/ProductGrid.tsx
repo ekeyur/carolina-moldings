@@ -44,6 +44,7 @@ export function ProductGrid({
         return (
           p.name.toLowerCase().includes(q) ||
           matchesPartNumber(p, search) ||
+          (p.altNames ?? []).some((n) => n.toLowerCase().includes(q)) ||
           (p.brand || "").toLowerCase().includes(q) ||
           (p.fits || "").toLowerCase().includes(q)
         );

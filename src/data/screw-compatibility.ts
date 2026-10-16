@@ -1,7 +1,7 @@
 import type { Product } from "@/types/product";
 
 /**
- * Maps a catalog product id (index cover or tamper cup) to the meter-screw
+ * Maps a catalog product id (index cover or security cup) to the meter-screw
  * part numbers ("fits" rows) that mount it, transcribed from the shop's
  * screw reference sheet.
  */

@@ -42,7 +42,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 const TITLE =
   "Carolina Moldings, Inc. — Gas Meter Index Covers & Security Seals";
 const DESCRIPTION =
-  "Family-owned U.S. manufacturer of gas meter index covers, Snap Seal™ tamper systems, meter screws, paint covers, and gas fittings. Same or next-day shipping since 1975.";
+  "Family-owned U.S. manufacturer of gas meter index covers, Snap Seal™ security systems, meter screws, paint covers, and gas fittings. Same or next-day shipping since 1975.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     "gas meter parts",
     "security seals",
     "Snap Seal",
-    "gas meter tamper system",
+    "gas meter security system",
     "meter screws",
     "paint covers",
     "American AL-175 index cover",

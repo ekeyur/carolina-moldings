@@ -109,7 +109,7 @@ export const CATEGORY_SEO: Record<string, CategorySeo> = {
   index: {
     title: "Gas Meter Index Covers & Index Boxes",
     intro:
-      "Replacement index covers — also called index boxes — for American / Honeywell, Rockwell / Xylem, Sprague and Itron gas meters. Molded in UV-stable polycarbonate in the USA, available bare or with a pre-applied Sure Seal™ gasket, and ready for Snap Seal™ tamper plugs.",
+      "Replacement index covers — also called index boxes — for American / Honeywell, Rockwell / Xylem, Sprague and Itron gas meters. Molded in UV-stable polycarbonate in the USA, available bare or with a pre-applied Sure Seal™ gasket, and ready for Snap Seal™ security plugs.",
     keywords: [
       "gas meter index covers",
       "meter index box",
@@ -122,19 +122,18 @@ export const CATEGORY_SEO: Record<string, CategorySeo> = {
   tamper: {
     title: "Snap Seal™ Security Seals, Plugs & Meter Locks",
     intro:
-      "The Snap Seal™ tamper-evident system: snap-on seals, security cups, and tamper plugs that lock over the meter connection and can't be removed without visibly breaking. Color-coded and sequentially numbered for inventory control. “You can't steal from Snap Seal.”",
+      "The Snap Seal™ tamper-evident system: snap-on seals, security cups, and security plugs that lock over the meter connection and can't be removed without visibly breaking. Color-coded and sequentially numbered for inventory control. “You can't steal from Snap Seal.”",
     keywords: [
-      "gas meter tamper seals",
       "gas meter security seals",
       "meter security seals",
       "Snap Seal",
-      "meter tamper plugs",
+      "meter security plugs",
       "gas meter locks",
       "tamper evident meter seal",
     ],
   },
   screws: {
-    title: "Gas Meter Screws — Index, Bonnet & Tamper-Proof",
+    title: "Gas Meter Screws — Index, Bonnet & Security",
     intro:
       "Brass and stainless index screws, bonnet screws, and drilled-head sealing screws for American, Rockwell, Sprague and Itron gas meters. Matched by thread size and head type to every index cover we make.",
     keywords: [
@@ -142,7 +141,7 @@ export const CATEGORY_SEO: Record<string, CategorySeo> = {
       "meter cover screws",
       "drilled head sealing screws",
       "index cover screws",
-      "tamper proof meter screws",
+      "gas meter security screws",
       "brass meter screws",
     ],
   },

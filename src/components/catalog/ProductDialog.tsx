@@ -117,11 +117,12 @@ export function ProductDialog({ product, open, onClose }: Props) {
               </Link>
             </div>
 
-            {alternatePartNumbers(product).length > 0 && (
+            {(product.altNames?.length || alternatePartNumbers(product).length) ? (
               <p className="text-slate-500 text-xs -mt-2">
-                Also known as: {alternatePartNumbers(product).join(", ")}
+                Also known as:{" "}
+                {[...(product.altNames ?? []), ...alternatePartNumbers(product)].join(", ")}
               </p>
-            )}
+            ) : null}
 
             {/* Description */}
             {product.desc && (

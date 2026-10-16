@@ -12,7 +12,7 @@ export const metadata: Metadata = {
       "Carolina Moldings — Gas Meter Index Covers, Security Seals & Meter Parts",
   },
   description:
-    "U.S. manufacturer of gas meter index covers for American/Honeywell, Rockwell/Xylem and Sprague/Itron meters, plus Snap Seal™ tamper systems, meter screws, and gas fittings. Family owned since 1975, same or next-day shipping.",
+    "U.S. manufacturer of gas meter index covers for American/Honeywell, Rockwell/Xylem and Sprague/Itron meters, plus Snap Seal™ security systems, meter screws, and gas fittings. Family owned since 1975, same or next-day shipping.",
   alternates: { canonical: "/" },
 };
 

@@ -73,11 +73,11 @@ export function ProductCard({ product, onOpen, priority }: Props) {
           {product.name}
         </Link>
 
-        {/* Tamper badge */}
+        {/* Security badge */}
         {product.tamperCompatible && (
           <div className="flex items-center gap-1 text-green text-[11px] font-semibold">
             <Shield className="h-3 w-3" />
-            Tamper Compatible
+            Security Compatible
           </div>
         )}
 
