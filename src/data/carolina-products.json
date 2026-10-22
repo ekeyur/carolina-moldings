@@ -411,18 +411,6 @@
       "desc": "Paint cover for A-103 and A-103-OS index covers.",
       "images": ["/products/pca3.png"]
     },
-    // {
-    //   "id": "pca40g",
-    //   "name": "PC A-40G Paint Cover",
-    //   "partNo": "PC A-40G",
-    //   "cat": "paint",
-    //   "ph": "PAINT COVER",
-    //   "material": "LDPE",
-    //   "pack": "As needed",
-    //   "fits": "A-40G index cover",
-    //   "desc": "Paint cover for the A-40G index cover.",
-    //   "images": ["/products/pca40g.png"]
-    // },
     {
       "id": "pca100g",
       "name": "PC A-100G Paint Cover",
@@ -435,18 +423,6 @@
       "desc": "Paint cover for the A-100G index cover.",
       "images": ["/products/pca100g.png"]
     },
-    // {
-    //   "id": "pca340g",
-    //   "name": "PC A3-40G Paint Cover",
-    //   "partNo": "PC A3-40G",
-    //   "cat": "paint",
-    //   "ph": "PAINT COVER",
-    //   "material": "LDPE",
-    //   "pack": "As needed",
-    //   "fits": "A-103 Index Cover & Commercial American 40G ERT",
-    //   "desc": "Paint cover for the A-103 index cover and the commercial American 40G ERT.",
-    //   "images": ["/products/pca340g.png"]
-    // },
     {
       "id": "pca3hinged",
       "name": "PC A3 Hinged Paint Cover",
