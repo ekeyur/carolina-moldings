@@ -448,18 +448,6 @@
       "images": ["/products/pcr3.png"]
     },
     {
-      "id": "pcr40g",
-      "name": "PC R-40G Paint Cover",
-      "partNo": "PC R-40G",
-      "cat": "paint",
-      "ph": "PAINT COVER",
-      "material": "LDPE",
-      "pack": "As needed",
-      "fits": "R-40G index cover",
-      "desc": "Paint cover for the R-40G index cover.",
-      "images": ["/products/pcr40g.png"]
-    },
-    {
       "id": "pcr100g",
       "name": "PC 100G-R Paint Cover",
       "partNo": "PC 100G-R",

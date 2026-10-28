@@ -131,7 +131,7 @@ export function NutsAndSwivelsGrid({ families }: Props) {
                         : isQuoteOnly
                           ? "Custom · quote only"
                           : family.variants
-                            ? `${family.variants.length} variants${family.hasFinish ? " · 3 finishes" : ""}${family.hasInsulated ? " · insulated option" : ""}`
+                            ? `${family.variants.length} variants${family.hasFinish ? ` · ${catalog.finishes.length} finishes` : ""}${family.hasInsulated ? " · insulated option" : ""}`
                             : ""}
                   </p>
 
