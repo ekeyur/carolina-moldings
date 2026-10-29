@@ -31,6 +31,11 @@
       "id": "G",
       "name": "Galvanized",
       "suffix": "-G"
+    },
+    {
+      "id": "Z",
+      "name": "Zinc Electroplated",
+      "suffix": "-Z"
     }
   ],
   "meterBarConfig": {
@@ -111,7 +116,7 @@
       "features": [
         "Available insulated or non-insulated",
         "Optional pressure taps — specify size & location",
-        "Black or galvanized"
+        "Black, galvanized or zinc electroplated"
       ],
       "variantLabel": "Pilot / thread size",
       "hasFinish": true,
@@ -193,7 +198,7 @@
       "features": [
         "Available insulated or non-insulated",
         "Optional pressure taps",
-        "Black or galvanized"
+        "Black, galvanized or zinc electroplated"
       ],
       "variantLabel": "Pilot / thread size",
       "hasFinish": true,
@@ -225,7 +230,7 @@
       "features": [
         "Wide range of pilot, thread & offset combinations",
         "Insulated options available",
-        "Black or galvanized"
+        "Black, galvanized or zinc electroplated"
       ],
       "variantLabel": "Configuration",
       "hasFinish": true,
@@ -409,7 +414,7 @@
       "name": "Meter Connection Nut",
       "ph": "CONNECTION NUT",
       "blurb": "Standard meter connection nut, sized to the pilot.",
-      "features": ["Black or galvanized"],
+      "features": ["Black, galvanized or zinc electroplated"],
       "variantLabel": "Pilot size",
       "hasFinish": true,
       "hasInsulated": false,
@@ -499,7 +504,7 @@
       "blurb": "Plug for sealing an unused meter connection nut. Plastic or metal.",
       "features": [
         "Plastic (PP) or metal",
-        "Metal: black or galvanized"
+        "Metal: black, galvanized or zinc electroplated"
       ],
       "variantLabel": "Type / pilot size",
       "hasFinish": false,
@@ -856,7 +861,7 @@
       "features": [
         "Riser, bar or wall mount",
         "Optional U-bolt & mounting hardware",
-        "Black or galvanized"
+        "Black, galvanized or zinc electroplated"
       ],
       "variantLabel": "Style",
       "hasFinish": true,
@@ -888,7 +893,7 @@
       "features": [
         "Side, top, sleeved, direct & rear-center styles",
         "Optional pressure taps — specify size & location",
-        "Black or galvanized"
+        "Black, galvanized or zinc electroplated"
       ],
       "configurator": "meterbar"
     },
