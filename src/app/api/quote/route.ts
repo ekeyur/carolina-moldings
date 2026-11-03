@@ -40,9 +40,8 @@ function itemsTable(items: z.infer<typeof itemSchema>[]) {
     .map(
       (item) => `
         <tr>
-          <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.name)}</td>
+          <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.name)}${item.specLine ? `<br><span style="color:#6b7280;font-size:12px;">${escapeHtml(item.specLine)}</span>` : ""}</td>
           <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.partNo)}</td>
-          <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;">${escapeHtml(item.specLine || "")}</td>
           <td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;text-align:right;">${formatQty(item)}</td>
         </tr>`
     )
@@ -54,7 +53,6 @@ function itemsTable(items: z.infer<typeof itemSchema>[]) {
         <tr style="text-align:left;">
           <th style="padding:6px 10px;border-bottom:2px solid #13294b;">Item</th>
           <th style="padding:6px 10px;border-bottom:2px solid #13294b;">Part #</th>
-          <th style="padding:6px 10px;border-bottom:2px solid #13294b;">Spec</th>
           <th style="padding:6px 10px;border-bottom:2px solid #13294b;text-align:right;">Qty</th>
         </tr>
       </thead>
