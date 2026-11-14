@@ -1,27 +1,29 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { guardFormRequest } from "@/lib/abuse";
 import { getCaseQty } from "@/lib/case-qty";
 import { EMAIL_FROM, QUOTE_TO_EMAIL, emailField, escapeHtml, getResend } from "@/lib/email";
 
 const itemSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  partNo: z.string(),
+  id: z.string().max(200),
+  name: z.string().max(300),
+  partNo: z.string().max(100),
   supplier: z.enum(["carolina", "nuts-and-swivels"]),
-  quantity: z.number().int().positive(),
-  image: z.string().optional(),
-  specLine: z.string().optional(),
+  quantity: z.number().int().positive().max(1_000_000),
+  image: z.string().max(500).optional(),
+  specLine: z.string().max(500).optional(),
 });
 
 const schema = z.object({
-  name: z.string().min(1),
-  company: z.string().optional(),
-  email: z.string().email(),
-  phone: z.string().optional(),
-  message: z.string().optional(),
+  name: z.string().trim().min(1).max(120),
+  company: z.string().max(200).optional(),
+  email: z.string().email().max(254),
+  phone: z.string().max(40).optional(),
+  message: z.string().max(5000).optional(),
   items: z
     .array(itemSchema)
     .min(1)
+    .max(200)
     .refine(
       (items) => items.every((item) => item.quantity % (getCaseQty(item.id) ?? 1) === 0),
       "Case-packed items must be ordered in whole cases",
@@ -62,9 +64,12 @@ function itemsTable(items: z.infer<typeof itemSchema>[]) {
 }
 
 export async function POST(request: Request) {
+  const guard = await guardFormRequest(request, "quote");
+  if (!guard.ok) return guard.response;
+
   let data;
   try {
-    data = schema.parse(await request.json());
+    data = schema.parse(guard.body);
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid form data" }, { status: 400 });
   }

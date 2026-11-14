@@ -1,20 +1,24 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
+import { guardFormRequest } from "@/lib/abuse";
 import { CONTACT_TO_EMAIL, EMAIL_FROM, emailField, escapeHtml, getResend } from "@/lib/email";
 
 const schema = z.object({
-  name: z.string().min(1),
-  company: z.string().optional(),
-  email: z.string().email(),
-  phone: z.string().optional(),
-  subject: z.string().optional(),
-  message: z.string().min(1),
+  name: z.string().trim().min(1).max(120),
+  company: z.string().max(200).optional(),
+  email: z.string().email().max(254),
+  phone: z.string().max(40).optional(),
+  subject: z.string().max(200).optional(),
+  message: z.string().trim().min(1).max(5000),
 });
 
 export async function POST(request: Request) {
+  const guard = await guardFormRequest(request, "contact");
+  if (!guard.ok) return guard.response;
+
   let data;
   try {
-    data = schema.parse(await request.json());
+    data = schema.parse(guard.body);
   } catch {
     return NextResponse.json({ ok: false, error: "Invalid form data" }, { status: 400 });
   }

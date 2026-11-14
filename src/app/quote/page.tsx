@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { X, ShoppingCart, Check } from "lucide-react";
@@ -20,11 +20,11 @@ import type { CatalogData } from "@/types/product";
 const allProducts = (catalogData as CatalogData).products;
 
 const schema = z.object({
-  name: z.string().min(2, "Full name is required"),
-  company: z.string().optional(),
-  email: z.string().email("Valid email is required"),
-  phone: z.string().optional(),
-  message: z.string().optional(),
+  name: z.string().min(2, "Full name is required").max(120, "Name is too long"),
+  company: z.string().max(200, "Company name is too long").optional(),
+  email: z.string().email("Valid email is required").max(254),
+  phone: z.string().max(40, "Phone number is too long").optional(),
+  message: z.string().max(5000, "Please keep your message under 5,000 characters").optional(),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -33,6 +33,8 @@ export default function QuotePage() {
   const { items, add, setQty, remove, clear } = useQuote();
   const [submitted, setSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState(false);
+  // Honeypot: hidden from people, but bots that auto-fill every field fill it.
+  const honeypotRef = useRef<HTMLInputElement>(null);
 
   const {
     register,
@@ -52,7 +54,11 @@ export default function QuotePage() {
     const res = await fetch("/api/quote", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...data, items }),
+      body: JSON.stringify({
+        ...data,
+        items,
+        website: honeypotRef.current?.value ?? "",
+      }),
     });
     if (!res.ok) {
       setSubmitError(true);
@@ -256,6 +262,18 @@ export default function QuotePage() {
             Request pricing
           </h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+            <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+              <label htmlFor="website">Leave this field empty</label>
+              <input
+                ref={honeypotRef}
+                id="website"
+                name="website"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                defaultValue=""
+              />
+            </div>
             <div className="space-y-1">
               <Label htmlFor="name" className="text-sm font-medium text-slate-700">
                 Full name

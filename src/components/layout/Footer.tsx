@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { CookieSettingsButton } from "./CookieConsent";
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
@@ -119,9 +119,14 @@ export function Footer() {
             © {new Date().getFullYear()} Carolina Moldings, Inc. All rights
             reserved.
           </span>
-          <span className="tracking-wide uppercase text-[10px]">
-            Charlotte · North Carolina · USA
-          </span>
+          <div className="flex items-center gap-4">
+            <Link href="/cookies" className="hover:text-carolina transition-colors">
+              Cookie Policy
+            </Link>
+            <CookieSettingsButton className="hover:text-carolina transition-colors cursor-pointer" />            <span className="tracking-wide uppercase text-[10px]">
+              Charlotte · North Carolina · USA
+            </span>
+          </div>
         </div>
       </div>
     </footer>

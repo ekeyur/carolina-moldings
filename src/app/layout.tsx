@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import "./globals.css";
 import { QuoteProvider } from "@/context/QuoteContext";
 import { UtilityBar } from "@/components/layout/UtilityBar";
@@ -105,7 +105,7 @@ export default function RootLayout({
           <main className="flex-1">{children}</main>
           <Footer />
         </QuoteProvider>
-        <Analytics />
+        <CookieConsent />
         <JsonLd
           data={{
             "@context": "https://schema.org",
