@@ -218,7 +218,7 @@
       "name": "100G-I Index Cover",
       "partNo": "100G-I",
       "cat": "index",
-      "altPartNos": "MLD-0200-014",
+      "altPartNos": ["MLD-0200-014"],
       "brand": "Sprague / Itron",
       "ph": "INDEX COVER",
       "material": "Polycarbonate",
