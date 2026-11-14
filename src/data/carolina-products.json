@@ -138,7 +138,7 @@
         "Compatible with 2 Tophat security plugs (not included)",
         "Security System Kit available"
       ],
-      "desc": "Index cover for Itron 100G,500G or 550G endpoints on American meters. Does not use the Sure Seal preapplied gasket.",
+      "desc": "100G Datalogging Index Cover – American Elster Residential - Compatible with Itron 100G (MLD-0200-002)",
       "images": ["/products/a100g.png"]
     },
     {
@@ -192,7 +192,7 @@
         "Compatible with 2 Tophat security plugs (not included)",
         "Security System Kit available"
       ],
-      "desc": "Index cover for Itron 100G/500G/550G endpoints on Rockwell Residential meters.",
+      "desc": "100G Datalogging Index Cover – Sensus Rockwell Residential - Compatible with Itron 100G (MLD-0200-006)",
       "images": ["/products/r100g.png"]
     },
     {
@@ -230,8 +230,8 @@
         "Compatible with 2 Tophat security plugs (not included)",
         "Security System Kit available"
       ],
-      "desc": "Index cover for Itron 100G endpoints on Itron meters.",
-      "images": ["/products/i100g.png"]
+      "desc": "100G Datalogging Index Cover – Itron Sprague Residential - Compatible with Itron 100G (MLD-0200-014)",
+      "images": ["/products/i100g.png", "/products/i100g-1.png"]
     },
     {
       "id": "ss1",
