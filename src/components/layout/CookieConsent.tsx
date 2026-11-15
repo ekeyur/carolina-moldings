@@ -57,7 +57,9 @@ export function CookieConsent() {
       {consent === "granted" && (
         // beforeSend re-checks storage so a later "Decline" stops events
         // immediately, even though the already-loaded script stays in memory.
-        <Analytics beforeSend={(e) => (readConsent() === "granted" ? e : null)} />
+        <Analytics
+          beforeSend={(e) => (readConsent() === "granted" ? e : null)}
+        />
       )}
 
       {open && (
@@ -90,7 +92,7 @@ export function CookieConsent() {
                 onClick={() => choose("granted")}
                 className="inline-flex items-center justify-center rounded-[3px] bg-navy hover:bg-navy/90 text-white font-semibold px-5 py-2.5 text-sm transition-colors"
               >
-                Accept analytics
+                Accept
               </button>
             </div>
           </div>
@@ -117,7 +119,9 @@ export function CookieSettingsButton({ className }: { className?: string }) {
   return (
     <button
       type="button"
-      onClick={() => window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT))}
+      onClick={() =>
+        window.dispatchEvent(new Event(OPEN_COOKIE_SETTINGS_EVENT))
+      }
       className={className}
     >
       Cookie settings
