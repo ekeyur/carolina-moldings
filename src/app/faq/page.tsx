@@ -1,15 +1,16 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { Faq, type FaqItem } from "@/components/seo/Faq";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Gas Meter Parts FAQ — Index Covers, Snap Seal™ & Shipping",
   description:
-    "Answers about Carolina Moldings gas meter parts: index cover vs. index box, which meters our parts fit, Snap Seal™ security seals, materials, shipping times, and how to get pricing.",
-  alternates: { canonical: "/faq" },
-};
+    "Gas meter parts FAQ: index cover vs. index box, which meters our parts fit, Snap Seal™ security seals, materials, shipping times and pricing.",
+  path: "/faq",
+});
 
 const faqs: FaqItem[] = [
   {
@@ -105,7 +106,7 @@ export default function FaqPage() {
               Didn't find your answer?
             </h2>
             <p className="text-slate-600 text-sm mb-5 max-w-xl">
-              Call 1-800-523-7475 (Mon–Fri, 9am–5pm EST) or send us the meter
+              Call 1-800-523-7475 (Mon–Fri, 9am–3pm EST) or send us the meter
               you're working on and we'll point you to the right part.
             </p>
             <div className="flex flex-col sm:flex-row gap-3">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { ProductGrid } from "@/components/catalog/ProductGrid";
@@ -9,12 +10,12 @@ import type { CatalogData } from "@/types/product";
 
 const data = catalogData as CatalogData;
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Gas Meter Index Covers, Security Seals & Meter Screws",
   description:
     "Gas meter parts made in the USA — index covers (index boxes) for American/Honeywell, Rockwell/Xylem and Sprague/Itron meters, Snap Seal™ security plugs, meter screws, and paint covers. Build a quote online.",
-  alternates: { canonical: "/catalog" },
-};
+  path: "/catalog",
+});
 
 type SearchParams = { cat?: string; brand?: string; q?: string };
 

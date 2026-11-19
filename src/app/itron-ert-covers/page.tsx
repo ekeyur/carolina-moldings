@@ -1,28 +1,31 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Faq, type FaqItem } from "@/components/seo/Faq";
 import { ProductLinkGrid } from "@/components/catalog/ProductLinkGrid";
 import { categories, ertProducts, productSlug } from "@/lib/products";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 const PATH = "/itron-ert-covers";
-const TITLE = "Itron ERT Covers — 100G / 500G / 550G Index Covers & Gaskets";
+const TITLE = "Itron ERT Covers — 100G / 500G / 550G Index Covers & Seals";
 const DESCRIPTION =
-  "Replacement Itron ERT covers for American, Rockwell and Itron meters — 100G-A, 100G-R and 100G-I index covers, ERT cork gaskets, paint covers and security seals. Made in the USA, ships same or next day.";
+  "Itron ERT covers for American, Rockwell and Itron meters: 100G-A, 100G-R and 100G-I index covers, protectors, paint covers and seals. Made in the USA.";
 
 const SECTION_TITLES: Record<string, string> = {
   index: "Itron ERT index covers",
-  misc: "ERT gaskets & protectors",
+  misc: "ERT protectors",
   paint: "ERT paint covers",
   tamper: "ERT security seals",
   screws: "ERT cover screws",
 };
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: TITLE,
   description: DESCRIPTION,
+  path: PATH,
   keywords: [
     "Itron ERT covers",
     "Itron ERT cover",
@@ -32,23 +35,14 @@ export const metadata: Metadata = {
     "Itron 500G cover",
     "Itron 550G cover",
     "100G ERT index cover",
-    "ERT cork gasket",
     "commercial ERT protector",
   ],
-  alternates: { canonical: PATH },
-  openGraph: {
-    type: "website",
-    title: TITLE,
-    description: DESCRIPTION,
-    url: `${SITE_URL}${PATH}`,
-    images: ["/og.png"],
-  },
-};
+});
 
 const faqs: FaqItem[] = [
   {
     q: "Which Itron ERT covers do you make?",
-    a: "We mold index covers for Itron 100G, 500G and 550G ERT endpoints on three meter lines: the 100G-A for American meters, the 100G-R for Rockwell residential meters, and the 100G-I for Itron meters. We also make matching ERT cork gaskets, paint covers, the CEP commercial ERT protector, and the Tophat security seal, which fits Itron ERT covers.",
+    a: "We mold index covers for Itron 100G, 500G and 550G ERT endpoints on three meter lines: the 100G-A for American meters, the 100G-R for Rockwell residential meters, and the 100G-I for Itron meters. We also make matching paint covers, the CEP commercial ERT protector, and the Tophat security seal, which fits Itron ERT covers.",
   },
   {
     q: "Do your ERT covers fit without modifying the meter?",
@@ -83,8 +77,8 @@ export default function ItronErtCoversPage() {
           name: "Itron ERT Covers",
           url: `${SITE_URL}${PATH}`,
           about:
-            "Replacement index covers, gaskets, paint covers and security seals for Itron ERT endpoints.",
-          isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+            "Replacement index covers, protectors, paint covers and security seals for Itron ERT endpoints.",
+          isPartOf: { "@id": `${SITE_URL}/#website` },
           mainEntity: {
             "@type": "ItemList",
             itemListElement: items.map((p, i) => ({
@@ -96,25 +90,12 @@ export default function ItronErtCoversPage() {
           },
         }}
       />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Catalog",
-              item: `${SITE_URL}/catalog`,
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: "Itron ERT Covers",
-              item: `${SITE_URL}${PATH}`,
-            },
-          ],
-        }}
+      <BreadcrumbJsonLd
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Catalog", path: "/catalog" },
+          { name: "Itron ERT Covers", path: PATH },
+        ]}
       />
 
       {/* Header */}
@@ -134,10 +115,10 @@ export default function ItronErtCoversPage() {
             Itron ERT Covers
           </h1>
           <p className="text-white/60 mt-2 text-sm max-w-2xl leading-relaxed">
-            Replacement index covers for Itron 100G, 500G and 550G ERT
-            endpoints on American, Rockwell and Itron gas meters, plus the
-            gaskets, paint covers and security seals that go with them. Molded
-            in the USA and shipped same or next day.
+            Replacement index covers for Itron 100G, 500G and 550G ERT endpoints
+            on American, Rockwell and Itron gas meters, plus the protectors,
+            paint covers and security seals that go with them. Molded in the USA
+            and shipped same or next day.
           </p>
         </div>
       </div>
@@ -157,9 +138,9 @@ export default function ItronErtCoversPage() {
         <div className="max-w-310 mx-auto px-6">
           <Faq items={faqs} heading="Itron ERT covers — FAQ" />
           <p className="text-slate-400 text-xs mt-8 max-w-3xl">
-            Itron and ERT are trademarks of Itron, Inc. Carolina Moldings is
-            not affiliated with Itron; names are used only to identify
-            compatible meters and endpoints.
+            Itron and ERT are trademarks of Itron, Inc. Carolina Moldings is not
+            affiliated with Itron; names are used only to identify compatible
+            meters and endpoints.
           </p>
         </div>
       </section>

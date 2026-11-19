@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "About — 50 Years of U.S. Gas Meter Parts Manufacturing",
   description:
-    "Since 1975, Carolina Moldings has molded gas meter index covers, Snap Seal™ security seals, and meter parts in Charlotte, NC. Three generations, family owned, every order hand-inspected.",
-  alternates: { canonical: "/about" },
-};
+    "Since 1975, Carolina Moldings has made gas meter index covers, Snap Seal™ seals and meter parts in Charlotte, NC. Three generations, family owned.",
+  path: "/about",
+});
 
 const stats = [
   { value: "50", label: "Years in Business" },

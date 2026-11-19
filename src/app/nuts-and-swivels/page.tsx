@@ -1,20 +1,28 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { NutsAndSwivelsGrid } from "@/components/nuts-and-swivels/NutsAndSwivelsGrid";
 import catalog from "@/data/nuts-and-swivels-catalog.json";
 import type { NutsAndSwivelsFamily } from "@/types/nuts-and-swivels";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Nuts & Swivels — Gas Meter Swivels, Meter Bars & Assemblies",
   description:
-    "Configure gas meter swivels, meter accessories, meter bars, and custom assemblies online, then add them to your quote. Manufactured in the USA by Carolina Moldings.",
-  alternates: { canonical: "/nuts-and-swivels" },
-};
+    "Configure gas meter swivels, meter bars, accessories and custom assemblies online, then add them to your quote. Made in the USA by Carolina Moldings.",
+  path: "/nuts-and-swivels",
+});
 
 const families = catalog.nutsAndSwivelsFamilies as NutsAndSwivelsFamily[];
 
 export default function NutsAndSwivelsPage() {
   return (
     <>
+      <BreadcrumbJsonLd
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Nuts & Swivels", path: "/nuts-and-swivels" },
+        ]}
+      />
       {/* Hero */}
       <div className="bg-navy py-12">
         <div className="max-w-310 mx-auto px-6">

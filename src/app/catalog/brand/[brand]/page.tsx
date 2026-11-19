@@ -3,16 +3,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { pageMetadata } from "@/lib/seo";
 import { Faq, type FaqItem } from "@/components/seo/Faq";
 import { ProductLinkGrid } from "@/components/catalog/ProductLinkGrid";
 import {
   METER_BRANDS,
   getMeterBrand,
+  productSlug,
   productsForBrand,
   type MeterBrand,
 } from "@/lib/products";
 import type { Product } from "@/types/product";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 function brandFaqs(brand: MeterBrand, items: Product[]): FaqItem[] {
   const covers = items.filter((p) => p.cat === "index").map((p) => p.partNo);
@@ -54,18 +57,11 @@ export async function generateMetadata({
   const title = `${brand.name} Gas Meter Index Covers, Screws & Security Seals`;
   const description = `${count} made-in-USA parts for ${brand.models} — index covers (index boxes), Snap Seal™ security seals, meter screws, and paint covers. Ships same or next day.`;
 
-  return {
+  return pageMetadata({
     title,
     description,
-    alternates: { canonical: `/catalog/brand/${slug}` },
-    openGraph: {
-      type: "website",
-      title,
-      description,
-      url: `${SITE_URL}/catalog/brand/${slug}`,
-      images: ["/og.png"],
-    },
-  };
+    path: `/catalog/brand/${slug}`,
+  });
 }
 
 export default async function BrandPage({
@@ -88,28 +84,25 @@ export default async function BrandPage({
           name: `${brand.name} Gas Meter Parts`,
           url: `${SITE_URL}/catalog/brand/${slug}`,
           about: `Replacement index covers, security seals and screws for ${brand.models}.`,
-          isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+          isPartOf: { "@id": `${SITE_URL}/#website` },
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: items.length,
+            itemListElement: items.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: p.name,
+              url: `${SITE_URL}/catalog/${productSlug(p)}`,
+            })),
+          },
         }}
       />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Catalog",
-              item: `${SITE_URL}/catalog`,
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: brand.name,
-              item: `${SITE_URL}/catalog/brand/${slug}`,
-            },
-          ],
-        }}
+      <BreadcrumbJsonLd
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Catalog", path: "/catalog" },
+          { name: brand.name, path: `/catalog/brand/${slug}` },
+        ]}
       />
 
       {/* Header */}

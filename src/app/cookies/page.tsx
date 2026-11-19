@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { CookieSettingsButton } from "@/components/layout/CookieConsent";
 import { SITE_ADDRESS, SITE_EMAIL, SITE_NAME } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Cookie Policy",
   description:
     "How carolinamoldings.com uses cookies and similar technologies, and how you can control them.",
-  alternates: { canonical: "/cookies" },
-};
+  path: "/cookies",
+});
 
 const LAST_UPDATED = "November 14, 2026";
 
@@ -68,15 +69,13 @@ export default function CookiePolicyPage() {
             <Section title="What we use">
               <ul className="list-disc pl-5 space-y-2">
                 <li>
-                  <strong className="text-navy">Essential storage.</strong>{" "}
-                  We save a small amount of information in your browser so your
+                  <strong className="text-navy">Essential storage.</strong> We
+                  save a small amount of information in your browser so your
                   quote list and cookie choice are remembered. It stays on your
                   device.
                 </li>
                 <li>
-                  <strong className="text-navy">
-                    Analytics (optional).
-                  </strong>{" "}
+                  <strong className="text-navy">Analytics (optional).</strong>{" "}
                   Only if you accept, we use cookieless analytics to count page
                   visits. It does not identify you or track you across other
                   websites.
@@ -107,9 +106,7 @@ export default function CookiePolicyPage() {
             </Section>
 
             <Section title="Contact us">
-              <p>
-                Questions? Contact {SITE_NAME}:
-              </p>
+              <p>Questions? Contact {SITE_NAME}:</p>
               <p className="text-navy">
                 {SITE_ADDRESS.streetAddress}
                 <br />

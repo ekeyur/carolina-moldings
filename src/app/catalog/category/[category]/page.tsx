@@ -3,14 +3,17 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ChevronRight } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { pageMetadata } from "@/lib/seo";
 import { ProductLinkGrid } from "@/components/catalog/ProductLinkGrid";
 import {
   CATEGORY_SEO,
   categories,
   getCategory,
+  productSlug,
   productsForCategory,
 } from "@/lib/products";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -33,19 +36,12 @@ export async function generateMetadata({
   const description =
     (seo?.intro ?? category.blurb) + ` ${count} parts, made in the USA.`;
 
-  return {
+  return pageMetadata({
     title,
     description,
     keywords: seo?.keywords,
-    alternates: { canonical: `/catalog/category/${id}` },
-    openGraph: {
-      type: "website",
-      title,
-      description,
-      url: `${SITE_URL}/catalog/category/${id}`,
-      images: ["/og.png"],
-    },
-  };
+    path: `/catalog/category/${id}`,
+  });
 }
 
 export default async function CategoryPage({
@@ -69,28 +65,25 @@ export default async function CategoryPage({
           name: seo?.title ?? category.name,
           url: `${SITE_URL}/catalog/category/${id}`,
           about: seo?.intro ?? category.blurb,
-          isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_URL },
+          isPartOf: { "@id": `${SITE_URL}/#website` },
+          mainEntity: {
+            "@type": "ItemList",
+            numberOfItems: items.length,
+            itemListElement: items.map((p, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              name: p.name,
+              url: `${SITE_URL}/catalog/${productSlug(p)}`,
+            })),
+          },
         }}
       />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Catalog",
-              item: `${SITE_URL}/catalog`,
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: category.name,
-              item: `${SITE_URL}/catalog/category/${id}`,
-            },
-          ],
-        }}
+      <BreadcrumbJsonLd
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Catalog", path: "/catalog" },
+          { name: category.name, path: `/catalog/category/${id}` },
+        ]}
       />
 
       {/* Header */}

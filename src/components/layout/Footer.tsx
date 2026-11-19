@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { CookieSettingsButton } from "./CookieConsent";
+import { SITE_HOURS } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="bg-navy text-white">
@@ -109,7 +110,7 @@ export function Footer() {
                   contact@carolinamoldings.com
                 </a>
               </li>
-              <li>Mon–Fri · 9am–5pm EST</li>
+              <li>{SITE_HOURS}</li>
             </ul>
           </div>
         </div>

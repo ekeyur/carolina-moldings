@@ -4,6 +4,8 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ChevronRight, ShieldCheck } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
+import { pageMetadata } from "@/lib/seo";
 import { AddToQuoteButton } from "@/components/catalog/AddToQuoteButton";
 import {
   ertProducts,
@@ -16,7 +18,7 @@ import {
 } from "@/lib/products";
 import { formatFits } from "@/lib/slug";
 import { alternatePartNumbers } from "@/lib/part-numbers";
-import { SITE_NAME, SITE_URL } from "@/lib/site";
+import { SITE_URL } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -38,29 +40,45 @@ export async function generateMetadata({
   const cover = isIndexCover(product);
   const fits = product.fits ? formatFits(product.fits) : undefined;
   const alts = alternatePartNumbers(product);
-  const title = fits
-    ? `${product.name} — fits ${fits}`
-    : `${product.name} — Part ${product.partNo}`;
+  // Some names already spell out the fitment ("…for American AC-250 meters");
+  // don't repeat it in the title.
+  const nameHasFits =
+    !!fits &&
+    (/\bfor\b/i.test(product.name) ||
+      product.name.toLowerCase().includes(fits.toLowerCase()));
+  const title =
+    fits && !nameHasFits
+      ? `${product.name} — fits ${fits}`
+      : product.name.includes(product.partNo)
+        ? product.name
+        : `${product.name} — Part ${product.partNo}`;
+  // Part number + fitment matter more in the SERP than the brand suffix, so
+  // drop " | Carolina Moldings" when it would push the title past ~60 chars.
+  const absoluteTitle = title.length + " | Carolina Moldings".length > 60;
 
+  // Cross-reference part numbers go early so they survive snippet truncation.
   const description =
     (product.desc ||
       `${product.name} (${product.partNo})${fits ? `, fits ${fits}` : ""}.`) +
-    (cover ? ` Direct replacement index box / index cover.` : "") +
-    (product.altNames?.length
-      ? ` Also called: ${product.altNames.join(", ")}.`
-      : "") +
     (product.altPartNos?.length
       ? ` Cross-references: ${product.altPartNos.join(", ")}.`
       : "") +
+    (product.altNames?.length
+      ? ` Also called: ${product.altNames.join(", ")}.`
+      : "") +
+    (cover ? ` Direct replacement index box / index cover.` : "") +
     ` Made in the USA.`;
 
   const brand = primaryBrandFor(product);
   const category = getCategory(product.cat);
   const image = product.images?.[0];
 
-  return {
+  return pageMetadata({
     title,
+    absoluteTitle,
     description,
+    path: `/catalog/${slug}`,
+    image,
     keywords: [
       product.name,
       product.partNo,
@@ -71,15 +89,7 @@ export async function generateMetadata({
       ...(brand ? [`${brand.name} ${category?.name ?? "meter parts"}`] : []),
       ...(fits ? [`index cover for ${fits}`] : []),
     ],
-    alternates: { canonical: `/catalog/${slug}` },
-    openGraph: {
-      type: "website",
-      title,
-      description,
-      url: `${SITE_URL}/catalog/${slug}`,
-      images: image ? [{ url: image }] : ["/og.png"],
-    },
-  };
+  });
 }
 
 function SpecRow({ label, value }: { label: string; value: string }) {
@@ -137,7 +147,7 @@ export default async function ProductPage({
           image: image ? `${SITE_URL}${image}` : undefined,
           material: product.material || undefined,
           brand: { "@type": "Brand", name: "Carolina Moldings" },
-          manufacturer: { "@type": "Organization", name: SITE_NAME },
+          manufacturer: { "@id": `${SITE_URL}/#business` },
           url: `${SITE_URL}/catalog/${slug}`,
           isAccessoryOrSparePartFor: fits
             ? { "@type": "Product", name: fits }
@@ -153,39 +163,27 @@ export default async function ProductPage({
           },
         }}
       />
-      <JsonLd
-        data={{
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Catalog",
-              item: `${SITE_URL}/catalog`,
-            },
-            ...(category
-              ? [
-                  {
-                    "@type": "ListItem",
-                    position: 2,
-                    name: category.name,
-                    item: `${SITE_URL}/catalog/category/${category.id}`,
-                  },
-                ]
-              : []),
-            {
-              "@type": "ListItem",
-              position: category ? 3 : 2,
-              name: product.name,
-              item: `${SITE_URL}/catalog/${slug}`,
-            },
-          ],
-        }}
+      <BreadcrumbJsonLd
+        trail={[
+          { name: "Home", path: "/" },
+          { name: "Catalog", path: "/catalog" },
+          ...(category
+            ? [
+                {
+                  name: category.name,
+                  path: `/catalog/category/${category.id}`,
+                },
+              ]
+            : []),
+          { name: product.name, path: `/catalog/${slug}` },
+        ]}
       />
 
       {/* Breadcrumb */}
-      <nav aria-label="Breadcrumb" className="bg-surface-2 border-b border-line">
+      <nav
+        aria-label="Breadcrumb"
+        className="bg-surface-2 border-b border-line"
+      >
         <div className="max-w-310 mx-auto px-6 py-3 flex flex-wrap items-center gap-1.5 text-xs text-slate-500">
           <Link href="/catalog" className="hover:text-carolina">
             Catalog

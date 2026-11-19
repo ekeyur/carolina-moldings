@@ -50,7 +50,7 @@ export function MeterPartsIndex() {
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-0.5 transition-transform" />
                 </Link>
                 <p className="text-slate-500 text-sm mt-1">
-                  Index covers, gaskets &amp; seals for Itron 100G / 500G / 550G
+                  Index covers, protectors &amp; seals for Itron 100G / 500G / 550G
                   endpoints.
                 </p>
               </li>

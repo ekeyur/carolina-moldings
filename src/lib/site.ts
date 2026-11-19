@@ -25,7 +25,13 @@ export const SITE_MAP_URL =
     "Carolina Moldings, 3600 Woodpark Blvd, Charlotte, NC 28206",
   );
 
-export const SITE_HOURS = "Mon–Fri · 9am–5pm EST";
+/**
+ * Business hours. Keep in sync with openingHoursSpecification in layout.tsx —
+ * Google compares these against the Business Profile (NAP consistency).
+ */
+export const SITE_HOURS = "Mon–Fri · 9am–3pm EST";
+export const SITE_HOURS_OPEN = "09:00";
+export const SITE_HOURS_CLOSE = "15:00";
 
 /**
  * Public profiles that unambiguously represent this business — used for the

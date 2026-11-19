@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: "Your Quote List",
   description:
     "Review the gas meter parts on your quote list and send them to Carolina Moldings for pricing.",
-  alternates: { canonical: "/quote" },
-  robots: { index: false, follow: true },
-};
+  path: "/quote",
+  noindex: true,
+});
 
 export default function QuoteLayout({
   children,

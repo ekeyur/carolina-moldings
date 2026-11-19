@@ -11,6 +11,8 @@ import {
   SITE_ADDRESS,
   SITE_EMAIL,
   SITE_GEO,
+  SITE_HOURS_CLOSE,
+  SITE_HOURS_OPEN,
   SITE_MAP_URL,
   SITE_NAME,
   SITE_PHONE,
@@ -66,10 +68,12 @@ export const metadata: Metadata = {
     "Sprague Itron index cover",
     "gas meter swivels",
   ],
-  alternates: { canonical: "/" },
+  // No root canonical: it would be inherited by any page that forgets its own
+  // and point it at the homepage. Pages set canonicals via pageMetadata().
   openGraph: {
     type: "website",
     siteName: SITE_NAME,
+    locale: "en_US",
     url: SITE_URL,
     title: TITLE,
     description: DESCRIPTION,
@@ -142,8 +146,8 @@ export default function RootLayout({
                 "Thursday",
                 "Friday",
               ],
-              opens: "09:00",
-              closes: "15:00",
+              opens: SITE_HOURS_OPEN,
+              closes: SITE_HOURS_CLOSE,
             },
             sameAs: SITE_SAME_AS.length ? SITE_SAME_AS : undefined,
             contactPoint: {
