@@ -45,6 +45,10 @@ const faqs: FaqItem[] = [
     a: "We mold index covers for Itron 100G, 500G and 550G ERT endpoints on three meter lines: the 100G-A for American meters, the 100G-R for Rockwell residential meters, and the 100G-I for Itron meters. We also make matching paint covers, the CEP commercial ERT protector, and the Tophat security seal, which fits Itron ERT covers.",
   },
   {
+    q: "What part numbers does the Tophat security seal cross-reference?",
+    a: "The Tophat security seal cross-references part numbers OPT-0002-003, OPT-0002-005 and PGX00003706T. It fits Itron ERT covers as well as American Meter index covers, cups and meter top castings, and ships 1,000 per bag.",
+  },
+  {
     q: "Do your ERT covers fit without modifying the meter?",
     a: "Yes. Each cover is a direct replacement that installs on the original meter and ERT endpoint using the existing screws. Match the cover to the meter make (American, Rockwell or Itron) and the endpoint (100G, 500G or 550G).",
   },

@@ -46,8 +46,9 @@ export async function generateMetadata({
     !!fits &&
     (/\bfor\b/i.test(product.name) ||
       product.name.toLowerCase().includes(fits.toLowerCase()));
-  const title =
-    fits && !nameHasFits
+  const title = product.seoTitle
+    ? product.seoTitle
+    : fits && !nameHasFits
       ? `${product.name} — fits ${fits}`
       : product.name.includes(product.partNo)
         ? product.name
@@ -58,6 +59,7 @@ export async function generateMetadata({
 
   // Cross-reference part numbers go early so they survive snippet truncation.
   const description =
+    product.seoDescription ??
     (product.desc ||
       `${product.name} (${product.partNo})${fits ? `, fits ${fits}` : ""}.`) +
     (product.altPartNos?.length

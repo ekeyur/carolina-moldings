@@ -13,6 +13,10 @@ export type Product = {
   partNo: string;
   /** OEM / competitor cross-reference numbers this part replaces. */
   altPartNos?: string[];
+  /** Overrides the generated <title> on the product page (e.g. to lead with cross-reference numbers). */
+  seoTitle?: string;
+  /** Overrides the generated meta description (keep ≤160 chars so cross-reference numbers aren't truncated). */
+  seoDescription?: string;
   cat: string;
   brand?: string;
   ph: string;
