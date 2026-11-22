@@ -197,3 +197,13 @@ const ERT_MATCH = /\bERT\b|\b(40|100|500|550)G\b|itron/i;
 export function ertProducts(): Product[] {
   return products.filter((p) => ERT_MATCH.test(brandHaystack(p)));
 }
+
+/** Parts featured on /itron-100g-datalogging (display order); their product pages link back to it. */
+export const DATALOGGING_100G_PART_IDS = [
+  "a100g",
+  "r100g",
+  "i100g",
+  "tophat",
+  "pca100g",
+  "pcr100g",
+];

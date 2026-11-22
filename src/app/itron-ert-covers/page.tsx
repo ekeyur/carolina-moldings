@@ -131,6 +131,15 @@ export default function ItronErtCoversPage() {
       </div>
 
       <div className="max-w-310 mx-auto px-6 py-10 space-y-12">
+        <p className="text-sm text-slate-600">
+          Working on Itron 100G datalogging Modules?{" "}
+          <Link
+            href="/itron-100g-datalogging"
+            className="font-semibold text-carolina-ink hover:underline"
+          >
+            See the 100G datalogging cover &amp; tamper seal cross-reference →
+          </Link>
+        </p>
         {groups.map(({ category, items }) => (
           <section key={category.id}>
             <h2 className="font-heading font-bold text-navy text-xl mb-5">

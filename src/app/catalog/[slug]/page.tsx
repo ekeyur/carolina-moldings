@@ -8,6 +8,7 @@ import { BreadcrumbJsonLd } from "@/components/seo/BreadcrumbJsonLd";
 import { pageMetadata } from "@/lib/seo";
 import { AddToQuoteButton } from "@/components/catalog/AddToQuoteButton";
 import {
+  DATALOGGING_100G_PART_IDS,
   ertProducts,
   getCategory,
   getProductBySlug,
@@ -26,7 +27,7 @@ export function generateStaticParams() {
   return products.map((p) => ({ slug: productSlug(p) }));
 }
 
-const isIndexCover = (product: { cat: string }) => product.cat === "index";
+const isIndexCover =(product: { cat: string }) => product.cat === "index";
 
 export async function generateMetadata({
   params,
@@ -122,6 +123,7 @@ export default async function ProductPage({
   const fits = product.fits ? formatFits(product.fits) : undefined;
   const alts = alternatePartNumbers(product);
   const isErt = ertProducts().some((p) => p.id === product.id);
+  const is100gDatalogging = DATALOGGING_100G_PART_IDS.includes(product.id);
 
   return (
     <>
@@ -276,6 +278,15 @@ export default async function ProductPage({
                 <li key={b}>{b}</li>
               ))}
             </ul>
+          )}
+
+          {is100gDatalogging && (
+            <Link
+              href="/itron-100g-datalogging"
+              className="text-carolina-ink text-sm font-semibold hover:underline"
+            >
+              Itron 100G datalogging covers &amp; tamper seals →
+            </Link>
           )}
 
           {isErt && (

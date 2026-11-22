@@ -123,6 +123,12 @@ export default function RootLayout({
             description: DESCRIPTION,
             foundingDate: "1975",
             slogan: "You can't steal from Snap Seal™",
+            knowsAbout: [
+              "Gas meter index covers",
+              "Itron 100G datalogging module index covers",
+              "Itron 100G datalogging module tamper seals",
+              "Gas meter tamper seals, security seals",
+            ],
             email: SITE_EMAIL,
             telephone: SITE_PHONE,
             currenciesAccepted: "USD",
