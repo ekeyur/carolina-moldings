@@ -275,12 +275,12 @@
       "name": "Tophat Security Seal",
       "partNo": "Tophat",
       "altPartNos": ["OPT-0002-003", "OPT-0002-005", "PGX00003706T"],
-      "seoTitle": "Tophat Security Seal — OPT-0002-003 / OPT-0002-005 / PGX00003706T",
+      "seoTitle": "Itron 100G Datalogging ERT Module Security Seal, Tamper Seal — OPT-0002-003 / OPT-0002-005 / PGX00003706T",
       "seoDescription": "Tophat Security Seal (OPT-0002-003, OPT-0002-005, PGX00003706T): tamper seals used with Itron gas ERT and telemetry modules and American Meter covers.",
       "cat": "tamper",
       "ph": "SECURITY SEAL",
       "material": "Molded polymer",
-      "pack": "1000 / Bag",
+      "pack": "1000 / Bag, 20 / Bag",
       "fits": "American covers, cups, top castings; Itron ERT",
       "desc": "Tophat Security Seal for American Meter index covers, cups and meter top castings. Tamper seals used with Itron gas ERT and telemetry modules.",
       "images": ["/products/tophat.png"]
@@ -289,10 +289,11 @@
       "id": "tsplug",
       "name": "TS Plug",
       "partNo": "TS Plug",
+      "altPartNos": ["410-0287-02, 410-0287-03"],
       "cat": "tamper",
       "ph": "SECURITY SEAL",
       "material": "Molded polymer",
-      "pack": "1000 / Bag",
+      "pack": "1000 / Bag, 20 / Bag",
       "fits": "Rockwell covers, cups, top castings",
       "desc": "Security Seal for Rockwell Meter index covers, cups and meter top castings.",
       "images": ["/products/tsplug.png"]
@@ -378,7 +379,7 @@
       "material": "Assorted",
       "pack": "As needed",
       "fits": "American 35B–500B, AL-800–AL5000",
-      "desc": "Complete commercial kit protecting every entry point on American 35B–500B and AL-800–AL5000 meters — A-103 index cover with silicone gasket, Snap Seal #1 plugs, Cup #8, SS #3 and Cup ABP / AHH. Screws included.",
+      "desc": "Complete commercial kit protecting every entry point on American 35B–500B and AL-800–AL5000 meters — A-103 index cover with silicone gasket, Snap Seal #1 plugs, Cup #8, SS #3 and Cup AHH. Screws included.",
       "images": []
     },
     {
