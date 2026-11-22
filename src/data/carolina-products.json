@@ -280,7 +280,7 @@
       "cat": "tamper",
       "ph": "SECURITY SEAL",
       "material": "Molded polymer",
-      "pack": "1000 / Bag, 20 / Bag",
+      "pack": "1000 / Bag & 20 / Bag",
       "fits": "American covers, cups, top castings; Itron ERT",
       "desc": "Tophat Security Seal for American Meter index covers, cups and meter top castings. Tamper seals used with Itron gas ERT and telemetry modules.",
       "images": ["/products/tophat.png"]
@@ -293,7 +293,7 @@
       "cat": "tamper",
       "ph": "SECURITY SEAL",
       "material": "Molded polymer",
-      "pack": "1000 / Bag, 20 / Bag",
+      "pack": "1000 / Bag & 20 / Bag",
       "fits": "Rockwell covers, cups, top castings",
       "desc": "Security Seal for Rockwell Meter index covers, cups and meter top castings.",
       "images": ["/products/tsplug.png"]
